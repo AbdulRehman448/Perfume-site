@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Velvet Scents - a premium perfume atelier in Paris." />
+  <title>Velvet Scents | About</title>
+  <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav-shell">
+    <div class="container">
+      <nav class="navbar" aria-label="Primary">
+        <div class="nav-links" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="about.html">About</a>
+          <a href="cart.html">Cart</a>
+        </div>
+
+        <a class="brand-lockup" href="index.html" aria-label="Velvet Scents home">
+          <img class="brand-logo" src="images/logo.jpg" alt="Velvet Scents logo" />
+          <span class="brand">VELVET SCENTS</span>
+        </a>
+
+        <div class="utility">
+          <a class="utility-link" href="#location">Location</a>
+          <input class="theme-toggle" type="checkbox" id="theme-toggle" data-theme-toggle />
+          <label class="theme-switch" for="theme-toggle" aria-label="Toggle light and dark theme">
+            <span class="theme-switch-track" aria-hidden="true">
+              <span class="theme-switch-thumb"></span>
+            </span>
+            <span class="theme-switch-text">
+              <span>Dark</span>
+              <span>Light</span>
+            </span>
+          </label>
+          <a class="cart" href="cart.html" aria-label="Cart preview">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 7h15l-2 8H8L6 7Zm0 0L5 4H2"></path>
+              <circle cx="9" cy="20" r="1"></circle>
+              <circle cx="17" cy="20" r="1"></circle>
+            </svg>
+            <span class="badge" data-cart-count>0</span>
+          </a>
+          <div class="mobile-trigger">
+            <input class="hamburger-toggle" type="checkbox" id="menu-toggle" />
+            <label class="hamburger" for="menu-toggle" aria-label="Toggle menu">
+              <span></span>
+            </label>
+          </div>
+        </div>
+      </nav>
+
+      <div class="mobile-menu" aria-label="Mobile navigation">
+        <div class="mobile-menu-inner">
+          <a class="mobile-link" href="index.html">Home</a>
+          <a class="mobile-link" href="gallery.html">Gallery</a>
+          <a class="mobile-link" href="about.html">About</a>
+          <a class="mobile-link" href="cart.html">Cart</a>
+          <a class="mobile-link" href="#location">Location</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__inner">
+          <span class="eyebrow">Maison profile</span>
+          <h1 class="page-title">A fragrance house made for quiet magnetism.</h1>
+          <p class="page-copy">Velvet Scents is shaped by French composition, sculptural packaging, and a devotion to long-lasting atmosphere. The brand is built for people who want elegance with presence.</p>
+          <div class="page-actions">
+            <a class="btn" href="gallery.html">Browse the Gallery</a>
+            <a class="btn secondary" href="cart.html">Open Cart</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container about-grid">
+        <div class="story-media">
+          <img src="images/14.jpeg" alt="Velvet Scents atelier image" />
+        </div>
+        <div class="about-panel">
+          <span class="eyebrow">Our philosophy</span>
+          <h3>Minimal, sensual, editorial.</h3>
+          <p>
+            Every composition is designed to move slowly, with layered notes that feel polished rather than loud. The result is a perfume wardrobe that reads luxurious at first glance and even better in the air.
+          </p>
+          <div class="about-points">
+            <div class="about-point">
+              <strong>Craft</strong>
+              <p>Balanced accords, refined raw materials, and a careful hand at every stage.</p>
+            </div>
+            <div class="about-point">
+              <strong>Presentation</strong>
+              <p>Gold accents, generous whitespace, and a cinematic dark-and-ivory palette.</p>
+            </div>
+            <div class="about-point">
+              <strong>Service</strong>
+              <p>Curated packaging, gifting-ready presentation, and cart-first shopping flow.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="footer-logo" src="images/logo.jpg" alt="Velvet Scents logo" />
+          <h2>VELVET SCENTS</h2>
+          <p>Ultra-luxury French perfumery crafted with editorial restraint and cinematic depth.</p>
+          <small>2026 Velvet Scents. All rights reserved.</small>
+        </div>
+
+        <div class="footer-links">
+          <h3>House</h3>
+          <a href="about.html">Our Story</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="cart.html">Cart</a>
+        </div>
+
+        <div class="footer-links">
+          <h3>Client Care</h3>
+          <a href="#location">Shipping</a>
+          <a href="#location">Returns</a>
+          <a href="#location">Gifting</a>
+        </div>
+
+        <div class="socials">
+          <h3>Social</h3>
+          <a href="#top">Instagram</a>
+          <a href="#top">Pinterest</a>
+          <a href="#top">Contact</a>
+        </div>
+
+        <div class="footer-location" id="location">
+          <h3>Shop Location</h3>
+          <p>Velvet Scents Atelier, Paris, France</p>
+          <div class="map-frame">
+            <iframe
+              title="Velvet Scents shop location map"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=2.320%2C48.855%2C2.344%2C48.867&layer=mapnik"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="shop.js"></script>
+</body>
+</html>
