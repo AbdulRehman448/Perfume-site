@@ -26,6 +26,10 @@
 
         <div class="utility">
           <a class="utility-link" href="#location">Location</a>
+          <form id="site-search" class="site-search" role="search" onsubmit="handleSearch(event)">
+            <input id="search-input" name="q" type="search" placeholder="Search fragrances" aria-label="Search fragrances" />
+            <button class="btn btn-search" aria-label="Search">Search</button>
+          </form>
           <input class="theme-toggle" type="checkbox" id="theme-toggle" data-theme-toggle />
           <label class="theme-switch" for="theme-toggle" aria-label="Toggle light and dark theme">
             <span class="theme-switch-track" aria-hidden="true">
@@ -76,7 +80,6 @@
             <a class="btn" href="gallery.html">Continue Shopping</a>
             <a class="btn secondary" href="about.html">Learn More</a>
           </div>
-          <p class="developer-credit"><strong>Developed by Abdul Rehman Ali</strong> · Contact: abdulrehman.tp.786@gmail.com</p>
         </div>
       </div>
     </section>
@@ -92,8 +95,8 @@
                 <p>Bergamot, iris root, smoked amber, velvet woods</p>
               </div>
               <div class="cart-item__meta">
-                <strong>€168</strong>
-                <span>Line total: €168</span>
+                <strong>AED 664</strong>
+                <span>Line total: AED 664</span>
               </div>
             </div>
             <div class="cart-item__controls">
@@ -108,8 +111,8 @@
                 <p>Saffron, soft leather, cedar smoke, iris petals</p>
               </div>
               <div class="cart-item__meta">
-                <strong>€174</strong>
-                <span>Line total: €174</span>
+                <strong>AED 687</strong>
+                <span>Line total: AED 687</span>
               </div>
             </div>
             <div class="cart-item__controls">
@@ -122,7 +125,7 @@
           <span class="eyebrow">Checkout</span>
           <div class="summary-row">
             <strong>Subtotal</strong>
-            <span>€342</span>
+            <span>AED 1351</span>
           </div>
           <div class="summary-row">
             <strong>Shipping</strong>
@@ -130,7 +133,7 @@
           </div>
           <div class="summary-total">
             <strong>Total</strong>
-            <span>€342</span>
+            <span>AED 1351</span>
           </div>
 
           <form class="checkout-form" action="#" method="post">
