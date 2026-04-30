@@ -13,10 +13,10 @@
     <div class="container">
       <nav class="navbar" aria-label="Primary">
         <div class="nav-links" aria-label="Main navigation">
-          <a href="index.html">Home</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="about.html">About</a>
-          <a href="cart.html">Cart</a>
+          <a data-i18n="nav.home" href="index.html">Home</a>
+          <a data-i18n="nav.gallery" href="gallery.html">Gallery</a>
+          <a data-i18n="nav.about" href="about.html">About</a>
+          <a data-i18n="nav.cart" href="cart.html">Cart</a>
         </div>
 
         <a class="brand-lockup" href="index.html" aria-label="Velvet Scents home">
@@ -27,8 +27,8 @@
         <div class="utility">
           <a class="utility-link" href="#location">Location</a>
           <form id="site-search" class="site-search" role="search" onsubmit="handleSearch(event)">
-            <input id="search-input" name="q" type="search" placeholder="Search fragrances" aria-label="Search fragrances" />
-            <button class="btn btn-search" aria-label="Search">Search</button>
+            <input id="search-input" name="q" type="search" placeholder="Search fragrances" aria-label="Search fragrances" data-i18n-placeholder="search.placeholder" />
+            <button class="btn btn-search" aria-label="Search" data-i18n="search.button">Search</button>
           </form>
           <input class="theme-toggle" type="checkbox" id="theme-toggle" />
           <label class="theme-switch" for="theme-toggle" aria-label="Toggle light and dark theme">
@@ -40,6 +40,10 @@
               <span>Light</span>
             </span>
           </label>
+          <select id="lang-select" class="lang-select" aria-label="Select language">
+            <option value="en">EN</option>
+            <option value="ar">العربية</option>
+          </select>
           <a class="cart" href="cart.html" aria-label="Cart preview">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M6 7h15l-2 8H8L6 7Zm0 0L5 4H2"></path>
@@ -59,12 +63,12 @@
 
       <div class="mobile-menu" aria-label="Mobile navigation">
         <div class="mobile-menu-inner">
-          <a class="mobile-link" href="index.html">Home</a>
-          <a class="mobile-link" href="gallery.html">Gallery</a>
-          <a class="mobile-link" href="about.html">About</a>
-          <a class="mobile-link" href="cart.html">Cart</a>
-          <a class="mobile-link" href="#location">Location</a>
-        </div>
+            <a class="mobile-link" data-i18n="nav.home" href="index.html">Home</a>
+            <a class="mobile-link" data-i18n="nav.gallery" href="gallery.html">Gallery</a>
+            <a class="mobile-link" data-i18n="nav.about" href="about.html">About</a>
+            <a class="mobile-link" data-i18n="nav.cart" href="cart.html">Cart</a>
+            <a class="mobile-link" data-i18n="nav.location" href="#location">Location</a>
+          </div>
       </div>
     </div>
   </header>
@@ -73,14 +77,14 @@
     <section class="hero">
       <div class="container">
         <div class="hero-grid">
-          <span class="eyebrow">Ultra-luxury perfume atelier</span>
-          <h1 class="hero-title">Perfume as atmosphere.</h1>
-          <p class="hero-copy">
+          <span class="eyebrow" data-i18n="hero.eyebrow">Ultra-luxury perfume atelier</span>
+          <h1 class="hero-title" data-i18n="hero.title">Perfume as atmosphere.</h1>
+          <p class="hero-copy" data-i18n="hero.copy">
             Velvet Scents composes sensual fragrances with rare depth, quiet confidence, and a cinematic finish. Each bottle is designed like a private ritual for the modern collector.
           </p>
           <div class="hero-actions">
-            <a class="btn" href="gallery.html">Discover the Gallery</a>
-            <a class="btn secondary" href="about.html">Explore the Maison</a>
+            <a class="btn" data-i18n="hero.discover" href="gallery.html">Discover the Gallery</a>
+            <a class="btn secondary" data-i18n="hero.explore" href="about.html">Explore the Maison</a>
           </div>
           <div class="hero-meta" aria-label="Brand highlights">
             <div class="meta-item">
@@ -243,7 +247,7 @@
             <p>
               A magnetic blend of suede, incense, and warm resin. The house signature for evenings that demand presence without excess.
             </p>
-            <a class="btn" href="cart.html">Reserve Your Bottle</a>
+              <a class="btn" data-i18n="spotlight.reserve" href="cart.html">Reserve Your Bottle</a>
           </div>
         </div>
       </div>
@@ -279,12 +283,12 @@
     <section class="section newsletter" id="newsletter">
       <div class="container">
         <div class="newsletter-inner">
-          <span class="eyebrow">Newsletter</span>
-          <h2>Join the private list.</h2>
-          <p>Receive first access to limited launches, fragrance notes, and intimate maison updates.</p>
+          <span class="eyebrow" data-i18n="newsletter.eyebrow">Newsletter</span>
+          <h2 data-i18n="newsletter.title">Join the private list.</h2>
+          <p data-i18n="newsletter.copy">Receive first access to limited launches, fragrance notes, and intimate maison updates.</p>
           <form class="newsletter-form" action="#" method="post">
-            <input type="email" name="email" placeholder="Email address" aria-label="Email address" />
-            <button class="btn" type="submit">Subscribe</button>
+            <input type="email" name="email" placeholder="Email address" aria-label="Email address" data-i18n-placeholder="newsletter.email" />
+            <button class="btn" type="submit" data-i18n="newsletter.subscribe">Subscribe</button>
           </form>
         </div>
       </div>
@@ -299,32 +303,32 @@
           <h2>VELVET SCENTS</h2>
           <p>Ultra-luxury French perfumery crafted with editorial restraint and cinematic depth.</p>
           <div class="footer-contact">
-            <span class="footer-credit">Developed by Abdul Rehman Ali</span>
-            <button id="contact-dev" class="btn btn-small" aria-label="Contact developer">Contact Developer</button>
-            <a class="btn btn-small secondary" href="https://www.linkedin.com/in/abdul-rehman-ali/" target="_blank" rel="noopener">LinkedIn</a>
+            <span class="footer-credit" data-i18n="footer.developed">Developed by Abdul Rehman Ali</span>
+            <button id="contact-dev" class="btn btn-small" aria-label="Contact developer" data-i18n="footer.contact">Contact Developer</button>
+            <a class="btn btn-small secondary" data-i18n="footer.linkedin" href="https://www.linkedin.com/in/abdul-rehman-ali/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
           <small>2026 Velvet Scents. All rights reserved.</small>
         </div>
 
         <div class="footer-links">
-          <h3>House</h3>
-          <a href="about.html">Our Story</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="cart.html">Cart</a>
+          <h3 data-i18n="footer.house">House</h3>
+          <a data-i18n="footer.ourstory" href="about.html">Our Story</a>
+          <a data-i18n="footer.gallery" href="gallery.html">Gallery</a>
+          <a data-i18n="footer.cart" href="cart.html">Cart</a>
         </div>
 
         <div class="footer-links">
-          <h3>Client Care</h3>
-          <a href="#location">Shipping</a>
-          <a href="#location">Returns</a>
-          <a href="#location">Gifting</a>
+          <h3 data-i18n="footer.clientcare">Client Care</h3>
+          <a data-i18n="footer.shipping" href="#location">Shipping</a>
+          <a data-i18n="footer.returns" href="#location">Returns</a>
+          <a data-i18n="footer.gifting" href="#location">Gifting</a>
         </div>
 
         <div class="socials">
-          <h3>Social</h3>
-          <a href="#top">Instagram</a>
-          <a href="#top">Pinterest</a>
-          <a href="#top">Contact</a>
+          <h3 data-i18n="footer.social">Social</h3>
+          <a data-i18n="footer.instagram" href="#top">Instagram</a>
+          <a data-i18n="footer.pinterest" href="#top">Pinterest</a>
+          <a data-i18n="footer.contactlink" href="#top">Contact</a>
         </div>
 
         <div class="footer-location" id="location">

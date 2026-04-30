@@ -464,6 +464,16 @@ input {
   .site-search { display: none; }
 }
 
+/* Right-to-left support */
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="rtl"] .nav-links { direction: rtl; }
+[dir="rtl"] .brand-lockup { justify-self: center; }
+[dir="rtl"] .hero-grid { text-align: right; }
+[dir="rtl"] .site-search { direction: rtl; }
+
 .mobile-link {
   color: var(--ivory);
 }
