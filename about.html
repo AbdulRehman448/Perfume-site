@@ -26,6 +26,10 @@
 
         <div class="utility">
           <a class="utility-link" href="#location">Location</a>
+          <form id="site-search" class="site-search" role="search" onsubmit="handleSearch(event)">
+            <input id="search-input" name="q" type="search" placeholder="Search fragrances" aria-label="Search fragrances" />
+            <button class="btn btn-search" aria-label="Search">Search</button>
+          </form>
           <input class="theme-toggle" type="checkbox" id="theme-toggle" data-theme-toggle />
           <label class="theme-switch" for="theme-toggle" aria-label="Toggle light and dark theme">
             <span class="theme-switch-track" aria-hidden="true">
@@ -76,7 +80,6 @@
             <a class="btn" href="gallery.html">Browse the Gallery</a>
             <a class="btn secondary" href="cart.html">Open Cart</a>
           </div>
-          <p class="developer-credit"><strong>Developed by Abdul Rehman Ali</strong> · Contact: abdulrehman.tp.786@gmail.com</p>
         </div>
       </div>
     </section>
@@ -88,22 +91,25 @@
         </div>
         <div class="about-panel">
           <span class="eyebrow">Our philosophy</span>
-          <h3>Minimal, sensual, editorial.</h3>
+          <h3>Craft, composition, and discretion — a modern maison.</h3>
           <p>
-            Every composition is designed to move slowly, with layered notes that feel polished rather than loud. The result is a perfume wardrobe that reads luxurious at first glance and even better in the air.
+            Velvet Scents began as a practice: a small atelier where perfumers and designers worked together to build perfumes that behave like objects — quiet, precise, and built to last. We source responsibly, favour extrait-level concentrations, and work on small, numbered batches that age before release.
+          </p>
+          <p>
+            Our approach blends classical French composition with contemporary restraint: top notes that promise, heart notes that reveal, and base structures that linger. Packaging is curated to reflect ritual — tactile boxes, satin ribbons, and print materials chosen for longevity.
           </p>
           <div class="about-points">
             <div class="about-point">
               <strong>Craft</strong>
-              <p>Balanced accords, refined raw materials, and a careful hand at every stage.</p>
+              <p>Long maturation, curated ingredients, and close collaboration with organoleptic evaluators.</p>
             </div>
             <div class="about-point">
               <strong>Presentation</strong>
-              <p>Gold accents, generous whitespace, and a cinematic dark-and-ivory palette.</p>
+              <p>Objects meant to be displayed, wrapped, and gifted — not discarded.</p>
             </div>
             <div class="about-point">
               <strong>Service</strong>
-              <p>Curated packaging, gifting-ready presentation, and cart-first shopping flow.</p>
+              <p>Personal consultations, discreet shipping across the UAE, and white‑glove gifting on request.</p>
             </div>
           </div>
         </div>
@@ -118,7 +124,11 @@
           <img class="footer-logo" src="images/logo.jpg" alt="Velvet Scents logo" />
           <h2>VELVET SCENTS</h2>
           <p>Ultra-luxury French perfumery crafted with editorial restraint and cinematic depth.</p>
-          <p class="footer-credit">Developed by Abdul Rehman Ali · abdulrehman.tp.786@gmail.com</p>
+          <div class="footer-contact">
+            <span class="footer-credit">Developed by Abdul Rehman Ali</span>
+            <button id="contact-dev" class="btn btn-small" aria-label="Contact developer">Contact Developer</button>
+            <a class="btn btn-small secondary" href="https://www.linkedin.com/in/abdul-rehman-ali/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
           <small>2026 Velvet Scents. All rights reserved.</small>
         </div>
 
@@ -144,20 +154,60 @@
         </div>
 
         <div class="footer-location" id="location">
-          <h3>Shop Location</h3>
-          <p>Velvet Scents Atelier, Paris, France</p>
+          <h3>Shop Location (UAE)</h3>
+          <p>Velvet Scents Atelier — Dubai, United Arab Emirates</p>
+          <label for="uae-location">Select Emirate / City</label>
+          <select id="uae-location" aria-label="UAE location">
+            <optgroup label="Abu Dhabi">
+              <option>Abu Dhabi</option>
+              <option>Al Ain</option>
+            </optgroup>
+            <optgroup label="Dubai">
+              <option>Dubai</option>
+            </optgroup>
+            <optgroup label="Sharjah">
+              <option>Sharjah</option>
+              <option>Khor Fakkan</option>
+            </optgroup>
+            <optgroup label="Ajman">
+              <option>Ajman</option>
+            </optgroup>
+            <optgroup label="Umm Al Quwain">
+              <option>Umm Al Quwain</option>
+            </optgroup>
+            <optgroup label="Ras Al Khaimah">
+              <option>Ras Al Khaimah</option>
+            </optgroup>
+            <optgroup label="Fujairah">
+              <option>Fujairah</option>
+            </optgroup>
+          </select>
           <div class="map-frame">
             <iframe
-              title="Velvet Scents shop location map"
+              title="Velvet Scents UAE shop location map"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=2.320%2C48.855%2C2.344%2C48.867&layer=mapnik"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=55.22%2C25.05%2C55.36%2C25.12&layer=mapnik"
             ></iframe>
           </div>
         </div>
       </div>
     </div>
   </footer>
+</footer>
+  <script>
+    function handleSearch(e) {
+      e.preventDefault();
+      const q = document.getElementById('search-input').value.trim();
+      if (!q) return;
+      localStorage.setItem('vs_search', q);
+      location.href = 'gallery.html';
+    }
 
+    document.getElementById('contact-dev')?.addEventListener('click', function () {
+      const email = 'abdulrehman.tp.786@gmail.com';
+      window.location.href = 'mailto:' + email + '?subject=Website%20enquiry';
+    });
+  </script>
 </body>
 </html>

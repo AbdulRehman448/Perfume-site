@@ -26,6 +26,10 @@
 
         <div class="utility">
           <a class="utility-link" href="#location">Location</a>
+          <form id="site-search" class="site-search" role="search" onsubmit="handleSearch(event)">
+            <input id="search-input" name="q" type="search" placeholder="Search fragrances" aria-label="Search fragrances" />
+            <button class="btn btn-search" aria-label="Search">Search</button>
+          </form>
           <input class="theme-toggle" type="checkbox" id="theme-toggle" />
           <label class="theme-switch" for="theme-toggle" aria-label="Toggle light and dark theme">
             <span class="theme-switch-track" aria-hidden="true">
@@ -78,7 +82,6 @@
             <a class="btn" href="gallery.html">Discover the Gallery</a>
             <a class="btn secondary" href="about.html">Explore the Maison</a>
           </div>
-          <p class="developer-credit"><strong>Developed by Abdul Rehman Ali</strong> · Contact: abdulrehman.tp.786@gmail.com</p>
           <div class="hero-meta" aria-label="Brand highlights">
             <div class="meta-item">
               <strong>Made in France</strong>
@@ -295,7 +298,11 @@
           <img class="footer-logo" src="images/logo.jpg" alt="Velvet Scents logo" />
           <h2>VELVET SCENTS</h2>
           <p>Ultra-luxury French perfumery crafted with editorial restraint and cinematic depth.</p>
-          <p class="footer-credit">Developed by Abdul Rehman Ali · abdulrehman.tp.786@gmail.com</p>
+          <div class="footer-contact">
+            <span class="footer-credit">Developed by Abdul Rehman Ali</span>
+            <button id="contact-dev" class="btn btn-small" aria-label="Contact developer">Contact Developer</button>
+            <a class="btn btn-small secondary" href="https://www.linkedin.com/in/abdul-rehman-ali/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
           <small>2026 Velvet Scents. All rights reserved.</small>
         </div>
 
@@ -335,5 +342,21 @@
       </div>
     </div>
   </footer>
+  <script>
+    function handleSearch(e) {
+      e.preventDefault();
+      const q = document.getElementById('search-input').value.trim();
+      if (!q) return;
+      // Save query and open gallery where results are filtered
+      localStorage.setItem('vs_search', q);
+      location.href = 'gallery.html';
+    }
+
+    document.getElementById('contact-dev')?.addEventListener('click', function () {
+      // open mail client without printing the email text on page
+      const email = 'abdulrehman.tp.786@gmail.com';
+      window.location.href = 'mailto:' + email + '?subject=Website%20enquiry';
+    });
+  </script>
 </body>
 </html>

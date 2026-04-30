@@ -26,6 +26,10 @@
 
         <div class="utility">
           <a class="utility-link" href="#location">Location</a>
+          <form id="site-search" class="site-search" role="search" onsubmit="handleSearch(event)">
+            <input id="search-input" name="q" type="search" placeholder="Search fragrances" aria-label="Search fragrances" />
+            <button class="btn btn-search" aria-label="Search">Search</button>
+          </form>
           <input class="theme-toggle" type="checkbox" id="theme-toggle" data-theme-toggle />
           <label class="theme-switch" for="theme-toggle" aria-label="Toggle light and dark theme">
             <span class="theme-switch-track" aria-hidden="true">
@@ -76,7 +80,6 @@
             <a class="btn" href="cart.html">View Cart</a>
             <a class="btn secondary" href="about.html">About the Maison</a>
           </div>
-          <p class="developer-credit"><strong>Developed by Abdul Rehman Ali</strong> · Contact: abdulrehman.tp.786@gmail.com</p>
         </div>
       </div>
     </section>
@@ -124,7 +127,11 @@
           <img class="footer-logo" src="images/logo.jpg" alt="Velvet Scents logo" />
           <h2>VELVET SCENTS</h2>
           <p>Ultra-luxury French perfumery crafted with editorial restraint and cinematic depth.</p>
-          <p class="footer-credit">Developed by Abdul Rehman Ali · abdulrehman.tp.786@gmail.com</p>
+          <div class="footer-contact">
+            <span class="footer-credit">Developed by Abdul Rehman Ali</span>
+            <button id="contact-dev" class="btn btn-small" aria-label="Contact developer">Contact Developer</button>
+            <a class="btn btn-small secondary" href="https://www.linkedin.com/in/abdul-rehman-ali/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
           <small>2026 Velvet Scents. All rights reserved.</small>
         </div>
 
@@ -150,14 +157,40 @@
         </div>
 
         <div class="footer-location" id="location">
-          <h3>Shop Location</h3>
-          <p>Velvet Scents Atelier, Paris, France</p>
+          <h3>Shop Location (UAE)</h3>
+          <p>Velvet Scents Atelier — Dubai, United Arab Emirates</p>
+          <label for="uae-location">Select Emirate / City</label>
+          <select id="uae-location" aria-label="UAE location">
+            <optgroup label="Abu Dhabi">
+              <option>Abu Dhabi</option>
+              <option>Al Ain</option>
+            </optgroup>
+            <optgroup label="Dubai">
+              <option>Dubai</option>
+            </optgroup>
+            <optgroup label="Sharjah">
+              <option>Sharjah</option>
+              <option>Khor Fakkan</option>
+            </optgroup>
+            <optgroup label="Ajman">
+              <option>Ajman</option>
+            </optgroup>
+            <optgroup label="Umm Al Quwain">
+              <option>Umm Al Quwain</option>
+            </optgroup>
+            <optgroup label="Ras Al Khaimah">
+              <option>Ras Al Khaimah</option>
+            </optgroup>
+            <optgroup label="Fujairah">
+              <option>Fujairah</option>
+            </optgroup>
+          </select>
           <div class="map-frame">
             <iframe
-              title="Velvet Scents shop location map"
+              title="Velvet Scents UAE shop location map"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=2.320%2C48.855%2C2.344%2C48.867&layer=mapnik"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=55.22%2C25.05%2C55.36%2C25.12&layer=mapnik"
             ></iframe>
           </div>
         </div>
