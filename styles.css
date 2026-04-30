@@ -45,6 +45,8 @@ body:has(.theme-toggle:checked) {
   --glow-a: rgba(152, 122, 49, 0.12);
   --glow-b: rgba(255, 255, 255, 0.35);
   --shadow: 0 30px 80px rgba(34, 25, 14, 0.12);
+  --btn-accent: linear-gradient(180deg, #f0d78a, #c7a43a);
+  --btn-contrast: #16120f;
 }
 
 html {
