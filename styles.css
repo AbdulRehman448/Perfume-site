@@ -1999,6 +1999,37 @@ input {
     grid-template-columns: 1fr;
   }
 
+/* --- Refined responsive tuning for 360 / 768 / 1200 breakpoints --- */
+@media (max-width: 380px) {
+  html { font-size: 14px; }
+  .hero-inner, .hero-home__copy { padding: 1rem; }
+  .hero::before { background-position: center top; }
+  .hero-title { font-size: clamp(1.6rem, 7vw, 2.6rem); }
+  .btn { padding: 0.65rem 1rem; font-size: 0.95rem; }
+  .collection-grid, .gallery-grid, .category-grid { gap: 0.6rem; }
+}
+
+@media (min-width: 381px) and (max-width: 767px) {
+  html { font-size: 15px; }
+  .grid, .collection-grid, .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 0.9rem; }
+  .hero-title { font-size: clamp(2.2rem, 6.5vw, 3.6rem); }
+  .hero-inner { padding: 2rem; }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  html { font-size: 16px; }
+  .grid, .collection-grid, .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .hero-title { font-size: clamp(2.8rem, 5.5vw, 4.4rem); }
+  .hero-inner { padding: 3rem; }
+}
+
+@media (min-width: 1200px) {
+  html { font-size: 16.5px; }
+  .grid, .collection-grid, .gallery-grid { grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  .hero-title { font-size: clamp(3.6rem, 4.4vw, 5.2rem); }
+  .hero-inner { padding: 4rem; }
+}
+
   .hero-home__feature--large,
   .category-card,
   .category-card--wide,
