@@ -497,6 +497,21 @@
           sel.addEventListener('change', e => setLanguage(e.target.value));
         }
         setLanguage(stored);
+
+        // Theme: default to light unless user explicitly chose dark
+        const themeToggle = document.getElementById('theme-toggle');
+        const storedTheme = localStorage.getItem('vs_theme');
+        if (themeToggle) {
+          if (storedTheme) {
+            themeToggle.checked = storedTheme === 'light';
+          } else {
+            themeToggle.checked = true; // default light
+            localStorage.setItem('vs_theme', 'light');
+          }
+          themeToggle.addEventListener('change', function (e) {
+            localStorage.setItem('vs_theme', e.target.checked ? 'light' : 'dark');
+          });
+        }
       });
     })();
 
