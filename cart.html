@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -160,11 +160,10 @@
           <h2>VELVET SCENTS</h2>
           <p>Ultra-luxury French perfumery crafted with editorial restraint and cinematic depth.</p>
           <div class="footer-contact">
-            <span class="footer-credit" data-i18n="footer.developed">Developed by Abdul Rehman Ali</span>
-            <button id="contact-dev" class="btn btn-small" aria-label="Contact developer" data-i18n="footer.contact">Contact Developer</button>
-            <a class="btn btn-small secondary" data-i18n="footer.linkedin" href="https://www.linkedin.com/in/abdul-rehman-ali/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="footer-credit-link" href="mailto:abdulrehman.tp.786@gmail.com">تم التطوير بواسطة Abdul Rehman Ali</a>
+            <a class="footer-link" href="https://www.linkedin.com/in/abdul-rehman-ali/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
-          <small>2026 Velvet Scents. All rights reserved.</small>
+          <small>جميع الحقوق محفوظة — VELVET SCENTS</small>
         </div>
 
         <div class="footer-links">
@@ -182,10 +181,9 @@
         </div>
 
         <div class="socials">
-          <h3 data-i18n="footer.social">Social</h3>
-          <a data-i18n="footer.instagram" href="#top">Instagram</a>
-          <a data-i18n="footer.pinterest" href="#top">Pinterest</a>
-          <a data-i18n="footer.contactlink" href="#top">Contact</a>
+          <h3>التواصل</h3>
+          <a href="https://wa.me/qr/4EGSY3HZUCP3E1" target="_blank" rel="noopener">واتساب</a>
+          <a href="https://vt.tiktok.com/ZSHwNjFkg" target="_blank" rel="noopener">تيك توك</a>
         </div>
 
         <div class="footer-location" id="location">
@@ -223,16 +221,24 @@
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               src="https://www.openstreetmap.org/export/embed.html?bbox=55.22%2C25.05%2C55.36%2C25.12&layer=mapnik"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+            <div id="map" style="height:220px;border-radius:12px;overflow:hidden;"></div>
   <script>
     function handleSearch(e) {
       e && e.preventDefault();
       const q = document.getElementById('search-input').value.trim();
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        try {
+          const map = L.map('map').setView([25.2048, 55.2708], 12);
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap contributors'
+          }).addTo(map);
+          L.marker([25.2048, 55.2708]).addTo(map);
+        } catch (e) {}
+      });
+    </script>
       if (!q) return;
       localStorage.setItem('vs_search', q);
       location.href = 'gallery.html';
