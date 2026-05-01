@@ -74,141 +74,66 @@
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="container">
-        <div class="hero-grid">
+    <section class="hero hero-home">
+      <div class="container hero-home__grid">
+        <div class="hero-home__copy">
           <span class="eyebrow" data-i18n="hero.eyebrow">Ultra-luxury perfume atelier</span>
-          <h1 class="hero-title" data-i18n="hero.title">Perfume as atmosphere.</h1>
-          <p class="hero-copy" data-i18n="hero.copy">
-            Velvet Scents composes sensual fragrances with rare depth, quiet confidence, and a cinematic finish. Each bottle is designed like a private ritual for the modern collector.
+          <h1 class="hero-title hero-home__title" data-i18n="hero.title">Perfume as atmosphere.</h1>
+          <p class="hero-copy hero-home__lede" data-i18n="hero.copy">
+            Velvet Scents composes sensual fragrances with rare depth, quiet confidence, and a cinematic finish. The homepage is built like a luxury storefront: editorial, layered, and intentionally immersive.
           </p>
           <div class="hero-actions">
             <a class="btn" data-i18n="hero.discover" href="gallery.html">Discover the Gallery</a>
             <a class="btn secondary" data-i18n="hero.explore" href="about.html">Explore the Maison</a>
           </div>
-          <div class="hero-meta" aria-label="Brand highlights">
+          <div class="hero-meta hero-home__meta" aria-label="Brand highlights">
             <div class="meta-item">
-              <strong>Made in France</strong>
-              <span>Extrait-level concentration</span>
+              <strong>Maison crafting</strong>
+              <span>Small-batch compositions</span>
             </div>
             <div class="meta-item">
-              <strong>Limited batches</strong>
-              <span>Numbered compositions</span>
+              <strong>Limited editions</strong>
+              <span>Rare, numbered releases</span>
             </div>
             <div class="meta-item">
-              <strong>Signature service</strong>
-              <span>White-glove gifting</span>
+              <strong>Gift-ready service</strong>
+              <span>Wrapped and delivered with care</span>
             </div>
-            <script>
-              (function () {
-                const translations = {
-                  en: {
-                    'nav.home': 'Home',
-                    'nav.gallery': 'Gallery',
-                    'nav.about': 'About',
-                    'nav.cart': 'Cart',
-                    'nav.location': 'Location',
-                    'search.placeholder': 'Search fragrances',
-                    'search.button': 'Search',
-                    'hero.eyebrow': 'Ultra-luxury perfume atelier',
-                    'hero.title': 'Perfume as atmosphere.',
-                    'hero.copy': 'Velvet Scents composes sensual fragrances with rare depth, quiet confidence, and a cinematic finish. Each bottle is designed like a private ritual for the modern collector.',
-                    'hero.discover': 'Discover the Gallery',
-                    'hero.explore': 'Explore the Maison',
-                    'spotlight.reserve': 'Reserve Your Bottle',
-                    'newsletter.eyebrow': 'Newsletter',
-                    'newsletter.title': 'Join the private list.',
-                    'newsletter.copy': 'Receive first access to limited launches, fragrance notes, and intimate maison updates.',
-                    'newsletter.email': 'Email address',
-                    'newsletter.subscribe': 'Subscribe',
-                    'footer.developed': 'Developed by Abdul Rehman Ali',
-                    'footer.contact': 'Contact Developer',
-                    'footer.linkedin': 'LinkedIn',
-                    'footer.house': 'House',
-                    'footer.ourstory': 'Our Story',
-                    'footer.gallery': 'Gallery',
-                    'footer.cart': 'Cart',
-                    'footer.clientcare': 'Client Care',
-                    'footer.shipping': 'Shipping',
-                    'footer.returns': 'Returns',
-                    'footer.gifting': 'Gifting',
-                    'footer.social': 'Social',
-                    'footer.instagram': 'Instagram',
-                    'footer.pinterest': 'Pinterest',
-                    'footer.contactlink': 'Contact'
-                  },
-                  ar: {
-                    'nav.home': 'الرئيسية',
-                    'nav.gallery': 'المعرض',
-                    'nav.about': 'من نحن',
-                    'nav.cart': 'السلة',
-                    'nav.location': 'الموقع',
-                    'search.placeholder': 'ابحث عن العطور',
-                    'search.button': 'بحث',
-                    'hero.eyebrow': 'دار عطور فاخرة للغاية',
-                    'hero.title': 'العطر كأجواء',
-                    'hero.copy': 'تؤلف Velvet Scents عطوراً حسّية بعمق نادر وثقة هادئة ونهاية سينمائية. كل زجاجة مصممة كطقس خاص لهواة الجمع العصريين.',
-                    'hero.discover': 'استكشف المعرض',
-                    'hero.explore': 'اكتشف الدار',
-                    'spotlight.reserve': 'احجز زجاجتك',
-                    'newsletter.eyebrow': 'النشرة',
-                    'newsletter.title': 'انضم إلى القائمة الخاصة',
-                    'newsletter.copy': 'تلقَ وصولاً مبكراً إلى الإصدارات المحدودة وملاحظات العطور وتحديثات الدار الحصرية.',
-                    'newsletter.email': 'البريد الإلكتروني',
-                    'newsletter.subscribe': 'اشترك',
-                    'footer.developed': 'تم التطوير بواسطة Abdul Rehman Ali',
-                    'footer.contact': 'اتصل بالمطور',
-                    'footer.linkedin': 'لينكدإن',
-                    'footer.house': 'الدار',
-                    'footer.ourstory': 'قصتنا',
-                    'footer.gallery': 'المعرض',
-                    'footer.cart': 'السلة',
-                    'footer.clientcare': 'خدمة العملاء',
-                    'footer.shipping': 'الشحن',
-                    'footer.returns': 'الإرجاع',
-                    'footer.gifting': 'الهدايا',
-                    'footer.social': 'التواصل',
-                    'footer.instagram': 'انستغرام',
-                    'footer.pinterest': 'بنترست',
-                    'footer.contactlink': 'اتصل'
-                  }
-                };
+          </div>
+          <div class="hero-home__ticker" aria-label="Featured scent names">
+            <span>Marj</span>
+            <span>Oud &amp; Roses</span>
+            <span>Bin Shaikh</span>
+            <span>Ignite Oud</span>
+            <span>The Bloom Edit</span>
+          </div>
+        </div>
 
-                function applyTranslations(lang) {
-                  const dict = translations[lang] || translations.en;
-                  document.querySelectorAll('[data-i18n]').forEach(el => {
-                    const key = el.getAttribute('data-i18n');
-                    if (dict[key]) el.textContent = dict[key];
-                  });
-                  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-                    const key = el.getAttribute('data-i18n-placeholder');
-                    if (dict[key]) el.setAttribute('placeholder', dict[key]);
-                  });
-                  // inputs with data-i18n-placeholder attribute
-                  document.querySelectorAll('input[data-i18n-placeholder]').forEach(i => {
-                    const k = i.getAttribute('data-i18n-placeholder'); if (translations[lang][k]) i.placeholder = translations[lang][k];
-                  });
-                }
+        <div class="hero-home__showcase" aria-label="Featured fragrance showcase">
+          <article class="hero-home__feature hero-home__feature--large">
+            <img src="images/5.jpeg" alt="Featured perfume bottle" />
+            <div>
+              <span>Featured drop</span>
+              <h2>Obsidian Amber</h2>
+              <p>Warm resin, black fig, and smoked woods in a deep, refined finish.</p>
+            </div>
+          </article>
 
-                function setLanguage(lang) {
-                  localStorage.setItem('vs_lang', lang);
-                  document.documentElement.lang = lang === 'ar' ? 'ar' : 'en';
-                  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-                  applyTranslations(lang);
-                }
-
-                document.addEventListener('DOMContentLoaded', function () {
-                  const sel = document.getElementById('lang-select');
-                  const stored = localStorage.getItem('vs_lang') || 'en';
-                  if (sel) { sel.value = stored; sel.addEventListener('change', e => setLanguage(e.target.value)); }
-                  setLanguage(stored);
-                });
-              })();
-
-              // keep existing behaviors (search + contact) if present
-              function handleSearch(e) { e && e.preventDefault(); const q = document.getElementById('search-input')?.value?.trim(); if (!q) return; localStorage.setItem('vs_search', q); location.href = 'gallery.html'; }
-              document.getElementById('contact-dev')?.addEventListener('click', function () { const email = 'abdulrehman.tp.786@gmail.com'; window.location.href = 'mailto:' + email + '?subject=Website%20enquiry'; });
-            </script>
+          <div class="hero-home__stack">
+            <article class="hero-home__feature">
+              <img src="images/2.jpeg" alt="Luxury perfume bottle" />
+              <div>
+                <span>Signature</span>
+                <h3>Cuir Lumière</h3>
+              </div>
+            </article>
+            <article class="hero-home__feature">
+              <img src="images/11.jpeg" alt="Dark amber perfume bottle" />
+              <div>
+                <span>Bestseller</span>
+                <h3>L'ombre Noire</h3>
+              </div>
+            </article>
           </div>
         </div>
       </div>
@@ -216,175 +141,189 @@
 
     <section class="marquee" aria-label="Brand marquee">
       <div class="marquee-track">
-        <span><strong>VELVET SCENTS</strong> - OBSIDIAN SOULS - CHAMPAGNE TRAILS - IVORY HAZE -</span>
-        <span><strong>VELVET SCENTS</strong> - OBSIDIAN SOULS - CHAMPAGNE TRAILS - IVORY HAZE -</span>
-        <span><strong>VELVET SCENTS</strong> - OBSIDIAN SOULS - CHAMPAGNE TRAILS - IVORY HAZE -</span>
-        <span><strong>VELVET SCENTS</strong> - OBSIDIAN SOULS - CHAMPAGNE TRAILS - IVORY HAZE -</span>
+        <span><strong>VELVET SCENTS</strong> - MARJ - OUD &amp; ROSES - BIN SHAIKH - IGNITE OUD -</span>
+        <span><strong>VELVET SCENTS</strong> - MARJ - OUD &amp; ROSES - BIN SHAIKH - IGNITE OUD -</span>
+        <span><strong>VELVET SCENTS</strong> - MARJ - OUD &amp; ROSES - BIN SHAIKH - IGNITE OUD -</span>
+        <span><strong>VELVET SCENTS</strong> - MARJ - OUD &amp; ROSES - BIN SHAIKH - IGNITE OUD -</span>
       </div>
     </section>
 
-    <section class="section" id="collection">
+    <section class="section section--tight" id="categories">
       <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Featured collection</span>
-          <h2>Three signatures, one quiet obsession with elegance.</h2>
-          <p>Minimal compositions, carefully balanced notes, and presentation that feels as considered as the fragrance itself.</p>
-        </div>
-
-        <div class="collection-grid">
-          <article class="product-card">
-            <div class="product-media">
-              <img src="images/5.jpeg" alt="Noir Éclat fragrance bottle" />
-            </div>
-            <div class="product-body">
-              <div>
-                <h3 class="product-name">Noir Éclat</h3>
-                <p class="product-notes">Black fig, iris root, smoked amber, velvet woods.</p>
-              </div>
-              <div class="rating" aria-label="Five star rating">
-                <span>★★★★★</span><span>· 4.9</span>
-              </div>
-              <a class="product-action" href="gallery.html">View in Gallery</a>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-media">
-              <img src="images/2.jpeg" alt="Cuir Lumière fragrance bottle" />
-            </div>
-            <div class="product-body">
-              <div>
-                <h3 class="product-name">Cuir Lumière</h3>
-                <p class="product-notes">Saffron, soft leather, cedar smoke, iris petals.</p>
-              </div>
-              <div class="rating" aria-label="Five star rating">
-                <span>★★★★★</span><span>· 5.0</span>
-              </div>
-              <a class="product-action" href="gallery.html">View in Gallery</a>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <div class="product-media">
-              <img src="images/4.jpeg" alt="Velours Minuit fragrance bottle" />
-            </div>
-            <div class="product-body">
-              <div>
-                <h3 class="product-name">Velours Minuit</h3>
-                <p class="product-notes">Bergamot, rose absolute, tonka, dark musk.</p>
-              </div>
-              <div class="rating" aria-label="Five star rating">
-                <span>★★★★★</span><span>· 4.8</span>
-              </div>
-              <a class="product-action" href="gallery.html">View in Gallery</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="story">
-      <div class="container">
-        <div class="story-grid">
-          <div class="story-media">
-            <img src="images/3.jpeg" alt="Artistic perfume still life" />
+        <div class="section-heading section-heading--split">
+          <div>
+            <span class="eyebrow">Explore by category</span>
+            <h2>Curated the way a luxury storefront feels.</h2>
           </div>
-          <div class="story-copy">
-            <span class="eyebrow">Scent story</span>
-            <h2 class="story-title">A fragrance house shaped by shadow, silk, and precision.</h2>
-            <p>
-              Velvet Scents is a study in restraint. The compositions open softly, deepen slowly, and leave a refined trail that feels intimate rather than loud.
-            </p>
-            <div class="story-points">
-              <div class="point">
-                <div class="icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"></path></svg>
-                </div>
-                <div>
-                  <h3>Architectural balance</h3>
-                  <p>Top, heart, and base notes are tuned to unfold with measured poise.</p>
-                </div>
-              </div>
-              <div class="point">
-                <div class="icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M5 19h14M7 19V9l5-5 5 5v10"></path></svg>
-                </div>
-                <div>
-                  <h3>Maison ritual</h3>
-                  <p>Every detail, from bottle silhouette to box texture, is designed as an object of desire.</p>
-                </div>
-              </div>
+          <p>Inspired by the reference storefront, this homepage leans into category-led discovery, full-width banners, and product storytelling that reads quickly but feels premium.</p>
+        </div>
+
+        <div class="category-rail" aria-label="Category shortcuts">
+          <a class="category-pill" href="gallery.html">All perfumes</a>
+          <a class="category-pill" href="gallery.html">Dakhoon</a>
+          <a class="category-pill" href="gallery.html">Concentrated parfum</a>
+          <a class="category-pill" href="gallery.html">Gift sets</a>
+          <a class="category-pill" href="gallery.html">Care essentials</a>
+        </div>
+
+        <div class="category-grid">
+          <article class="category-card category-card--wide">
+            <img src="images/1.jpeg" alt="Perfume collection" />
+            <div class="category-card__body">
+              <span>Best sellers</span>
+              <h3>Fragrances adored by all.</h3>
+              <a class="btn btn-small" href="gallery.html">Shop now</a>
             </div>
+          </article>
+          <article class="category-card">
+            <img src="images/12.jpeg" alt="Gift set" />
+            <div class="category-card__body">
+              <span>Gift sets</span>
+              <h3>The art of gifting.</h3>
+              <a class="btn btn-small secondary" href="gallery.html">View all</a>
+            </div>
+          </article>
+          <article class="category-card">
+            <img src="images/18.jpeg" alt="Dakhoon collection" />
+            <div class="category-card__body">
+              <span>Dakhoon</span>
+              <h3>Arabic smoke, modern finish.</h3>
+              <a class="btn btn-small secondary" href="gallery.html">Discover</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase-band">
+      <div class="container showcase-band__inner">
+        <div>
+          <span class="eyebrow">The Bloom Edit</span>
+          <h2>Elegant treasures for every occasion.</h2>
+          <p>Soft florals, ambered woods, and gift-ready compositions designed for daily rituals or statement gifting.</p>
+        </div>
+        <a class="btn" href="gallery.html">Shop the edit</a>
+      </div>
+    </section>
+
+    <section class="section" id="best-sellers">
+      <div class="container">
+        <div class="section-heading section-heading--split">
+          <div>
+            <span class="eyebrow">Best sellers</span>
+            <h2>House signatures with real presence.</h2>
+          </div>
+          <p>Three-tone storytelling, strong contrast, and a visual rhythm that feels closer to a luxury catalog than a standard perfume grid.</p>
+        </div>
+
+        <div class="collection-grid collection-grid--feature">
+          <article class="product-card product-card--stacked">
+            <div class="product-media">
+              <img src="images/3.jpeg" alt="Marj fragrance bottle" />
+            </div>
+            <div class="product-body">
+              <div>
+                <h3 class="product-name">Marj</h3>
+                <p class="product-notes">The sense of sheer elegance and affection.</p>
+              </div>
+              <div class="rating"><span>★★★★★</span><span>· AED 175</span></div>
+              <a class="product-action" href="gallery.html">Discover</a>
+            </div>
+          </article>
+
+          <article class="product-card product-card--stacked">
+            <div class="product-media">
+              <img src="images/10.jpeg" alt="Bin Shaikh fragrance bottle" />
+            </div>
+            <div class="product-body">
+              <div>
+                <h3 class="product-name">Bin Shaikh</h3>
+                <p class="product-notes">Concocted in royalty and lavishness.</p>
+              </div>
+              <div class="rating"><span>★★★★★</span><span>· AED 245</span></div>
+              <a class="product-action" href="gallery.html">Discover</a>
+            </div>
+          </article>
+
+          <article class="product-card product-card--stacked">
+            <div class="product-media">
+              <img src="images/14.jpeg" alt="Ignite Oud fragrance bottle" />
+            </div>
+            <div class="product-body">
+              <div>
+                <h3 class="product-name">Ignite Oud</h3>
+                <p class="product-notes">A fragrance that sets the senses ablaze.</p>
+              </div>
+              <div class="rating"><span>★★★★★</span><span>· AED 212</span></div>
+              <a class="product-action" href="gallery.html">Discover</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-banner" id="gift-sets">
+      <div class="container story-banner__inner">
+        <div class="story-banner__media">
+          <img src="images/24.jpeg" alt="Gift set arrangement" />
+        </div>
+        <div class="story-banner__copy">
+          <span class="eyebrow">The art of gifting</span>
+          <h2>Gift sets that feel ceremonial, not transactional.</h2>
+          <p>From satin ribbons to layered packaging, the presentation is tuned to feel generous, polished, and unmistakably premium.</p>
+          <div class="page-actions">
+            <a class="btn" href="gallery.html">Browse gifts</a>
+            <a class="btn secondary" href="cart.html">Open bag</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="craft">
+    <section class="section" id="services">
       <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">How it's made</span>
-          <h2>Composed in three discreet movements.</h2>
-          <p>From selection of raw materials to final bottling, the process is intentionally slow and exacting.</p>
+        <div class="section-heading section-heading--split">
+          <div>
+            <span class="eyebrow">Your journey begins with a scent</span>
+            <h2>Luxury details that reduce friction.</h2>
+          </div>
+          <p>The reference site balances product storytelling with trust markers. This version does the same with shipping, payment, and service assurances.</p>
         </div>
 
-        <div class="process-grid">
-          <article class="step">
-            <div class="step-number">01</div>
-            <h3>Source</h3>
-            <p>We select refined ingredients for clarity, depth, and a luminous dry-down.</p>
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-card__icon">01</span>
+            <h3>Swift shipping</h3>
+            <p>Complimentary delivery on eligible orders with careful packaging.</p>
           </article>
-          <article class="step">
-            <div class="step-number">02</div>
-            <h3>Compose</h3>
-            <p>Our perfumers layer accords with restraint, allowing each material to breathe.</p>
+          <article class="service-card">
+            <span class="service-card__icon">02</span>
+            <h3>Secure payment</h3>
+            <p>Clear checkout flow and trusted payment options for every order.</p>
           </article>
-          <article class="step">
-            <div class="step-number">03</div>
-            <h3>Refine</h3>
-            <p>Each batch is aged and polished until the structure feels seamless and complete.</p>
+          <article class="service-card">
+            <span class="service-card__icon">03</span>
+            <h3>Cash on delivery</h3>
+            <p>Flexible ordering for customers who prefer to pay on arrival.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-card__icon">04</span>
+            <h3>Client care</h3>
+            <p>Personal support for gifting, recommendations, and aftercare.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="spotlight" id="spotlight">
+    <section class="spotlight" id="story">
       <div class="spotlight-inner">
         <div class="container">
           <div class="spotlight-card">
-            <span class="eyebrow">Bestseller spotlight</span>
-            <h2 class="spotlight-title">L'ombre Noire</h2>
+            <span class="eyebrow">A gracious invitation</span>
+            <h2 class="spotlight-title">A boutique experience in digital form.</h2>
             <p>
-              A magnetic blend of suede, incense, and warm resin. The house signature for evenings that demand presence without excess.
+              Velvet Scents blends French composition with warm Middle Eastern depth. The result is a storefront that feels intimate, immersive, and built for discovery.
             </p>
-              <a class="btn" data-i18n="spotlight.reserve" href="cart.html">Reserve Your Bottle</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="testimonials">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Testimonials</span>
-          <h2>Quiet praise from collectors and editors.</h2>
-          <p>Swipe horizontally to read the editorial tone and luxurious restraint that define the house.</p>
-        </div>
-
-        <div class="testimonial-shell">
-          <div class="testimonial-track">
-            <article class="testimonial">
-              <blockquote>“The sort of perfume that makes a room feel curated the moment you enter.”</blockquote>
-              <footer><span>Maison review</span><span>Paris</span></footer>
-            </article>
-            <article class="testimonial">
-              <blockquote>“Elegant, dark, and impeccably composed. It wears like tailored black silk.”</blockquote>
-              <footer><span>Beauty director</span><span>London</span></footer>
-            </article>
-            <article class="testimonial">
-              <blockquote>“A rare example of minimal branding that still feels deeply opulent.”</blockquote>
-              <footer><span>Collector note</span><span>New York</span></footer>
-            </article>
+            <a class="btn" data-i18n="spotlight.reserve" href="about.html">Read the maison story</a>
           </div>
         </div>
       </div>
@@ -457,6 +396,110 @@
     </div>
   </footer>
   <script>
+    (function () {
+      const translations = {
+        en: {
+          'nav.home': 'Home',
+          'nav.gallery': 'Gallery',
+          'nav.about': 'About',
+          'nav.cart': 'Cart',
+          'nav.location': 'Location',
+          'search.placeholder': 'Search fragrances',
+          'search.button': 'Search',
+          'hero.eyebrow': 'Ultra-luxury perfume atelier',
+          'hero.title': 'Perfume as atmosphere.',
+          'hero.copy': 'Velvet Scents composes sensual fragrances with rare depth, quiet confidence, and a cinematic finish. The homepage is built like a luxury storefront: editorial, layered, and intentionally immersive.',
+          'hero.discover': 'Discover the Gallery',
+          'hero.explore': 'Explore the Maison',
+          'spotlight.reserve': 'Reserve your bottle',
+          'newsletter.eyebrow': 'Newsletter',
+          'newsletter.title': 'Join the private list.',
+          'newsletter.copy': 'Receive first access to limited launches, fragrance notes, and intimate maison updates.',
+          'newsletter.email': 'Email address',
+          'newsletter.subscribe': 'Subscribe',
+          'footer.developed': 'Developed by Abdul Rehman Ali',
+          'footer.contact': 'Contact Developer',
+          'footer.linkedin': 'LinkedIn',
+          'footer.house': 'House',
+          'footer.ourstory': 'Our Story',
+          'footer.gallery': 'Gallery',
+          'footer.cart': 'Cart',
+          'footer.clientcare': 'Client Care',
+          'footer.shipping': 'Shipping',
+          'footer.returns': 'Returns',
+          'footer.gifting': 'Gifting',
+          'footer.social': 'Social',
+          'footer.instagram': 'Instagram',
+          'footer.pinterest': 'Pinterest',
+          'footer.contactlink': 'Contact'
+        },
+        ar: {
+          'nav.home': 'الرئيسية',
+          'nav.gallery': 'المعرض',
+          'nav.about': 'من نحن',
+          'nav.cart': 'السلة',
+          'nav.location': 'الموقع',
+          'search.placeholder': 'ابحث عن العطور',
+          'search.button': 'بحث',
+          'hero.eyebrow': 'دار عطور فاخرة للغاية',
+          'hero.title': 'العطر كأجواء',
+          'hero.copy': 'تؤلف Velvet Scents عطوراً حسّية بعمق نادر وثقة هادئة ونهاية سينمائية. صُممت الصفحة الرئيسية كواجهة متجر فاخرة: تحريرية، متعددة الطبقات، وغامرة عن قصد.',
+          'hero.discover': 'استكشف المعرض',
+          'hero.explore': 'اكتشف الدار',
+          'spotlight.reserve': 'احجز زجاجتك',
+          'newsletter.eyebrow': 'النشرة',
+          'newsletter.title': 'انضم إلى القائمة الخاصة',
+          'newsletter.copy': 'تلقَ وصولاً مبكراً إلى الإصدارات المحدودة وملاحظات العطور وتحديثات الدار الحصرية.',
+          'newsletter.email': 'البريد الإلكتروني',
+          'newsletter.subscribe': 'اشترك',
+          'footer.developed': 'تم التطوير بواسطة Abdul Rehman Ali',
+          'footer.contact': 'اتصل بالمطور',
+          'footer.linkedin': 'لينكدإن',
+          'footer.house': 'الدار',
+          'footer.ourstory': 'قصتنا',
+          'footer.gallery': 'المعرض',
+          'footer.cart': 'السلة',
+          'footer.clientcare': 'خدمة العملاء',
+          'footer.shipping': 'الشحن',
+          'footer.returns': 'الإرجاع',
+          'footer.gifting': 'الهدايا',
+          'footer.social': 'التواصل',
+          'footer.instagram': 'انستغرام',
+          'footer.pinterest': 'بنترست',
+          'footer.contactlink': 'اتصل'
+        }
+      };
+
+      function applyTranslations(lang) {
+        const dict = translations[lang] || translations.en;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (dict[key]) el.textContent = dict[key];
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+          const key = el.getAttribute('data-i18n-placeholder');
+          if (dict[key]) el.setAttribute('placeholder', dict[key]);
+        });
+      }
+
+      function setLanguage(lang) {
+        localStorage.setItem('vs_lang', lang);
+        document.documentElement.lang = lang === 'ar' ? 'ar' : 'en';
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        applyTranslations(lang);
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const sel = document.getElementById('lang-select');
+        const stored = localStorage.getItem('vs_lang') || 'en';
+        if (sel) {
+          sel.value = stored;
+          sel.addEventListener('change', e => setLanguage(e.target.value));
+        }
+        setLanguage(stored);
+      });
+    })();
+
     function handleSearch(e) {
       e.preventDefault();
       const q = document.getElementById('search-input').value.trim();
