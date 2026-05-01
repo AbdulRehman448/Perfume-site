@@ -245,7 +245,23 @@
       };
       function applyTranslations(lang) { const dict = translations[lang] || translations.en; document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n'); if(dict[k]) el.textContent = dict[k];}); document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{const k=el.getAttribute('data-i18n-placeholder'); if(dict[k]) el.placeholder = dict[k];}); }
       function setLanguage(lang) { localStorage.setItem('vs_lang', lang); document.documentElement.lang = lang==='ar'?'ar':'en'; document.documentElement.dir = lang==='ar'?'rtl':'ltr'; applyTranslations(lang); }
-      document.addEventListener('DOMContentLoaded', function(){ const sel = document.getElementById('lang-select'); const stored = localStorage.getItem('vs_lang')||'en'; if(sel){ sel.value = stored; sel.addEventListener('change', e=>setLanguage(e.target.value)); } setLanguage(stored); });
+      document.addEventListener('DOMContentLoaded', function(){ const sel = document.getElementById('lang-select'); const stored = localStorage.getItem('vs_lang')||'en'; if(sel){ sel.value = stored; sel.addEventListener('change', e=>setLanguage(e.target.value)); } setLanguage(stored);
+
+        // Theme: default to light unless user explicitly chose dark
+        const themeToggle = document.getElementById('theme-toggle');
+        const storedTheme = localStorage.getItem('vs_theme');
+        if (themeToggle) {
+          if (storedTheme) {
+            themeToggle.checked = storedTheme === 'light';
+          } else {
+            themeToggle.checked = true; // default light
+            localStorage.setItem('vs_theme', 'light');
+          }
+          themeToggle.addEventListener('change', function (e) {
+            localStorage.setItem('vs_theme', e.target.checked ? 'light' : 'dark');
+          });
+        }
+      });
     })();
 
     document.getElementById('contact-dev')?.addEventListener('click', function () {
