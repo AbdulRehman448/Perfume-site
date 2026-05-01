@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,54 +12,39 @@
   <header class="nav-shell">
     <div class="container">
       <input class="hamburger-toggle" type="checkbox" id="menu-toggle" />
-      <label class="hamburger" for="menu-toggle" aria-label="Toggle menu">
-        <span></span>
-      </label>
+      <label class="hamburger" for="menu-toggle" aria-label="Toggle menu"><span></span></label>
       <nav class="navbar" aria-label="Primary">
         <div class="nav-links" aria-label="Main navigation">
-          <a href="index.html">Home</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="about.html">About</a>
-          <a href="cart.html">Cart</a>
+          <a data-i18n="nav.home" href="index.html">Home</a>
+          <a data-i18n="nav.gallery" href="gallery.html">Gallery</a>
+          <a data-i18n="nav.about" href="about.html">About</a>
+          <a data-i18n="nav.cart" href="cart.html">Cart</a>
         </div>
-
         <a class="brand-lockup" href="index.html" aria-label="Velvet Scents home">
           <img class="brand-logo" src="images/logo.jpg" alt="Velvet Scents logo" />
           <span class="brand">VELVET SCENTS</span>
         </a>
-
         <div class="utility">
-          <a class="utility-link" href="#location">Location</a>
+          <a class="utility-link" href="#location" data-i18n="nav.location">Location</a>
           <form id="site-search" class="site-search" role="search" onsubmit="handleSearch(event)">
-            <input id="search-input" name="q" type="search" placeholder="Search fragrances" aria-label="Search fragrances" />
-            <button class="btn btn-search" aria-label="Search">Search</button>
+            <input id="search-input" name="q" type="search" placeholder="Search fragrances" aria-label="Search fragrances" data-i18n-placeholder="search.placeholder" />
+            <button class="btn btn-search" aria-label="Search" data-i18n="search.button">Search</button>
           </form>
-          <input class="theme-toggle" type="checkbox" id="theme-toggle" data-theme-toggle />
+          <input class="theme-toggle" type="checkbox" id="theme-toggle" />
           <label class="theme-switch" for="theme-toggle" aria-label="Toggle light and dark theme">
-            <span class="theme-switch-track" aria-hidden="true">
-              <span class="theme-switch-thumb"></span>
-            </span>
-            <span class="theme-switch-text">
-              <span>Dark</span>
-              <span>Light</span>
-            </span>
+            <span class="theme-switch-track" aria-hidden="true"><span class="theme-switch-thumb"></span></span>
+            <span class="theme-switch-text"><span>Dark</span><span>Light</span></span>
           </label>
           <select id="lang-select" class="lang-select" aria-label="Select language">
             <option value="en">EN</option>
             <option value="ar">العربية</option>
           </select>
           <a class="cart" href="cart.html" aria-label="Cart preview">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M6 7h15l-2 8H8L6 7Zm0 0L5 4H2"></path>
-              <circle cx="9" cy="20" r="1"></circle>
-              <circle cx="17" cy="20" r="1"></circle>
-            </svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h15l-2 8H8L6 7Zm0 0L5 4H2"></path><circle cx="9" cy="20" r="1"></circle><circle cx="17" cy="20" r="1"></circle></svg>
             <span class="badge">0</span>
           </a>
-          
         </div>
       </nav>
-
       <div class="mobile-menu" aria-label="Mobile navigation">
         <div class="mobile-menu-inner">
           <a class="mobile-link" data-i18n="nav.home" href="index.html">Home</a>
@@ -76,12 +61,12 @@
     <section class="page-hero">
       <div class="container">
         <div class="page-hero__inner">
-          <span class="eyebrow">Shopping bag</span>
-          <h1 class="page-title">Your selection, refined and ready.</h1>
-          <p class="page-copy">Review your fragrances inside a static cart preview and submit a purchase request from one elegant, no-JavaScript checkout form.</p>
+          <span class="eyebrow" data-i18n="cart.eyebrow">Shopping bag</span>
+          <h1 class="page-title" data-i18n="cart.title">Your selection, refined and ready.</h1>
+          <p class="page-copy" data-i18n="cart.copy">Review your fragrances inside a static cart preview and submit a purchase request from one elegant, no-JavaScript checkout form.</p>
           <div class="page-actions">
-            <a class="btn" href="gallery.html">Continue Shopping</a>
-            <a class="btn secondary" href="about.html">Learn More</a>
+            <a class="btn" data-i18n="cart.continue" href="gallery.html">Continue Shopping</a>
+            <a class="btn secondary" data-i18n="cart.learnmore" href="about.html">Learn More</a>
           </div>
         </div>
       </div>
@@ -99,11 +84,11 @@
               </div>
               <div class="cart-item__meta">
                 <strong>AED 664</strong>
-                <span>Line total: AED 664</span>
+                <span data-i18n="cart.linetotal">Line total: AED 664</span>
               </div>
             </div>
             <div class="cart-item__controls">
-              <span class="qty-btn" aria-label="Quantity 1">Qty 1</span>
+              <span class="qty-btn" aria-label="Quantity 1" data-i18n="cart.qty">Qty 1</span>
             </div>
           </article>
           <article class="cart-item">
@@ -115,36 +100,36 @@
               </div>
               <div class="cart-item__meta">
                 <strong>AED 687</strong>
-                <span>Line total: AED 687</span>
+                <span data-i18n="cart.linetotal">Line total: AED 687</span>
               </div>
             </div>
             <div class="cart-item__controls">
-              <span class="qty-btn" aria-label="Quantity 1">Qty 1</span>
+              <span class="qty-btn" aria-label="Quantity 1" data-i18n="cart.qty">Qty 1</span>
             </div>
           </article>
         </div>
 
         <aside class="cart-summary">
-          <span class="eyebrow">Checkout</span>
+          <span class="eyebrow" data-i18n="cart.checkout">Checkout</span>
           <div class="summary-row">
-            <strong>Subtotal</strong>
+            <strong data-i18n="cart.subtotal">Subtotal</strong>
             <span>AED 1351</span>
           </div>
           <div class="summary-row">
-            <strong>Shipping</strong>
-            <span>Complimentary</span>
+            <strong data-i18n="cart.shipping">Shipping</strong>
+            <span data-i18n="cart.complimentary">Complimentary</span>
           </div>
           <div class="summary-total">
-            <strong>Total</strong>
+            <strong data-i18n="cart.total">Total</strong>
             <span>AED 1351</span>
           </div>
 
           <form class="checkout-form" action="#" method="post">
-            <input type="text" name="name" placeholder="Full name" aria-label="Full name" required />
-            <input type="email" name="email" placeholder="Email address" aria-label="Email address" required />
-            <textarea name="address" placeholder="Delivery address" aria-label="Delivery address" required></textarea>
-            <button class="btn" type="submit">Place Order</button>
-            <p class="order-message">Private checkout. No payment gateway is connected.</p>
+            <input type="text" name="name" aria-label="Full name" required data-i18n-placeholder="cart.fullname" />
+            <input type="email" name="email" aria-label="Email address" required data-i18n-placeholder="cart.email" />
+            <textarea name="address" aria-label="Delivery address" required data-i18n-placeholder="cart.address"></textarea>
+            <button class="btn" type="submit" data-i18n="cart.placeorder">Place Order</button>
+            <p class="order-message" data-i18n="cart.ordermessage">Private checkout. No payment gateway is connected.</p>
           </form>
         </aside>
       </div>
@@ -156,104 +141,114 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <img class="footer-logo" src="images/logo.jpg" alt="Velvet Scents logo" />
-          <h2>VELVET SCENTS</h2>
-          <p>Ultra-luxury French perfumery crafted with editorial restraint and cinematic depth.</p>
+          <h2 data-i18n="brand">VELVET SCENTS</h2>
+          <p data-i18n="brand.desc">Ultra-luxury French perfumery crafted with editorial restraint and cinematic depth.</p>
           <div class="footer-contact">
-            <span class="footer-credit" data-i18n="footer.developed">Developed by Abdul Rehman Ali</span>
-            <button id="contact-dev" class="btn btn-small" aria-label="Contact developer" data-i18n="footer.contact">Contact Developer</button>
-            <a class="btn btn-small secondary" data-i18n="footer.linkedin" href="https://www.linkedin.com/in/abdul-rehman-ali/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="footer-credit-link" href="mailto:abdulrehman.tp.786@gmail.com" data-i18n="footer.developed">Developed by Abdul Rehman Ali</a>
+            <a class="footer-link" href="https://www.linkedin.com/in/abdul-rehman-ali/" target="_blank" rel="noopener" data-i18n="footer.linkedin">LinkedIn</a>
           </div>
-          <small>2026 Velvet Scents. All rights reserved.</small>
+          <small data-i18n="footer.rights">All rights reserved © VELVET SCENTS 2026</small>
         </div>
-
         <div class="footer-links">
           <h3 data-i18n="footer.house">House</h3>
           <a data-i18n="footer.ourstory" href="about.html">Our Story</a>
           <a data-i18n="footer.gallery" href="gallery.html">Gallery</a>
           <a data-i18n="footer.cart" href="cart.html">Cart</a>
         </div>
-
         <div class="footer-links">
           <h3 data-i18n="footer.clientcare">Client Care</h3>
           <a data-i18n="footer.shipping" href="#location">Shipping</a>
           <a data-i18n="footer.returns" href="#location">Returns</a>
           <a data-i18n="footer.gifting" href="#location">Gifting</a>
         </div>
-
         <div class="socials">
           <h3 data-i18n="footer.social">Social</h3>
-          <a data-i18n="footer.instagram" href="#top">Instagram</a>
-          <a data-i18n="footer.pinterest" href="#top">Pinterest</a>
-          <a data-i18n="footer.contactlink" href="#top">Contact</a>
+          <a href="https://wa.me/qr/4EGSY3HZUCP3E1" target="_blank" rel="noopener" data-i18n="footer.whatsapp">WhatsApp</a>
+          <a href="https://vt.tiktok.com/ZSHwNjFkg" target="_blank" rel="noopener" data-i18n="footer.tiktok">TikTok</a>
         </div>
-
         <div class="footer-location" id="location">
-          <h3>Shop Location (UAE)</h3>
-          <p>Velvet Scents Atelier — Dubai, United Arab Emirates</p>
-          <label for="uae-location">Select Emirate / City</label>
-          <select id="uae-location" aria-label="UAE location">
-            <optgroup label="Abu Dhabi">
-              <option>Abu Dhabi</option>
-              <option>Al Ain</option>
-            </optgroup>
-            <optgroup label="Dubai">
-              <option>Dubai</option>
-            </optgroup>
-            <optgroup label="Sharjah">
-              <option>Sharjah</option>
-              <option>Khor Fakkan</option>
-            </optgroup>
-            <optgroup label="Ajman">
-              <option>Ajman</option>
-            </optgroup>
-            <optgroup label="Umm Al Quwain">
-              <option>Umm Al Quwain</option>
-            </optgroup>
-            <optgroup label="Ras Al Khaimah">
-              <option>Ras Al Khaimah</option>
-            </optgroup>
-            <optgroup label="Fujairah">
-              <option>Fujairah</option>
-            </optgroup>
-          </select>
+          <h3 data-i18n="footer.location">Shop Location</h3>
+          <p data-i18n="footer.location.addr">Velvet Scents Atelier, Paris, France</p>
           <div class="map-frame">
-            <iframe
-              title="Velvet Scents UAE shop location map"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=55.22%2C25.05%2C55.36%2C25.12&layer=mapnik"
-            ></iframe>
+            <iframe title="Velvet Scents Location Map" width="100%" height="220" style="border-radius:12px;border:none;" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.8897223166755!2d2.3376!3d48.8606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fb7f4c8a3e5%3A0x1234567890abcdef!2sVelvet%20Scents%20Atelier!5e0!3m2!1sen!2sfr!4v1234567890"></iframe>
           </div>
         </div>
       </div>
     </div>
   </footer>
-  <script>
-    function handleSearch(e) {
-      e && e.preventDefault();
-      const q = document.getElementById('search-input').value.trim();
-      if (!q) return;
-      localStorage.setItem('vs_search', q);
-      location.href = 'gallery.html';
-    }
 
+  <script>
     (function () {
       const translations = {
-        en: { 'nav.home':'Home','nav.gallery':'Gallery','nav.about':'About','nav.cart':'Cart','search.placeholder':'Search fragrances','footer.contact':'Contact Developer','footer.developed':'Developed by Abdul Rehman Ali' },
-        ar: { 'nav.home':'الرئيسية','nav.gallery':'المعرض','nav.about':'من نحن','nav.cart':'السلة','search.placeholder':'ابحث عن العطور','footer.contact':'اتصل بالمطور','footer.developed':'تم التطوير بواسطة Abdul Rehman Ali' }
+        en: {
+          'nav.home': 'Home', 'nav.gallery': 'Gallery', 'nav.about': 'About', 'nav.cart': 'Cart', 'nav.location': 'Location',
+          'search.placeholder': 'Search fragrances', 'search.button': 'Search',
+          'cart.eyebrow': 'Shopping bag', 'cart.title': 'Your selection, refined and ready.',
+          'cart.copy': 'Review your fragrances inside a static cart preview and submit a purchase request from one elegant, no-JavaScript checkout form.',
+          'cart.continue': 'Continue Shopping', 'cart.learnmore': 'Learn More',
+          'cart.linetotal': 'Line total:', 'cart.qty': 'Qty 1',
+          'cart.checkout': 'Checkout', 'cart.subtotal': 'Subtotal', 'cart.shipping': 'Shipping',
+          'cart.complimentary': 'Complimentary', 'cart.total': 'Total',
+          'cart.fullname': 'Full name', 'cart.email': 'Email address', 'cart.address': 'Delivery address',
+          'cart.placeorder': 'Place Order', 'cart.ordermessage': 'Private checkout. No payment gateway is connected.',
+          'brand': 'VELVET SCENTS', 'brand.desc': 'Ultra-luxury French perfumery crafted with editorial restraint and cinematic depth.',
+          'footer.developed': 'Developed by Abdul Rehman Ali', 'footer.linkedin': 'LinkedIn', 'footer.rights': 'All rights reserved © VELVET SCENTS 2026',
+          'footer.house': 'House', 'footer.ourstory': 'Our Story', 'footer.gallery': 'Gallery', 'footer.cart': 'Cart',
+          'footer.clientcare': 'Client Care', 'footer.shipping': 'Shipping', 'footer.returns': 'Returns', 'footer.gifting': 'Gifting',
+          'footer.social': 'Social', 'footer.whatsapp': 'WhatsApp', 'footer.tiktok': 'TikTok',
+          'footer.location': 'Shop Location', 'footer.location.addr': 'Velvet Scents Atelier, Paris, France'
+        },
+        ar: {
+          'nav.home': 'الرئيسية', 'nav.gallery': 'المعرض', 'nav.about': 'من نحن', 'nav.cart': 'السلة', 'nav.location': 'الموقع',
+          'search.placeholder': 'ابحث عن العطور', 'search.button': 'بحث',
+          'cart.eyebrow': 'حقيبة التسوق', 'cart.title': 'اختيارك، مرهف وجاهز.',
+          'cart.copy': 'راجع عطورك داخل معاينة سلة ثابتة وقدم طلب شراء من نموذج دفع واحد أنيق خالٍ من JavaScript.',
+          'cart.continue': 'متابعة التسوق', 'cart.learnmore': 'اعرف المزيد',
+          'cart.linetotal': 'إجمالي السطر:', 'cart.qty': 'الكمية 1',
+          'cart.checkout': 'الدفع', 'cart.subtotal': 'المجموع الفرعي', 'cart.shipping': 'الشحن',
+          'cart.complimentary': 'مجاني', 'cart.total': 'المجموع',
+          'cart.fullname': 'الاسم الكامل', 'cart.email': 'عنوان البريد الإلكتروني', 'cart.address': 'عنوان التسليم',
+          'cart.placeorder': 'تقديم الطلب', 'cart.ordermessage': 'دفع خاص. لا توجد بوابة دفع متصلة.',
+          'brand': 'VELVET SCENTS', 'brand.desc': 'عطارة فرنسية فاخرة للغاية مصنوعة بضبط تحريري وعمق سينمائي.',
+          'footer.developed': 'تم التطوير بواسطة Abdul Rehman Ali', 'footer.linkedin': 'LinkedIn', 'footer.rights': 'جميع الحقوق محفوظة © VELVET SCENTS 2026',
+          'footer.house': 'الدار', 'footer.ourstory': 'قصتنا', 'footer.gallery': 'المعرض', 'footer.cart': 'السلة',
+          'footer.clientcare': 'خدمة العملاء', 'footer.shipping': 'الشحن', 'footer.returns': 'المرتجعات', 'footer.gifting': 'الهدايا',
+          'footer.social': 'التواصل الاجتماعي', 'footer.whatsapp': 'واتساب', 'footer.tiktok': 'تيك توك',
+          'footer.location': 'موقع المتجر', 'footer.location.addr': 'دار Velvet Scents، باريس، فرنسا'
+        }
       };
-      function applyTranslations(lang) { const dict = translations[lang] || translations.en; document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n'); if(dict[k]) el.textContent = dict[k];}); document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{const k=el.getAttribute('data-i18n-placeholder'); if(dict[k]) el.placeholder = dict[k];}); }
-      function setLanguage(lang) { localStorage.setItem('vs_lang', lang); document.documentElement.lang = lang==='ar'?'ar':'en'; document.documentElement.dir = lang==='ar'?'rtl':'ltr'; applyTranslations(lang); }
-      document.addEventListener('DOMContentLoaded', function(){ const sel = document.getElementById('lang-select'); const stored = localStorage.getItem('vs_lang')||'en'; if(sel){ sel.value = stored; sel.addEventListener('change', e=>setLanguage(e.target.value)); } setLanguage(stored);
 
-        // Theme: default to light unless user explicitly chose dark
+      function applyTranslations(lang) {
+        const dict = translations[lang] || translations.en;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (dict[key]) el.textContent = dict[key];
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+          const key = el.getAttribute('data-i18n-placeholder');
+          if (dict[key]) el.setAttribute('placeholder', dict[key]);
+        });
+      }
+
+      function setLanguage(lang) {
+        localStorage.setItem('vs_lang', lang);
+        document.documentElement.lang = lang === 'ar' ? 'ar' : 'en';
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        applyTranslations(lang);
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const sel = document.getElementById('lang-select');
+        const stored = localStorage.getItem('vs_lang') || 'ar';
+        if(sel){ sel.value = stored; sel.addEventListener('change', e => setLanguage(e.target.value)); }
+        setLanguage(stored);
         const themeToggle = document.getElementById('theme-toggle');
         const storedTheme = localStorage.getItem('vs_theme');
         if (themeToggle) {
           if (storedTheme) {
             themeToggle.checked = storedTheme === 'light';
           } else {
-            themeToggle.checked = true; // default light
+            themeToggle.checked = true;
             localStorage.setItem('vs_theme', 'light');
           }
           themeToggle.addEventListener('change', function (e) {
@@ -263,9 +258,37 @@
       });
     })();
 
-    document.getElementById('contact-dev')?.addEventListener('click', function () {
-      const email = 'abdulrehman.tp.786@gmail.com';
-      window.location.href = 'mailto:' + email + '?subject=Website%20enquiry';
+    function handleSearch(e) {
+      e.preventDefault();
+      const q = document.getElementById('search-input').value.trim();
+      if (!q) return;
+      localStorage.setItem('vs_search', q);
+      location.href = 'gallery.html';
+    }
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const mapFrame = document.querySelector('.map-frame iframe');
+      if (mapFrame) {
+        let lastDistance = 0;
+        mapFrame.parentElement.addEventListener('touchmove', function (e) {
+          if (e.touches.length === 2) {
+            const dx = e.touches[0].clientX - e.touches[1].clientX;
+            const dy = e.touches[0].clientY - e.touches[1].clientY;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            if (lastDistance && distance > lastDistance + 10) {
+              mapFrame.style.transform = 'scale(1.05)';
+            } else if (lastDistance && distance < lastDistance - 10) {
+              mapFrame.style.transform = 'scale(0.95)';
+            }
+            lastDistance = distance;
+          }
+        }, false);
+        mapFrame.parentElement.addEventListener('touchend', function () {
+          mapFrame.style.transform = 'scale(1)';
+          lastDistance = 0;
+        }, false);
+      }
     });
   </script>
 </body>
