@@ -51,6 +51,7 @@ body:has(.theme-toggle:checked) {
 
 html {
   scroll-behavior: smooth;
+  font-size: 18px; /* base scaling to normalize perceived zoom */
 }
 
 * {
@@ -506,10 +507,21 @@ input {
   direction: rtl;
 }
 
-[dir="rtl"] .nav-links { direction: rtl; }
+[dir="rtl"] .nav-links { direction: rtl; flex-direction: row-reverse; }
 [dir="rtl"] .brand-lockup { justify-self: center; }
 [dir="rtl"] .hero-grid { text-align: right; }
 [dir="rtl"] .site-search { direction: rtl; }
+[dir="rtl"] .utility { justify-self: start; }
+[dir="rtl"] .badge { left: -0.05rem; right: auto; }
+
+/* Button focus + accessibility improvements */
+.btn:focus-visible {
+  outline: 3px solid rgba(201,168,76,0.22);
+  outline-offset: 4px;
+}
+
+/* Slightly stronger hover for interactive feel */
+.btn:hover { filter: brightness(1.03); }
 
 .mobile-link {
   color: var(--ivory);
