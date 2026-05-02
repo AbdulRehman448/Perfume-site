@@ -13,12 +13,12 @@
       } catch (error) {}
     }());
   </script>
-  <meta name="description" content="About Velvet Scents - a premium perfume atelier in Paris." />
-  <meta property="og:title" content="Velvet Scents | About" />
+  <meta name="description" content="Velvet Scents product detail page." />
+  <meta property="og:title" content="Velvet Scents | Product" />
   <meta property="og:image" content="images/logo.jpg" />
-  <meta property="og:url" content="https://velvet-scent.netlify.app/about.html" />
-  <link rel="canonical" href="https://velvet-scent.netlify.app/about.html" />
-  <title>Velvet Scents | About</title>
+  <meta property="og:url" content="https://velvet-scent.netlify.app/product.html" />
+  <link rel="canonical" href="https://velvet-scent.netlify.app/product.html" />
+  <title>Velvet Scents | Product</title>
   <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
@@ -37,12 +37,12 @@
           <a data-i18n="nav.cart" href="cart.html">Cart</a>
         </div>
         <a class="brand-lockup" href="index.html" aria-label="Velvet Scents home">
-          <img class="brand-logo" src="images/logo.jpg" alt="Velvet Scents logo" />
+          <img class="brand-logo" src="images/logo.jpg" alt="Velvet Scents logo" width="96" height="96" />
           <span class="brand">VELVET SCENTS</span>
         </a>
         <div class="utility">
           <a class="utility-link" href="#location" data-i18n="nav.location">Location</a>
-          <form id="site-search" class="site-search" role="search" onsubmit="handleSearch(event)">
+          <form id="site-search" class="site-search" role="search">
             <input id="search-input" name="q" type="search" placeholder="Search fragrances" aria-label="Search fragrances" data-i18n-placeholder="search.placeholder" />
             <button class="btn btn-search" aria-label="Search" data-i18n="search.button">Search</button>
           </form>
@@ -73,56 +73,13 @@
     </div>
   </header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <div class="page-hero__inner">
-          <span class="eyebrow" data-i18n="about.eyebrow">Maison profile</span>
-          <h1 class="page-title" data-i18n="about.title">A fragrance house made for quiet magnetism.</h1>
-          <p class="page-copy" data-i18n="about.copy">Velvet Scents is shaped by French composition, sculptural packaging, and a devotion to long-lasting atmosphere. The brand is built for people who want elegance with presence.</p>
-          <div class="page-actions">
-            <a class="btn" data-i18n="about.browse" href="gallery.html">Browse the Gallery</a>
-            <a class="btn secondary" data-i18n="about.opencart" href="cart.html">Open Cart</a>
-          </div>
-        </div>
-      </div>
-    </section>
+  <main data-product-page></main>
 
-    <section class="section">
-      <div class="container about-grid">
-        <div class="story-media">
-          <img src="images/14.jpeg" alt="Velvet Scents atelier image" />
-        </div>
-        <div class="about-panel">
-          <span class="eyebrow" data-i18n="about.philosophy.eyebrow">Our philosophy</span>
-          <h3 data-i18n="about.philosophy.title">Craft, composition, and discretion — a modern maison.</h3>
-          <p data-i18n="about.philosophy.copy1">Velvet Scents began as a practice: a small atelier where perfumers and designers worked together to build perfumes that behave like objects — quiet, precise, and built to last. We source responsibly, favour extrait-level concentrations, and work on small, numbered batches that age before release.</p>
-          <p data-i18n="about.philosophy.copy2">Our approach blends classical French composition with contemporary restraint: top notes that promise, heart notes that reveal, and base structures that linger. Packaging is curated to reflect ritual — tactile boxes, satin ribbons, and print materials chosen for longevity.</p>
-          <div class="about-points">
-            <div class="about-point">
-              <strong data-i18n="about.points.craft">Craft</strong>
-              <p data-i18n="about.points.craft.desc">Long maturation, curated ingredients, and close collaboration with organoleptic evaluators.</p>
-            </div>
-            <div class="about-point">
-              <strong data-i18n="about.points.presentation">Presentation</strong>
-              <p data-i18n="about.points.presentation.desc">Objects meant to be displayed, wrapped, and gifted — not discarded.</p>
-            </div>
-            <div class="about-point">
-              <strong data-i18n="about.points.service">Service</strong>
-              <p data-i18n="about.points.service.desc">Personal consultations, discreet shipping across the UAE, and white‑glove gifting on request.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- SHARED COMPONENT — keep in sync -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img class="footer-logo" src="images/logo.jpg" alt="Velvet Scents logo" />
+          <img class="footer-logo" src="images/logo.jpg" alt="Velvet Scents logo" width="96" height="96" />
           <h2 data-i18n="brand">VELVET SCENTS</h2>
           <p data-i18n="brand.desc">Ultra-luxury French perfumery crafted with editorial restraint and cinematic depth.</p>
           <div class="footer-contact">
@@ -150,7 +107,7 @@
         </div>
         <div class="footer-location" id="location">
           <h3 data-i18n="footer.location">Shop Location</h3>
-          <p data-i18n="footer.location.addr">Velvet Scents Atelier, Paris, France</p>
+          <p data-i18n="footer.location.addr">Velvet Scents Atelier, Dubai, UAE</p>
           <div class="map-frame">
             <iframe title="Velvet Scents Location Map" width="100%" height="220" style="border-radius:12px;border:none;" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.8897223166755!2d2.3376!3d48.8606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fb7f4c8a3e5%3A0x1234567890abcdef!2sVelvet%20Scents%20Atelier!5e0!3m2!1sen!2sfr!4v1234567890"></iframe>
           </div>

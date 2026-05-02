@@ -1,15 +1,30 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('vs_theme') === 'light' ? 'light' : 'dark';
+        var root = document.documentElement;
+        root.dataset.theme = theme;
+        root.classList.add(theme === 'light' ? 'theme-light' : 'theme-dark');
+      } catch (error) {}
+    }());
+  </script>
   <meta name="description" content="Velvet Scents - ultra-luxury perfume atelier with a curated gallery and premium cart experience." />
+  <meta property="og:title" content="Velvet Scents | Perfume Atelier" />
+  <meta property="og:image" content="images/logo.jpg" />
+  <meta property="og:url" content="https://velvet-scent.netlify.app/index.html" />
+  <link rel="canonical" href="https://velvet-scent.netlify.app/index.html" />
   <title>Velvet Scents | Perfume Atelier</title>
   <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
+  <!-- SHARED COMPONENT — keep in sync -->
   <header class="nav-shell">
     <div class="container">
       <input class="hamburger-toggle" type="checkbox" id="menu-toggle" />
@@ -22,125 +37,8 @@
           <a data-i18n="nav.gallery" href="gallery.html">Gallery</a>
           <a data-i18n="nav.about" href="about.html">About</a>
           <a data-i18n="nav.cart" href="cart.html">Cart</a>
-        </div>
-
-        <a class="brand-lockup" href="index.html" aria-label="Velvet Scents home">
-          <img class="brand-logo" src="images/logo.jpg" alt="Velvet Scents logo" />
-          <span class="brand">VELVET SCENTS</span>
-        </a>
-
-        <div class="utility">
-          <a class="utility-link" href="#location">Location</a>
-          <form id="site-search" class="site-search" role="search" onsubmit="handleSearch(event)">
-            <input id="search-input" name="q" type="search" placeholder="Search fragrances" aria-label="Search fragrances" data-i18n-placeholder="search.placeholder" />
-            <button class="btn btn-search" aria-label="Search" data-i18n="search.button">Search</button>
-          </form>
-          <input class="theme-toggle" type="checkbox" id="theme-toggle" />
-          <label class="theme-switch" for="theme-toggle" aria-label="Toggle light and dark theme">
-            <span class="theme-switch-track" aria-hidden="true">
-              <span class="theme-switch-thumb"></span>
-            </span>
-            <span class="theme-switch-text">
-              <span>Dark</span>
-              <span>Light</span>
-            </span>
-          </label>
-          <select id="lang-select" class="lang-select" aria-label="Select language">
-            <option value="en">EN</option>
-            <option value="ar">العربية</option>
-          </select>
-          <a class="cart" href="cart.html" aria-label="Cart preview">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M6 7h15l-2 8H8L6 7Zm0 0L5 4H2"></path>
-              <circle cx="9" cy="20" r="1"></circle>
-              <circle cx="17" cy="20" r="1"></circle>
-            </svg>
-            <span class="badge">0</span>
-          </a>
-          
-        </div>
-      </nav>
-
-      <div class="mobile-menu" aria-label="Mobile navigation">
-        <div class="mobile-menu-inner">
-            <a class="mobile-link" data-i18n="nav.home" href="index.html">Home</a>
-            <a class="mobile-link" data-i18n="nav.gallery" href="gallery.html">Gallery</a>
-            <a class="mobile-link" data-i18n="nav.about" href="about.html">About</a>
-            <a class="mobile-link" data-i18n="nav.cart" href="cart.html">Cart</a>
-            <a class="mobile-link" data-i18n="nav.location" href="#location">Location</a>
-          </div>
-      </div>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero hero-home">
-      <div class="container hero-home__grid">
-        <div class="hero-home__copy">
-          <span class="eyebrow" data-i18n="hero.eyebrow">Ultra-luxury perfume atelier</span>
-          <h1 class="hero-title hero-home__title" data-i18n="hero.title">Perfume as atmosphere.</h1>
-          <p class="hero-copy hero-home__lede" data-i18n="hero.copy">
-            Velvet Scents composes sensual fragrances with rare depth, quiet confidence, and a cinematic finish. The homepage is built like a luxury storefront: editorial, layered, and intentionally immersive.
-          </p>
-          <div class="hero-actions">
-            <a class="btn" data-i18n="hero.discover" href="gallery.html">Discover the Gallery</a>
-            <a class="btn secondary" data-i18n="hero.explore" href="about.html">Explore the Maison</a>
-          </div>
-          <div class="hero-meta hero-home__meta" aria-label="Brand highlights">
-            <div class="meta-item">
-              <strong data-i18n="meta.craft">Maison crafting</strong>
-              <span data-i18n="meta.craft.desc">Small-batch compositions</span>
-            </div>
-            <div class="meta-item">
-              <strong data-i18n="meta.limited">Limited editions</strong>
-              <span data-i18n="meta.limited.desc">Rare, numbered releases</span>
-            </div>
-            <div class="meta-item">
-              <strong data-i18n="meta.gift">Gift-ready service</strong>
-              <span data-i18n="meta.gift.desc">Wrapped and delivered with care</span>
-            </div>
-          </div>
-          <div class="hero-home__ticker" aria-label="Featured scent names">
-            <span>Marj</span>
-            <span>Oud &amp; Roses</span>
-            <span>Bin Shaikh</span>
-            <span>Ignite Oud</span>
-            <span>The Bloom Edit</span>
-          </div>
-        </div>
-
-        <div class="hero-home__showcase" aria-label="Featured fragrance showcase">
-          <article class="hero-home__feature hero-home__feature--large">
-            <img src="images/5.jpeg" alt="Featured perfume bottle" />
-            <div>
-              <span>Featured drop</span>
-              <h2>Obsidian Amber</h2>
-              <p>Warm resin, black fig, and smoked woods in a deep, refined finish.</p>
-            </div>
-          </article>
-
-          <div class="hero-home__stack">
-            <article class="hero-home__feature">
-              <img src="images/2.jpeg" alt="Luxury perfume bottle" />
-              <div>
-                <span>Signature</span>
-                <h3>Cuir Lumière</h3>
-              </div>
-            </article>
-            <article class="hero-home__feature">
-              <img src="images/11.jpeg" alt="Dark amber perfume bottle" />
-              <div>
-                <span>Bestseller</span>
-                <h3>L'ombre Noire</h3>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="marquee" aria-label="Brand marquee">
-      <div class="marquee-track">
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js" defer></script>
+        <script src="app.js" defer></script>
         <span><strong>VELVET SCENTS</strong> - MARJ - OUD &amp; ROSES - BIN SHAIKH - IGNITE OUD -</span>
         <span><strong>VELVET SCENTS</strong> - MARJ - OUD &amp; ROSES - BIN SHAIKH - IGNITE OUD -</span>
         <span><strong>VELVET SCENTS</strong> - MARJ - OUD &amp; ROSES - BIN SHAIKH - IGNITE OUD -</span>
@@ -344,6 +242,7 @@
     </section>
   </main>
 
+  <!-- SHARED COMPONENT — keep in sync -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
