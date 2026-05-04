@@ -10,32 +10,98 @@ const STORAGE_KEYS = {
 const PRODUCTS = [
     {
         id: 1,
-        nameEn: "Pack of 6 Velvet Scent Collection",
-        nameAr: "باقة 6 من مجموعة فيلفت سينت",
-        price: 39,
-        benefitEn: "Six signature minis for daily rotation.",
-        benefitAr: "ستة عطور مميزة للاستخدام اليومي.",
+        nameEn: "Noir Éclat",
+        nameAr: "نوار إكلات",
+        price: 285,
         image: "images/1.jpeg",
         rating: "★★★★★"
     },
     {
         id: 2,
-        nameEn: "Mini Pocket Perfume Set",
-        nameAr: "مجموعة عطر الجيب المصغرة",
-        price: 59,
-        benefitEn: "Compact set for travel, office, and on-the-go.",
-        benefitAr: "حجم عملي للسفر والعمل والاستخدام السريع.",
+        nameEn: "Cuir Lumière",
+        nameAr: "كوير لومييير",
+        price: 310,
         image: "images/2.jpeg",
         rating: "★★★★★"
     },
     {
         id: 3,
-        nameEn: "Perfume Bundle + Free Wallet",
-        nameAr: "باقة عطور مع محفظة مجانية",
-        price: 65,
-        benefitEn: "Value bundle with premium scent and free wallet.",
-        benefitAr: "عرض اقتصادي مع عطر فاخر ومحفظة مجانية.",
+        nameEn: "Marj",
+        nameAr: "مرج",
+        price: 295,
+        image: "images/4.jpeg",
+        rating: "★★★★★"
+    },
+    {
+        id: 4,
+        nameEn: "Oud & Roses",
+        nameAr: "عود وورد",
+        price: 420,
+        image: "images/5.jpeg",
+        rating: "★★★★★"
+    },
+    {
+        id: 5,
+        nameEn: "Bin Shaikh",
+        nameAr: "بن شيخ",
+        price: 450,
+        image: "images/10.jpeg",
+        rating: "★★★★★"
+    },
+    {
+        id: 6,
+        nameEn: "Ignite Oud",
+        nameAr: "إيجنايت عود",
+        price: 475,
+        image: "images/11.jpeg",
+        rating: "★★★★★"
+    },
+    {
+        id: 7,
+        nameEn: "Rose Diamond",
+        nameAr: "روز دايموند",
+        price: 380,
+        image: "images/12.jpeg",
+        rating: "★★★★★"
+    },
+    {
+        id: 8,
+        nameEn: "Signature Duo Set",
+        nameAr: "مجموعة ديو الخاصة",
+        price: 520,
         image: "images/3.jpeg",
+        rating: "★★★★★"
+    },
+    {
+        id: 9,
+        nameEn: "Premium Trio Collection",
+        nameAr: "مجموعة ثلاثية فاخرة",
+        price: 750,
+        image: "images/7.jpeg",
+        rating: "★★★★★"
+    },
+    {
+        id: 10,
+        nameEn: "Bakhoor Classic",
+        nameAr: "بخور كلاسيكي",
+        price: 180,
+        image: "images/18.jpeg",
+        rating: "★★★★★"
+    },
+    {
+        id: 11,
+        nameEn: "Oud Maliki",
+        nameAr: "عود ملكي",
+        price: 220,
+        image: "images/19.jpeg",
+        rating: "★★★★★"
+    },
+    {
+        id: 12,
+        nameEn: "Mini Pocket Set",
+        nameAr: "مجموعة الجيب الصغيرة",
+        price: 59,
+        image: "images/20.jpeg",
         rating: "★★★★★"
     }
 ];
@@ -261,22 +327,35 @@ function getProductName(product) {
 }
 
 function getProductBenefit(product) {
-    return currentLang === "ar" ? product.benefitAr : product.benefitEn;
+    return ""; // Removed benefit text for cleaner UI
 }
 
-function buildDirectOrderMessage(productName, price) {
+let currentOrderProduct = null;
+
+function openOrderForm(productId) {
+    const product = PRODUCTS.find((item) => item.id === productId);
+    if (!product) return;
+    
+    currentOrderProduct = product;
+    document.getElementById("orderFormTitle").textContent = currentLang === "en" 
+        ? `Order: ${product.nameEn}` 
+        : `الطلب: ${product.nameAr}`;
+    openModal("checkoutModal");
+}
+
+function buildOrderMessage(product, customer) {
     const lines = [
         "Hello, I would like to place an order from Velvet Scent.",
         "",
-        `Product: ${productName}`,
-        `Price: AED ${price}`,
+        `🛍 Product: ${product.nameEn}`,
+        `💰 Price: AED ${product.price}`,
         "",
-        "Full Name:",
-        "Phone Number:",
-        "Delivery Address (UAE):",
-        "City:",
+        `👤 Full Name: ${customer.fullName}`,
+        `📞 Phone: ${customer.phoneNumber}`,
+        `📍 Address: ${customer.deliveryAddress}`,
+        `🏙 City: ${customer.city}`,
         "",
-        "Payment Method: Cash on Delivery",
+        "💳 Payment: Cash on Delivery",
         "",
         "Please confirm my order. Thank you!"
     ];
@@ -328,12 +407,9 @@ function renderProducts() {
                 <div class="product-body">
                     <h3>${getProductName(product)}</h3>
                     <p class="price-line">AED ${product.price}</p>
-                    <p>${getProductBenefit(product)}</p>
                     <p class="stars">${product.rating}</p>
                     <div class="product-actions">
-                        <button class="btn btn-outline quick-view-btn" data-id="${product.id}">${t("quickView")}</button>
-                        <button class="btn btn-gold direct-order-btn" data-id="${product.id}">${t("orderWhatsapp")}</button>
-                        <button class="btn btn-outline add-cart-btn" data-id="${product.id}">${t("addToCart")}</button>
+                        <button class="btn btn-gold order-now-btn" data-id="${product.id}" type="button">Order Now</button>
                     </div>
                 </div>
             </article>
@@ -344,26 +420,10 @@ function renderProducts() {
 }
 
 function bindProductActions() {
-    document.querySelectorAll(".quick-view-btn").forEach((btn) => {
+    document.querySelectorAll(".order-now-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
             const id = Number(btn.dataset.id);
-            openQuickView(id);
-        });
-    });
-
-    document.querySelectorAll(".direct-order-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-            const id = Number(btn.dataset.id);
-            const product = PRODUCTS.find((p) => p.id === id);
-            if (!product) return;
-            openWhatsappWithText(buildDirectOrderMessage(getProductName(product), product.price));
-        });
-    });
-
-    document.querySelectorAll(".add-cart-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-            const id = Number(btn.dataset.id);
-            addToCart(id);
+            openOrderForm(id);
         });
     });
 }
@@ -753,47 +813,54 @@ function bindEvents() {
         restartSliderTimer();
     });
 
-    ["heroWhatsappBtn", "heroWhatsappBtn2", "heroWhatsappBtn3", "exitOrderBtn"].forEach((id) => {
+    ["heroWhatsappBtn", "heroWhatsappBtn2", "heroWhatsappBtn3"].forEach((id) => {
         document.getElementById(id)?.addEventListener("click", () => {
-            openWhatsappWithText(encodeURIComponent("Hello, I would like to place an order from Velvet Scent."));
+            // Scroll to products
+            document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" });
         });
     });
 
-    document.getElementById("stickyOrderBtn")?.addEventListener("click", openCartDrawer);
-
-    document.getElementById("quickViewOrderBtn")?.addEventListener("click", () => {
-        if (!selectedQuickProduct) return;
-        openWhatsappWithText(buildDirectOrderMessage(getProductName(selectedQuickProduct), selectedQuickProduct.price));
+    document.getElementById("stickyOrderBtn")?.addEventListener("click", () => {
+        document.getElementById("shop")?.scrollIntoView({ behavior: "smooth" });
     });
+
+
 
     document.getElementById("closeQuickViewBtn")?.addEventListener("click", closeAllOverlays);
     document.getElementById("closeCheckoutBtn")?.addEventListener("click", closeAllOverlays);
     document.getElementById("closeExitIntentBtn")?.addEventListener("click", closeAllOverlays);
 
-    document.getElementById("checkoutWhatsappBtn")?.addEventListener("click", () => {
-        if (cart.length === 0) return;
-        openModal("checkoutModal");
-    });
+
 
     document.getElementById("checkoutForm")?.addEventListener("submit", (event) => {
         event.preventDefault();
 
-        if (cart.length === 0) return;
+        if (!currentOrderProduct) return;
+
+        const fullName = document.getElementById("fullName")?.value.trim() || "";
+        const phoneNumber = document.getElementById("phoneNumber")?.value.trim() || "";
+        const deliveryAddress = document.getElementById("deliveryAddress")?.value.trim() || "";
+        const city = document.getElementById("city")?.value.trim() || "";
+
+        // Basic validation
+        if (!fullName || !phoneNumber || !deliveryAddress || !city) {
+            alert("Please fill in all required fields");
+            return;
+        }
 
         const customer = {
-            fullName: document.getElementById("fullName")?.value.trim() || "",
-            phoneNumber: document.getElementById("phoneNumber")?.value.trim() || "",
-            deliveryAddress: document.getElementById("deliveryAddress")?.value.trim() || "",
-            city: document.getElementById("city")?.value.trim() || ""
+            fullName: fullName,
+            phoneNumber: phoneNumber,
+            deliveryAddress: deliveryAddress,
+            city: city
         };
 
-        const encodedText = buildCartOrderMessage(customer);
+        const encodedText = buildOrderMessage(currentOrderProduct, customer);
         openWhatsappWithText(encodedText);
 
-        cart = [];
-        persistCart();
         closeAllOverlays();
         event.target.reset();
+        currentOrderProduct = null;
     });
 
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {

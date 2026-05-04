@@ -260,13 +260,13 @@
     <div class="modal" id="checkoutModal" aria-hidden="true">
         <div class="modal-content">
             <button class="icon-btn modal-close" id="closeCheckoutBtn" type="button" aria-label="Close checkout">✕</button>
-            <h3 data-i18n="checkoutFormTitle">Complete Your WhatsApp Order</h3>
+            <h3 id="orderFormTitle" data-i18n="checkoutFormTitle">Complete Your WhatsApp Order</h3>
             <form id="checkoutForm" class="checkout-form">
                 <label data-i18n="fullName">Full Name</label>
                 <input type="text" id="fullName" required>
 
                 <label data-i18n="phoneNumber">Phone Number</label>
-                <input type="tel" id="phoneNumber" required>
+                <input type="tel" id="phoneNumber" required placeholder="+971 5X XXX XXXX">
 
                 <label data-i18n="deliveryAddress">Delivery Address (UAE)</label>
                 <input type="text" id="deliveryAddress" required>
