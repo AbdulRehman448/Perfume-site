@@ -3,433 +3,491 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velvet Scents | Iconic Luxury Arabic Perfumery</title>
+    <title>Velvet Scents | Iconic Indulgence — Luxury Arabic Perfumery</title>
     <meta name="description" content="Discover Velvet Scents - a private perfume house in the UAE blending French structure with Arabian depth. Explore our signature fragrances, Dakhoon, and gift sets.">
-    
-    <!-- SEO & Icons -->
     <link rel="icon" href="images/logo.jpg" type="image/jpeg">
-    
-    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- 1. Top Announcement Bar -->
-    <div class="announcement-bar">
-        Free shipping across UAE on orders above AED 200
+    <!-- 1. ANNOUNCEMENT BAR -->
+    <div class="announce-bar">
+        <span data-i18n="announce">🚀 Free shipping across UAE on orders above AED 200  ·  Cash on Delivery Available</span>
+        <button class="announce-close">×</button>
     </div>
 
-    <!-- 2. Sticky Navigation -->
-    <header class="nav-wrapper">
-        <div class="container">
-            <nav class="navbar">
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="gallery.html">Shop</a>
-                    <a href="gallery.html#dakhoon">Dakhoon</a>
-                    <a href="gallery.html#gift-sets">Gift Sets</a>
-                    <a href="about.html">About</a>
-                </div>
+    <!-- 2. STICKY NAVIGATION -->
+    <header class="nav-shell">
+        <div class="container navbar">
+            <a href="index.html" class="nav-brand">
+                <div class="vs-logo">VS</div>
+                <span class="nav-wordmark">VELVET SCENTS</span>
+            </a>
 
-                <a href="index.html" class="nav-logo">
-                    <span class="logo-monogram">VS</span>
-                    <span class="logo-text">Velvet Scents</span>
-                </a>
-
-                <div class="nav-icons">
-                    <button class="icon-btn search-toggle-btn" aria-label="Search">🔍</button>
-                    <button class="icon-btn theme-toggle-btn" aria-label="Toggle Theme">🌙</button>
-                    <button class="icon-btn lang-toggle-btn" aria-label="Switch Language">عربي</button>
-                    <a href="#" class="icon-btn cart-icon" aria-label="Cart">
-                        🛍️ <span class="cart-count">0</span>
-                    </a>
-                    <button class="icon-btn mobile-trigger" aria-label="Menu">☰</button>
-                </div>
+            <nav class="nav-center">
+                <a href="index.html" class="nav-link" data-i18n="nav_home">Home</a>
+                <a href="gallery.html" class="nav-link" data-i18n="nav_shop">Shop</a>
+                <a href="gallery.html?cat=dakhoon" class="nav-link" data-i18n="nav_dakhoon">Dakhoon</a>
+                <a href="gallery.html?cat=giftsets" class="nav-link" data-i18n="nav_gifts">Gift Sets</a>
+                <a href="about.html" class="nav-link" data-i18n="nav_about">About</a>
+                <a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a>
             </nav>
+
+            <div class="nav-right">
+                <button class="nav-icon-btn search-trigger" aria-label="Search">🔍</button>
+                <button class="nav-icon-btn theme-toggle-btn" aria-label="Toggle Theme" onclick="cycleTheme()">🌙</button>
+                <button class="nav-icon-btn lang-toggle-btn" aria-label="Switch Language" onclick="toggleLanguage()">عربي</button>
+                <button class="nav-icon-btn cart-trigger" aria-label="Cart" onclick="openCart()">
+                    🛍️ <span class="cart-badge">0</span>
+                </button>
+                <button class="nav-icon-btn mobile-menu-trigger" aria-label="Menu" style="display: none;">☰</button>
+            </div>
         </div>
     </header>
 
-    <!-- 3. Hero Section -->
-    <section class="hero">
-        <div class="hero-bg">
-            <img src="images/28.jpeg" alt="Ultra-luxury Arabic Perfumery">
+    <!-- 3. MARQUEE TICKER (TOP) -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <span class="marquee-item">VELVET SCENTS · MARJ · OUD & ROSES · BIN SHAIKH · IGNITE OUD · DAKHOON · CONCENTRATED PARFUM ·</span>
+            <span class="marquee-item">VELVET SCENTS · MARJ · OUD & ROSES · BIN SHAIKH · IGNITE OUD · DAKHOON · CONCENTRATED PARFUM ·</span>
+            <span class="marquee-item">VELVET SCENTS · MARJ · OUD & ROSES · BIN SHAIKH · IGNITE OUD · DAKHOON · CONCENTRATED PARFUM ·</span>
         </div>
-        <div class="hero-content fade-up">
-            <span class="eyebrow" style="color: var(--soft-gold);">Ultra-luxury Arabic Perfumery</span>
-            <h1>Iconic Indulgence</h1>
-            <p>Crafted for the discerning</p>
+    </div>
+
+    <!-- 4. HERO SECTION -->
+    <section class="hero">
+        <div class="hero-media"><img src="images/28.jpeg" alt="Hero Perfume"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="eyebrow" data-i18n="hero_label">ULTRA-LUXURY ARABIC PERFUMERY</span>
+            <h1 class="hero-h1" data-i18n="hero_h1">Iconic Indulgence</h1>
+            <p class="hero-sub" data-i18n="hero_sub">Crafted for the discerning</p>
             <div class="hero-actions">
-                <a href="gallery.html" class="btn btn-primary">Shop Now</a>
-                <a href="about.html" class="btn btn-outline-white">Explore the Maison</a>
+                <a href="gallery.html" class="btn btn-gold" data-i18n="btn_shop">Shop Now</a>
+                <a href="about.html" class="btn btn-outline-white" data-i18n="btn_explore">Explore the Maison</a>
             </div>
         </div>
         <div class="scroll-indicator">
-            <span style="font-size: 1.5rem;">↓</span>
+            <span style="font-size: 1.5rem; color: white;">↓</span>
         </div>
     </section>
 
-    <!-- 4. Category Filter Tabs -->
-    <div class="category-filters">
-        <button class="filter-pill active">All</button>
-        <button class="filter-pill">Perfumes</button>
-        <button class="filter-pill">Dakhoon</button>
-        <button class="filter-pill">Concentrated</button>
-        <button class="filter-pill">Gift Sets</button>
+    <!-- 5. CATEGORY FILTER TABS -->
+    <div class="container">
+        <div class="filter-tabs">
+            <button class="filter-pill active" data-i18n="nav_shop">All</button>
+            <button class="filter-pill" data-i18n="nav_shop">Perfumes</button>
+            <button class="filter-pill" data-i18n="nav_dakhoon">Dakhoon</button>
+            <button class="filter-pill" data-i18n="nav_shop">Concentrated</button>
+            <button class="filter-pill" data-i18n="nav_gifts">Gift Sets</button>
+        </div>
     </div>
 
-    <!-- 5. Category Cards -->
+    <!-- 6. CATEGORY CARDS (3-COLUMN GRID) -->
     <section class="section">
         <div class="container">
-            <div class="category-grid">
-                <div class="category-card fade-up">
-                    <img src="images/1.jpeg" alt="Best Sellers">
-                    <div class="category-card-overlay">
-                        <h3>Best Sellers</h3>
-                        <a href="gallery.html" class="category-card-link">Shop Now</a>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                <div class="product-card reveal" style="aspect-ratio: 3/4;">
+                    <div class="card-media"><img src="images/1.jpeg" alt="Best Sellers"></div>
+                    <div style="position: absolute; bottom: 30px; left: 30px; color: white;">
+                        <h3 class="serif">Best Sellers</h3>
+                        <a href="gallery.html" style="font-size: 0.7rem; letter-spacing: 0.2em; border-bottom: 1px solid white;">SHOP NOW</a>
                     </div>
                 </div>
-                <div class="category-card fade-up" style="transition-delay: 0.2s;">
-                    <img src="images/3.jpeg" alt="Gift Sets">
-                    <div class="category-card-overlay">
-                        <h3>Gift Sets</h3>
-                        <a href="gallery.html" class="category-card-link">Shop Now</a>
+                <div class="product-card reveal" style="aspect-ratio: 3/4; transition-delay: 0.1s;">
+                    <div class="card-media"><img src="images/3.jpeg" alt="Gift Sets"></div>
+                    <div style="position: absolute; bottom: 30px; left: 30px; color: white;">
+                        <h3 class="serif">Gift Sets</h3>
+                        <a href="gallery.html?cat=giftsets" style="font-size: 0.7rem; letter-spacing: 0.2em; border-bottom: 1px solid white;">SHOP NOW</a>
                     </div>
                 </div>
-                <div class="category-card fade-up" style="transition-delay: 0.4s;">
-                    <img src="images/18.jpeg" alt="Dakhoon">
-                    <div class="category-card-overlay">
-                        <h3>Dakhoon</h3>
-                        <a href="gallery.html" class="category-card-link">Shop Now</a>
+                <div class="product-card reveal" style="aspect-ratio: 3/4; transition-delay: 0.2s;">
+                    <div class="card-media"><img src="images/18.jpeg" alt="Dakhoon"></div>
+                    <div style="position: absolute; bottom: 30px; left: 30px; color: white;">
+                        <h3 class="serif">Dakhoon</h3>
+                        <a href="gallery.html?cat=dakhoon" style="font-size: 0.7rem; letter-spacing: 0.2em; border-bottom: 1px solid white;">SHOP NOW</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 15. Marquee (Above Hero/Featured) -->
-    <div class="marquee-container">
-        <div class="marquee-content">
-            <span>VELVET SCENTS · MARJ · OUD & ROSES · BIN SHAIKH · IGNITE OUD · DAKHOON · CONCENTRATED PARFUM · </span>
-            <span>VELVET SCENTS · MARJ · OUD & ROSES · BIN SHAIKH · IGNITE OUD · DAKHOON · CONCENTRATED PARFUM · </span>
-        </div>
-    </div>
-
-    <!-- 6. Signature Selections -->
-    <section class="section">
+    <!-- 7. SIGNATURE SELECTIONS (HORIZONTAL SCROLL) -->
+    <section class="section" style="background-color: var(--ivory-dark);">
         <div class="container">
-            <div class="text-center">
-                <span class="eyebrow">Signature Selections</span>
-                <h2>Fragrances Adored by All</h2>
-                <p style="max-width: 600px; margin: 0 auto 3rem;">A curated collection of our most celebrated olfactory masterpieces, blending tradition with modern elegance.</p>
-            </div>
+            <span class="eyebrow" data-i18n="sig_label">SIGNATURE SELECTIONS</span>
+            <h2 class="serif" data-i18n="sig_h2">Fragrances Adored by All</h2>
             
-            <div class="horizontal-scroll">
-                <!-- Product 1 -->
-                <div class="product-card" data-id="p1">
-                    <div class="product-image">
-                        <img src="images/2.jpeg" alt="Noir Éclat">
-                        <div class="wishlist-btn">♡</div>
+            <div class="drag-scroll">
+                <!-- Items dynamically or static for SEO -->
+                <div class="product-card reveal">
+                    <div class="card-media">
+                        <img src="images/1.jpeg" alt="Noir Éclat">
+                        <div class="wishlist-btn" onclick="this.classList.toggle('active')">♡</div>
                     </div>
                     <div class="product-info">
-                        <h4>Noir Éclat</h4>
+                        <h3 class="serif">Noir Éclat</h3>
                         <p class="product-notes">Bergamot · Amber · Woods</p>
                         <p class="product-price">AED 285</p>
-                        <button class="btn btn-outline add-to-bag">Add to Bag</button>
+                        <button class="btn btn-outline" style="width: 100%;" data-i18n="add_bag" onclick="addToCart(1)">Add to Bag</button>
                     </div>
                 </div>
-                <!-- Product 2 -->
-                <div class="product-card" data-id="p2">
-                    <div class="product-image">
-                        <img src="images/5.jpeg" alt="Cuir Lumière">
-                        <div class="wishlist-btn">♡</div>
+                <div class="product-card reveal" style="transition-delay: 0.1s;">
+                    <div class="card-media">
+                        <img src="images/2.jpeg" alt="Cuir Lumière">
+                        <div class="wishlist-btn" onclick="this.classList.toggle('active')">♡</div>
                     </div>
                     <div class="product-info">
-                        <h4>Cuir Lumière</h4>
+                        <h3 class="serif">Cuir Lumière</h3>
                         <p class="product-notes">Saffron · Leather · Cedar</p>
                         <p class="product-price">AED 310</p>
-                        <button class="btn btn-outline add-to-bag">Add to Bag</button>
+                        <button class="btn btn-outline" style="width: 100%;" data-i18n="add_bag" onclick="addToCart(2)">Add to Bag</button>
                     </div>
                 </div>
-                <!-- Product 3 -->
-                <div class="product-card" data-id="p3">
-                    <div class="product-image">
-                        <img src="images/3.jpeg" alt="Marj">
-                        <div class="wishlist-btn">♡</div>
+                <div class="product-card reveal" style="transition-delay: 0.2s;">
+                    <div class="card-media">
+                        <img src="images/4.jpeg" alt="Marj">
+                        <div class="wishlist-btn" onclick="this.classList.toggle('active')">♡</div>
                     </div>
                     <div class="product-info">
-                        <h4>Marj</h4>
-                        <p class="product-notes">Rose · Musk · Amber</p>
+                        <h3 class="serif">Marj</h3>
+                        <p class="product-notes">Rose · Jasmine · Sandalwood</p>
                         <p class="product-price">AED 295</p>
-                        <button class="btn btn-outline add-to-bag">Add to Bag</button>
+                        <button class="btn btn-outline" style="width: 100%;" data-i18n="add_bag" onclick="addToCart(3)">Add to Bag</button>
                     </div>
                 </div>
-                <!-- Product 4 -->
-                <div class="product-card" data-id="p4">
-                    <div class="product-image">
-                        <img src="images/10.jpeg" alt="Oud & Roses">
-                        <div class="wishlist-btn">♡</div>
+                <div class="product-card reveal" style="transition-delay: 0.3s;">
+                    <div class="card-media">
+                        <img src="images/5.jpeg" alt="Oud & Roses">
+                        <div class="wishlist-btn" onclick="this.classList.toggle('active')">♡</div>
                     </div>
                     <div class="product-info">
-                        <h4>Oud & Roses</h4>
-                        <p class="product-notes">Oud · Damask Rose · Praline</p>
+                        <h3 class="serif">Oud & Roses</h3>
+                        <p class="product-notes">Oud · Rose · Musk</p>
                         <p class="product-price">AED 420</p>
-                        <button class="btn btn-outline add-to-bag">Add to Bag</button>
+                        <button class="btn btn-outline" style="width: 100%;" data-i18n="add_bag" onclick="addToCart(4)">Add to Bag</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 7. Brand Narrative -->
-    <section class="split-section section-dark">
-        <div class="split-image">
-            <img src="images/14.jpeg" alt="Maison Crafted">
-        </div>
-        <div class="split-content">
-            <span class="eyebrow">Maison Crafted</span>
-            <h2>Crafted for the Discerning</h2>
-            <p>Every bottle of Velvet Scents tells a story of heritage, precision, and passion. We select only the finest raw materials from across the globe to create fragrances that resonate with the soul.</p>
-            <a href="gallery.html" class="btn btn-primary" style="align-self: flex-start; margin-top: 2rem;">Shop Now</a>
+    <!-- 8. BRAND NARRATIVE (DARK SPLIT) -->
+    <section style="display: flex; min-height: 70vh;">
+        <div style="flex: 1;"><img src="images/28.jpeg" alt="Craftsmanship" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <div style="flex: 1; background-color: var(--dark2); color: white; display: flex; flex-direction: column; justify-content: center; padding: 0 8%;">
+            <span class="eyebrow" style="color: var(--gold);">MAISON CRAFTED</span>
+            <h2 class="serif">Crafted for the Discerning</h2>
+            <p style="opacity: 0.7; margin-bottom: 2rem;">Every bottle of Velvet Scents tells a story of heritage, precision, and passion. We select only the finest raw materials from across the globe to create fragrances that resonate with the soul.</p>
+            <a href="gallery.html" class="btn btn-gold" style="align-self: flex-start;" data-i18n="btn_shop">Shop Now</a>
         </div>
     </section>
 
-    <!-- 8. Best Sellers Interactive Showcase -->
+    <!-- 9. BEST SELLERS (INTERACTIVE LIST) -->
     <section class="section">
         <div class="container">
-            <div class="text-center">
-                <span class="eyebrow">House Signatures</span>
-                <h2>House Signatures with Real Presence</h2>
-            </div>
-            <div class="best-sellers-list">
-                <div class="best-seller-item fade-up">
-                    <span class="item-number">01</span>
-                    <div class="item-main">
-                        <h3>Bin Shaikh</h3>
-                        <p>Oud · Leather · Amber — ⭐ 4.9 (342 reviews)</p>
-                    </div>
-                    <div class="item-price">AED 450</div>
-                </div>
-                <div class="best-seller-item fade-up" style="transition-delay: 0.1s;">
-                    <span class="item-number">02</span>
-                    <div class="item-main">
-                        <h3>Ignite Oud</h3>
-                        <p>Oud · Spice · Wood — ⭐ 4.8 (298 reviews)</p>
-                    </div>
-                    <div class="item-price">AED 475</div>
-                </div>
-                <div class="best-seller-item fade-up" style="transition-delay: 0.2s;">
-                    <span class="item-number">03</span>
-                    <div class="item-main">
-                        <h3>Rose Diamond</h3>
-                        <p>Rose · Peony · Musk — ⭐ 4.7 (256 reviews)</p>
-                    </div>
-                    <div class="item-price">AED 380</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 9. Gift Sets -->
-    <section class="section" style="background-color: var(--bg-ivory);">
-        <div class="container">
-            <div class="text-center">
-                <span class="eyebrow">The Art of Gifting</span>
-                <h2>Elegant Treasures for Every Occasion</h2>
-            </div>
-            <div class="horizontal-scroll" style="margin-top: 3rem;">
-                <div class="category-card" style="min-width: 400px; height: 400px;">
-                    <img src="images/12.jpeg" alt="Signature Duo">
-                    <div class="category-card-overlay">
-                        <h3>Signature Duo</h3>
-                        <a href="gallery.html" class="category-card-link">Shop Now</a>
-                    </div>
-                </div>
-                <div class="category-card" style="min-width: 400px; height: 400px;">
-                    <img src="images/15.jpeg" alt="Premium Trio">
-                    <div class="category-card-overlay">
-                        <h3>Premium Trio</h3>
-                        <a href="gallery.html" class="category-card-link">Shop Now</a>
-                    </div>
-                </div>
-                <div class="category-card" style="min-width: 400px; height: 400px;">
-                    <img src="images/19.jpeg" alt="Deluxe Collection">
-                    <div class="category-card-overlay">
-                        <h3>Deluxe Collection</h3>
-                        <a href="gallery.html" class="category-card-link">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 10. Dakhoon Section -->
-    <section class="split-section section-dark" style="background-color: #080808;">
-        <div class="split-content">
-            <span class="eyebrow">Ancient Aromas</span>
-            <h2>The Essence of Arabic Dakhoon</h2>
-            <p>Experience the centuries-old tradition of Dakhoon, reimagined for the modern home. Our blends fill your space with warm, mystical clouds of oud and precious resins.</p>
-            <a href="gallery.html" class="btn btn-primary" style="align-self: flex-start; margin-top: 2rem;">Discover Dakhoon</a>
-        </div>
-        <div class="split-image">
-            <img src="images/18.jpeg" alt="Arabic Dakhoon">
-        </div>
-    </section>
-
-    <!-- 11. Influencer / UGC Section -->
-    <section class="section">
-        <div class="container">
-            <div class="text-center">
-                <span class="eyebrow">Iconic Indulgence</span>
-                <h2>See luxury through the eyes of those who know it best</h2>
-            </div>
-            <div class="category-grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 3rem;">
-                <div class="category-card ugc-card" style="height: 300px;"><img src="images/13.jpeg" alt="UGC 1"><div class="play-icon">▶</div></div>
-                <div class="category-card ugc-card" style="height: 300px;"><img src="images/14.jpeg" alt="UGC 2"><div class="play-icon">▶</div></div>
-                <div class="category-card ugc-card" style="height: 300px;"><img src="images/15.jpeg" alt="UGC 3"><div class="play-icon">▶</div></div>
-                <div class="category-card ugc-card" style="height: 300px;"><img src="images/16.jpeg" alt="UGC 4"><div class="play-icon">▶</div></div>
-                <div class="category-card ugc-card" style="height: 300px;"><img src="images/17.jpeg" alt="UGC 5"><div class="play-icon">▶</div></div>
-                <div class="category-card ugc-card" style="height: 300px;"><img src="images/19.jpeg" alt="UGC 6"><div class="play-icon">▶</div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 12. Brand Story -->
-    <section class="split-section">
-        <div class="split-image">
-            <img src="images/14.jpeg" alt="Our Story">
-        </div>
-        <div class="split-content">
-            <span class="eyebrow">25+ Years of Mastery</span>
-            <h2>Your Journey Begins with a Scent</h2>
-            <p>Born in the heart of Dubai, Velvet Scents has been at the forefront of luxury perfumery for over two decades. We bridge the gap between French elegance and Arabian depth.</p>
-            <a href="about.html" class="btn btn-outline" style="align-self: flex-start; margin-top: 2rem;">Read Our Story</a>
+            <span class="eyebrow">HOUSE SIGNATURES</span>
+            <h2 class="serif">Real Presence</h2>
             
-            <div style="display: flex; gap: 30px; margin-top: 4rem;">
-                <div>
-                    <h3 style="margin-bottom: 0;">28</h3>
-                    <p style="font-size: 0.8rem; text-transform: uppercase;">Fragrances</p>
+            <div style="margin-top: 40px;">
+                <div class="best-seller-row reveal" style="display: flex; align-items: center; border-bottom: 1px solid var(--border); padding: 30px 0; gap: 40px;">
+                    <span style="font-size: 1.5rem; opacity: 0.3;">01</span>
+                    <img src="images/10.jpeg" alt="Bin Shaikh" style="width: 100px; height: 100px; object-fit: cover;">
+                    <div style="flex: 1;">
+                        <h3 class="serif">Bin Shaikh</h3>
+                        <p class="product-notes">Oud · Leather · Amber</p>
+                        <p style="font-size: 0.8rem;">⭐ 4.9 · 342 reviews</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <p class="product-price">AED 450</p>
+                        <button class="btn btn-outline" data-i18n="add_bag" onclick="addToCart(5)">Add to Bag</button>
+                    </div>
                 </div>
-                <div>
-                    <h3 style="margin-bottom: 0;">UAE</h3>
-                    <p style="font-size: 0.8rem; text-transform: uppercase;">Delivery</p>
+                <div class="best-seller-row reveal" style="display: flex; align-items: center; border-bottom: 1px solid var(--border); padding: 30px 0; gap: 40px; transition-delay: 0.1s;">
+                    <span style="font-size: 1.5rem; opacity: 0.3;">02</span>
+                    <img src="images/11.jpeg" alt="Ignite Oud" style="width: 100px; height: 100px; object-fit: cover;">
+                    <div style="flex: 1;">
+                        <h3 class="serif">Ignite Oud</h3>
+                        <p class="product-notes">Oud · Spice · Wood</p>
+                        <p style="font-size: 0.8rem;">⭐ 4.8 · 298 reviews</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <p class="product-price">AED 475</p>
+                        <button class="btn btn-outline" data-i18n="add_bag" onclick="addToCart(6)">Add to Bag</button>
+                    </div>
                 </div>
-                <div>
-                    <h3 style="margin-bottom: 0;">5★</h3>
-                    <p style="font-size: 0.8rem; text-transform: uppercase;">Rated</p>
-                </div>
-                <div>
-                    <h3 style="margin-bottom: 0;">Hand</h3>
-                    <p style="font-size: 0.8rem; text-transform: uppercase;">Crafted</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 13. Newsletter -->
-    <section class="section text-center" style="background-color: var(--bg-ivory); border-top: 1px solid var(--soft-gold);">
-        <div class="container">
-            <div class="newsletter fade-up">
-                <span class="eyebrow">Join the Private List</span>
-                <h2>First access to limited drops.</h2>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Email Address" required>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- 14. Trust Badges -->
-    <section class="section" style="padding: 40px 0; border-top: 1px solid var(--soft-gold);">
-        <div class="container">
-            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px;">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="color: var(--accent-gold);">✓</span> Swift Shipping
-                </div>
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="color: var(--accent-gold);">✓</span> Secure Payment
-                </div>
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="color: var(--accent-gold);">✓</span> Cash on Delivery
-                </div>
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="color: var(--accent-gold);">✓</span> 24/7 Care
+                <div class="best-seller-row reveal" style="display: flex; align-items: center; border-bottom: 1px solid var(--border); padding: 30px 0; gap: 40px; transition-delay: 0.2s;">
+                    <span style="font-size: 1.5rem; opacity: 0.3;">03</span>
+                    <img src="images/12.jpeg" alt="Rose Diamond" style="width: 100px; height: 100px; object-fit: cover;">
+                    <div style="flex: 1;">
+                        <h3 class="serif">Rose Diamond</h3>
+                        <p class="product-notes">Rose · Peony · Musk</p>
+                        <p style="font-size: 0.8rem;">⭐ 4.7 · 256 reviews</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <p class="product-price">AED 380</p>
+                        <button class="btn btn-outline" data-i18n="add_bag" onclick="addToCart(7)">Add to Bag</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 16. Footer -->
-    <footer class="footer">
+    <!-- 10. GIFT SETS (HORIZONTAL CAROUSEL) -->
+    <section class="section" style="background-color: var(--ivory-dark);">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-logo-brand">
-                    <h2>VS</h2>
-                    <p class="footer-tagline">A private perfume house in the UAE blending French structure with Arabian depth.</p>
+            <span class="eyebrow" data-i18n="nav_gifts">GIFT SETS</span>
+            <h2 class="serif">The Art of Gifting</h2>
+            <div class="drag-scroll">
+                <div class="product-card reveal" style="min-width: 340px;">
+                    <div class="card-media" style="aspect-ratio: 3/4;"><img src="images/3.jpeg" alt="Gift 1"></div>
+                    <div style="margin-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                        <h3 class="serif">Signature Duo</h3>
+                        <a href="gallery.html?cat=giftsets" style="color: var(--gold); font-size: 0.8rem;">Shop Now →</a>
+                    </div>
                 </div>
-                <div class="footer-col">
-                    <h4>Shop</h4>
-                    <ul>
-                        <li><a href="gallery.html">Perfumes</a></li>
-                        <li><a href="gallery.html">Dakhoon</a></li>
-                        <li><a href="gallery.html">Gift Sets</a></li>
-                        <li><a href="gallery.html">New Arrivals</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="#">WhatsApp</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">TikTok</a></li>
-                        <li><a href="#">Facebook</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Visit Us</h4>
-                    <p style="font-size: 0.9rem; opacity: 0.8;">Velvet Scents Atelier<br>Dubai Mall, UAE</p>
-                    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Open Daily: 10AM - 11PM</p>
+                <div class="product-card reveal" style="min-width: 340px; transition-delay: 0.1s;">
+                    <div class="card-media" style="aspect-ratio: 3/4;"><img src="images/7.jpeg" alt="Gift 2"></div>
+                    <div style="margin-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                        <h3 class="serif">Premium Trio</h3>
+                        <a href="gallery.html?cat=giftsets" style="color: var(--gold); font-size: 0.8rem;">Shop Now →</a>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Velvet Scents. All rights reserved.</p>
-                <p>Developed by <a href="#" style="color: var(--accent-gold);">Antigravity</a></p>
+        </div>
+    </section>
+
+    <!-- 11. DAKHOON (DARK MOODY SECTION) -->
+    <section style="display: flex; background-color: #0A0806; color: white; min-height: 60vh;">
+        <div style="flex: 1; padding: 5%; overflow: hidden;">
+            <div class="drag-scroll" style="gap: 15px;">
+                <img src="images/18.jpeg" alt="Dakhoon 1" style="width: 200px; height: 300px; object-fit: cover;">
+                <img src="images/19.jpeg" alt="Dakhoon 2" style="width: 200px; height: 300px; object-fit: cover;">
+                <img src="images/20.jpeg" alt="Dakhoon 3" style="width: 200px; height: 300px; object-fit: cover;">
+                <img src="images/21.jpeg" alt="Dakhoon 4" style="width: 200px; height: 300px; object-fit: cover;">
             </div>
+        </div>
+        <div style="flex: 1; padding: 5%; display: flex; flex-direction: column; justify-content: center;">
+            <span class="eyebrow" style="color: var(--gold);">ANCIENT AROMAS</span>
+            <h2 class="serif">The Essence of Arabic Dakhoon</h2>
+            <p style="opacity: 0.6; margin-bottom: 2rem;">Experience the centuries-old tradition of Dakhoon, reimagined for the modern home. Our blends fill your space with warm, mystical clouds of oud and precious resins.</p>
+            <a href="gallery.html?cat=dakhoon" class="btn btn-outline" style="align-self: flex-start; color: white; border-color: white;">DISCOVER DAKHOON</a>
+        </div>
+    </section>
+
+    <!-- 12. INFLUENCER / UGC GRID -->
+    <section class="section">
+        <div class="container">
+            <span class="eyebrow">ICONIC INDULGENCE</span>
+            <h2 class="serif">See luxury through the eyes of those who know it best</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 40px;">
+                <div class="product-card reveal" style="height: 300px;"><img src="images/13.jpeg" alt="UGC 1" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                <div class="product-card reveal" style="height: 300px; transition-delay: 0.1s;"><img src="images/14.jpeg" alt="UGC 2" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                <div class="product-card reveal" style="height: 300px; transition-delay: 0.2s;"><img src="images/15.jpeg" alt="UGC 3" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                <div class="product-card reveal" style="height: 300px; transition-delay: 0.3s;"><img src="images/16.jpeg" alt="UGC 4" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                <div class="product-card reveal" style="height: 300px; transition-delay: 0.4s;"><img src="images/17.jpeg" alt="UGC 5" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                <div class="product-card reveal" style="height: 300px; transition-delay: 0.5s;"><img src="images/19.jpeg" alt="UGC 6" style="width: 100%; height: 100%; object-fit: cover;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. BRAND STORY (DARK SPLIT) -->
+    <section style="display: flex; min-height: 70vh; background-color: var(--dark); color: white;">
+        <div style="flex: 1;"><img src="images/14.jpeg" alt="Brand Story" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <div style="flex: 1; padding: 8%; display: flex; flex-direction: column; justify-content: center;">
+            <span class="eyebrow" style="color: var(--gold);">25+ YEARS OF MASTERY</span>
+            <h2 class="serif">Your Journey Begins with a Scent</h2>
+            <p style="opacity: 0.7; margin-bottom: 1.5rem;">Born in the heart of Dubai, Velvet Scents has been at the forefront of luxury perfumery for over two decades. We bridge the gap between French elegance and Arabian depth.</p>
+            <p style="opacity: 0.7; margin-bottom: 2rem;">Our atelier is a sanctuary of scent, where every drop is composed with the care of a master artist.</p>
+            <a href="about.html" class="btn btn-gold" style="align-self: flex-start;" data-i18n="nav_about">Read Our Story</a>
+        </div>
+    </section>
+
+    <!-- 14. STATS STRIP -->
+    <div style="background-color: var(--ivory); padding: 60px 0; border-bottom: 1px solid var(--border);">
+        <div class="container" style="display: flex; justify-content: space-around; text-align: center; gap: 20px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 150px; border-right: 1px solid var(--border);">
+                <h3 style="font-size: 2rem; color: var(--gold);">28</h3>
+                <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em;">Fragrances</p>
+            </div>
+            <div style="flex: 1; min-width: 150px; border-right: 1px solid var(--border);">
+                <h3 style="font-size: 2rem; color: var(--gold);">UAE</h3>
+                <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em;">Delivery</p>
+            </div>
+            <div style="flex: 1; min-width: 150px; border-right: 1px solid var(--border);">
+                <h3 style="font-size: 2rem; color: var(--gold);">5★</h3>
+                <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em;">Rated</p>
+            </div>
+            <div style="flex: 1; min-width: 150px;">
+                <h3 style="font-size: 2rem; color: var(--gold);">Hand</h3>
+                <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em;">Crafted</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 15. NEWSLETTER -->
+    <section class="section" style="background-color: var(--ivory-dark); text-align: center;">
+        <div class="container">
+            <span class="eyebrow" data-i18n="newsletter_label">JOIN THE PRIVATE LIST</span>
+            <h2 class="serif" data-i18n="newsletter_h2">First access to limited drops.</h2>
+            <form style="display: flex; max-width: 500px; margin: 30px auto 0; gap: 10px;">
+                <input type="email" placeholder="Your email address" data-i18n="newsletter_ph" style="flex: 1; padding: 15px; border: 1px solid var(--border); background: white;">
+                <button class="btn btn-gold" type="submit" data-i18n="newsletter_btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 16. TRUST BADGES -->
+    <section class="section" style="border-top: 1px solid var(--border);">
+        <div class="container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; text-align: center;">
+            <div>
+                <div style="width: 60px; height: 60px; background: var(--gold-soft); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">🚚</div>
+                <h4 data-i18n="trust_ship">Swift Shipping</h4>
+                <p style="font-size: 0.8rem; opacity: 0.6;" data-i18n="trust_ship_sub">Next-day delivery across UAE</p>
+            </div>
+            <div>
+                <div style="width: 60px; height: 60px; background: var(--gold-soft); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">🔒</div>
+                <h4 data-i18n="trust_pay">Secure Payment</h4>
+                <p style="font-size: 0.8rem; opacity: 0.6;" data-i18n="trust_pay_sub">Protected transactions</p>
+            </div>
+            <div>
+                <div style="width: 60px; height: 60px; background: var(--gold-soft); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">💵</div>
+                <h4 data-i18n="trust_cod">Cash on Delivery</h4>
+                <p style="font-size: 0.8rem; opacity: 0.6;" data-i18n="trust_cod_sub">Pay upon receipt</p>
+            </div>
+            <div>
+                <div style="width: 60px; height: 60px; background: var(--gold-soft); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">💬</div>
+                <h4 data-i18n="trust_care">Client Care</h4>
+                <p style="font-size: 0.8rem; opacity: 0.6;" data-i18n="trust_care_sub">24/7 WhatsApp support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 17. MARQUEE TICKER (BOTTOM) -->
+    <div class="marquee" style="background-color: var(--gold); color: white;">
+        <div class="marquee-track">
+            <span class="marquee-item">VELVET SCENTS · MARJ · OUD & ROSES · BIN SHAIKH · IGNITE OUD · DAKHOON · CONCENTRATED PARFUM ·</span>
+            <span class="marquee-item">VELVET SCENTS · MARJ · OUD & ROSES · BIN SHAIKH · IGNITE OUD · DAKHOON · CONCENTRATED PARFUM ·</span>
+            <span class="marquee-item">VELVET SCENTS · MARJ · OUD & ROSES · BIN SHAIKH · IGNITE OUD · DAKHOON · CONCENTRATED PARFUM ·</span>
+        </div>
+    </div>
+
+    <!-- 18. FOOTER (DARK) -->
+    <footer style="background-color: var(--black); color: white; padding: 100px 0 40px;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 60px;">
+            <div>
+                <div class="nav-brand" style="margin-bottom: 20px;">
+                    <div class="vs-logo" style="border-color: white;">VS</div>
+                    <span class="nav-wordmark">VELVET SCENTS</span>
+                </div>
+                <p style="font-size: 0.8rem; opacity: 0.6;" data-i18n="footer_tagline">A private perfume house in the UAE blending French structure with Arabian depth.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 25px; font-size: 0.9rem;" data-i18n="footer_shop">Shop</h4>
+                <ul style="list-style: none; font-size: 0.8rem; line-height: 2;">
+                    <li><a href="gallery.html" data-i18n="nav_shop">Shop</a></li>
+                    <li><a href="gallery.html?cat=dakhoon" data-i18n="nav_dakhoon">Dakhoon</a></li>
+                    <li><a href="gallery.html?cat=giftsets" data-i18n="nav_gifts">Gift Sets</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 25px; font-size: 0.9rem;" data-i18n="footer_connect">Connect</h4>
+                <ul style="list-style: none; font-size: 0.8rem; line-height: 2;">
+                    <li><a href="https://wa.me/qr/4EGSY3HZUCP3E1" target="_blank">WhatsApp</a></li>
+                    <li><a href="https://vt.tiktok.com/ZSHwNjFkg/" target="_blank">TikTok</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 25px; font-size: 0.9rem;" data-i18n="footer_visit">Visit Us</h4>
+                <p style="font-size: 0.8rem; opacity: 0.6; line-height: 2;">
+                    Velvet Scents Atelier, Dubai, UAE<br>
+                    velvetscents@gmail.com<br>
+                    Available by appointment only
+                </p>
+            </div>
+        </div>
+        <div class="container" style="margin-top: 80px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; font-size: 0.7rem; opacity: 0.4;">
+            <p data-i18n="copy">© 2026 Velvet Scents. All rights reserved.</p>
+            <p data-i18n="dev">Developed by Abdul Rehman Ali</p>
         </div>
     </footer>
 
-    <!-- Search Overlay -->
-    <div class="search-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-ivory); z-index: 3000; display: none; flex-direction: column; align-items: center; justify-content: center;">
-        <button class="close-search" style="position: absolute; top: 40px; right: 40px; font-size: 2rem; background: none; border: none; cursor: pointer;">×</button>
-        <div class="container" style="max-width: 800px; width: 100%;">
-            <input type="text" placeholder="Search fragrances..." style="width: 100%; background: none; border: none; border-bottom: 2px solid var(--accent-gold); font-size: 3rem; font-family: 'Cormorant Garamond', serif; padding: 20px 0; outline: none;">
-        </div>
-    </div>
-    <style>
-        .search-overlay.active { display: flex !important; }
-    </style>
+    <!-- 19. WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/qr/4EGSY3HZUCP3E1" target="_blank" class="wa-float" aria-label="Order via WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-2.32 0-4.591 1.255-4.591 3.264 0 1.271.725 2.409 1.812 3.105v1.288c0 .245.196.444.444.444.113 0 .221-.044.3-.122l.859-.859c.348.106.713.158 1.176.158 2.32 0 4.591-1.255 4.591-3.264s-2.271-3.264-4.591-3.264zm0 5.236c-1.323 0-2.551-.714-2.551-1.972 0-1.257 1.228-1.972 2.551-1.972 1.323 0 2.551.714 2.551 1.972 0 1.258-1.228 1.972-2.551 1.972z"/></svg>
+        <span class="wa-tooltip" data-i18n="wa_tooltip">Order via WhatsApp</span>
+    </a>
 
-    <!-- Cart Sidebar -->
-    <div class="cart-overlay"></div>
+    <!-- CART SIDEBAR -->
+    <div class="overlay-all"></div>
     <div class="cart-sidebar">
         <div class="cart-header">
-            <h3 class="serif">Shopping Bag</h3>
-            <span class="close-cart">×</span>
+            <h3 class="serif" data-i18n="cart_title">Shopping Bag</h3>
+            <button class="close-trigger" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">×</button>
         </div>
-        <div class="cart-items">
-            <!-- Items injected by JS -->
-            <p class="text-center" style="margin-top: 50px; opacity: 0.5;">Your bag is empty</p>
+        <div class="cart-items-container">
+            <!-- Dynamic Items -->
         </div>
         <div class="cart-footer">
-            <div class="cart-total">
-                <span>Subtotal</span>
-                <span class="subtotal-amount">AED 0.00</span>
+            <div class="cart-subtotal-row">
+                <span data-i18n="cart_subtotal">Subtotal</span>
+                <span class="subtotal-amount">AED 0</span>
             </div>
-            <a href="cart.html" class="btn btn-primary" style="width: 100%; text-align: center;">View Full Cart</a>
+            <button class="btn btn-gold" style="width: 100%;" data-i18n="checkout_wa" onclick="handleCheckout()">Checkout via WhatsApp</button>
+            <button class="btn btn-outline" style="width: 100%; margin-top: 10px;" data-i18n="continue_shop" onclick="closeCart()">Continue Shopping</button>
         </div>
     </div>
 
-    <!-- Scripts -->
+    <!-- ORDER MODAL -->
+    <div class="order-modal">
+        <h3 class="serif" data-i18n="order_title" style="margin-bottom: 25px;">Complete Your Order</h3>
+        <form id="order-form">
+            <div class="form-group">
+                <label data-i18n="order_name">Full Name</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="form-group">
+                <label data-i18n="order_phone">Phone Number</label>
+                <input type="tel" name="phone" required placeholder="+971 5X XXX XXXX">
+            </div>
+            <div class="form-group">
+                <label data-i18n="order_address">Delivery Address</label>
+                <textarea name="address" required rows="2"></textarea>
+            </div>
+            <div class="form-group">
+                <label data-i18n="order_city">City</label>
+                <select name="city" required>
+                    <option value="Dubai">Dubai</option>
+                    <option value="Abu Dhabi">Abu Dhabi</option>
+                    <option value="Sharjah">Sharjah</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div style="display: none;">
+                <input type="email" name="email">
+                <textarea name="notes"></textarea>
+                <input type="radio" name="payment" value="Cash on Delivery" checked>
+            </div>
+            <button class="btn btn-gold" type="submit" style="width: 100%;" data-i18n="order_submit">Send Order on WhatsApp</button>
+        </form>
+    </div>
+
+    <!-- SEARCH OVERLAY -->
+    <div class="search-overlay">
+        <button class="search-close">×</button>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search fragrances, oud, rose..." data-i18n="search_ph">
+            <div class="recent-searches-list">
+                <!-- Recent searches go here -->
+            </div>
+            <div class="search-results">
+                <!-- Results go here -->
+            </div>
+        </div>
+    </div>
+
     <script src="js/main.js"></script>
 </body>
 </html>

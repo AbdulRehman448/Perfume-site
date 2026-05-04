@@ -3,238 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop | Velvet Scents - Luxury Collection</title>
-    <meta name="description" content="Browse the full collection of Velvet Scents luxury fragrances, Dakhoon, and gift sets.">
+    <title>Shop | Velvet Scents</title>
     <link rel="icon" href="images/logo.jpg" type="image/jpeg">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <!-- Announcement Bar -->
-    <div class="announcement-bar">
-        Free shipping across UAE on orders above AED 200
+    <div class="announce-bar">
+        <span data-i18n="announce">🚀 Free shipping across UAE on orders above AED 200  ·  Cash on Delivery Available</span>
+        <button class="announce-close">×</button>
     </div>
 
-    <!-- Sticky Navigation -->
-    <header class="nav-wrapper">
-        <div class="container">
-            <nav class="navbar">
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="gallery.html">Shop</a>
-                    <a href="gallery.html#dakhoon">Dakhoon</a>
-                    <a href="gallery.html#gift-sets">Gift Sets</a>
-                    <a href="about.html">About</a>
-                </div>
-                <a href="index.html" class="nav-logo">
-                    <span class="logo-monogram">VS</span>
-                    <span class="logo-text">Velvet Scents</span>
-                </a>
-                <div class="nav-icons">
-                    <button class="icon-btn search-toggle-btn">🔍</button>
-                    <button class="icon-btn theme-toggle-btn">🌙</button>
-                    <button class="icon-btn lang-toggle-btn">عربي</button>
-                    <a href="#" class="icon-btn cart-icon">
-                        🛍️ <span class="cart-count">0</span>
-                    </a>
-                </div>
+    <header class="nav-shell scrolled">
+        <div class="container navbar">
+            <a href="index.html" class="nav-brand">
+                <div class="vs-logo">VS</div>
+                <span class="nav-wordmark">VELVET SCENTS</span>
+            </a>
+            <nav class="nav-center">
+                <a href="index.html" class="nav-link" data-i18n="nav_home">Home</a>
+                <a href="gallery.html" class="nav-link" data-i18n="nav_shop">Shop</a>
+                <a href="gallery.html?cat=dakhoon" class="nav-link" data-i18n="nav_dakhoon">Dakhoon</a>
+                <a href="gallery.html?cat=giftsets" class="nav-link" data-i18n="nav_gifts">Gift Sets</a>
+                <a href="about.html" class="nav-link" data-i18n="nav_about">About</a>
+                <a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a>
             </nav>
+            <div class="nav-right">
+                <button class="nav-icon-btn search-trigger" aria-label="Search">🔍</button>
+                <button class="nav-icon-btn theme-toggle-btn" onclick="cycleTheme()">🌙</button>
+                <button class="nav-icon-btn lang-toggle-btn" onclick="toggleLanguage()">عربي</button>
+                <button class="nav-icon-btn cart-trigger" onclick="openCart()">
+                    🛍️ <span class="cart-badge">0</span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="section" style="padding-bottom: 20px;">
+    <section class="section" style="background-color: var(--ivory-dark); padding: 60px 0;">
         <div class="container text-center">
-            <span class="eyebrow">The Collection</span>
-            <h1 style="font-size: 4rem;">The Gallery</h1>
-            <p style="max-width: 600px; margin: 0 auto;">Explore every composition from our atelier, from signature oud blends to delicate floral treasures.</p>
+            <h1 class="serif" style="font-size: 3.5rem;">Shop All Fragrances</h1>
         </div>
     </section>
 
-    <!-- Category Filter Tabs -->
-    <div class="category-filters">
-        <button class="filter-pill active">All</button>
-        <button class="filter-pill">Perfumes</button>
-        <button class="filter-pill">Dakhoon</button>
-        <button class="filter-pill">Concentrated</button>
-        <button class="filter-pill">Gift Sets</button>
+    <div class="container">
+        <div class="filter-tabs">
+            <button class="filter-pill active" onclick="filterGallery('all')">All</button>
+            <button class="filter-pill" onclick="filterGallery('perfumes')">Perfumes</button>
+            <button class="filter-pill" onclick="filterGallery('dakhoon')">Dakhoon</button>
+            <button class="filter-pill" onclick="filterGallery('giftsets')">Gift Sets</button>
+        </div>
+
+        <div id="product-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; padding: 40px 0;">
+            <!-- Dynamic Products -->
+        </div>
     </div>
 
-    <!-- Product Grid -->
-    <section class="section">
-        <div class="container">
-            <div class="category-grid" style="grid-template-columns: repeat(4, 1fr);">
-                <!-- Product Items (1-20) -->
-                <div class="product-card" data-id="g1">
-                    <div class="product-image">
-                        <img src="images/1.jpeg" alt="Noir Éclat">
-                        <div class="wishlist-btn">♡</div>
-                    </div>
-                    <div class="product-info">
-                        <h4>Noir Éclat</h4>
-                        <p class="product-notes">Bergamot · Amber · Woods</p>
-                        <p class="product-price">AED 285</p>
-                        <button class="btn btn-outline add-to-bag">Add to Bag</button>
-                    </div>
+    <footer style="background-color: var(--black); color: white; padding: 100px 0 40px;">
+        <div class="container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 60px;">
+            <div>
+                <div class="nav-brand" style="margin-bottom: 20px;">
+                    <div class="vs-logo" style="border-color: white;">VS</div>
+                    <span class="nav-wordmark">VELVET SCENTS</span>
                 </div>
-                <div class="product-card" data-id="g2">
-                    <div class="product-image">
-                        <img src="images/2.jpeg" alt="Cuir Lumière">
-                        <div class="wishlist-btn">♡</div>
-                    </div>
-                    <div class="product-info">
-                        <h4>Cuir Lumière</h4>
-                        <p class="product-notes">Saffron · Leather · Cedar</p>
-                        <p class="product-price">AED 310</p>
-                        <button class="btn btn-outline add-to-bag">Add to Bag</button>
-                    </div>
-                </div>
-                <div class="product-card" data-id="g3">
-                    <div class="product-image">
-                        <img src="images/3.jpeg" alt="Marj">
-                        <div class="wishlist-btn">♡</div>
-                    </div>
-                    <div class="product-info">
-                        <h4>Marj</h4>
-                        <p class="product-notes">Rose · Musk · Amber</p>
-                        <p class="product-price">AED 295</p>
-                        <button class="btn btn-outline add-to-bag">Add to Bag</button>
-                    </div>
-                </div>
-                <div class="product-card" data-id="g4">
-                    <div class="product-image">
-                        <img src="images/4.jpeg" alt="Oud & Roses">
-                        <div class="wishlist-btn">♡</div>
-                    </div>
-                    <div class="product-info">
-                        <h4>Oud & Roses</h4>
-                        <p class="product-notes">Oud · Damask Rose</p>
-                        <p class="product-price">AED 420</p>
-                        <button class="btn btn-outline add-to-bag">Add to Bag</button>
-                    </div>
-                </div>
-                <div class="product-card" data-id="g5">
-                    <div class="product-image">
-                        <img src="images/5.jpeg" alt="Bin Shaikh">
-                        <div class="wishlist-btn">♡</div>
-                    </div>
-                    <div class="product-info">
-                        <h4>Bin Shaikh</h4>
-                        <p class="product-notes">Oud · Leather · Amber</p>
-                        <p class="product-price">AED 450</p>
-                        <button class="btn btn-outline add-to-bag">Add to Bag</button>
-                    </div>
-                </div>
-                <div class="product-card" data-id="g6">
-                    <div class="product-image">
-                        <img src="images/6.jpeg" alt="Ignite Oud">
-                        <div class="wishlist-btn">♡</div>
-                    </div>
-                    <div class="product-info">
-                        <h4>Ignite Oud</h4>
-                        <p class="product-notes">Oud · Spice · Wood</p>
-                        <p class="product-price">AED 475</p>
-                        <button class="btn btn-outline add-to-bag">Add to Bag</button>
-                    </div>
-                </div>
-                <!-- ... More products can be added here ... -->
-                <div class="product-card" data-id="g7">
-                    <div class="product-image">
-                        <img src="images/7.jpeg" alt="Rose Diamond">
-                        <div class="wishlist-btn">♡</div>
-                    </div>
-                    <div class="product-info">
-                        <h4>Rose Diamond</h4>
-                        <p class="product-notes">Rose · Peony · Musk</p>
-                        <p class="product-price">AED 380</p>
-                        <button class="btn btn-outline add-to-bag">Add to Bag</button>
-                    </div>
-                </div>
-                <div class="product-card" data-id="g8">
-                    <div class="product-image">
-                        <img src="images/8.jpeg" alt="Amber Veil">
-                        <div class="wishlist-btn">♡</div>
-                    </div>
-                    <div class="product-info">
-                        <h4>Amber Veil</h4>
-                        <p class="product-notes">Amber · Vanilla · Incense</p>
-                        <p class="product-price">AED 350</p>
-                        <button class="btn btn-outline add-to-bag">Add to Bag</button>
-                    </div>
-                </div>
+                <p style="font-size: 0.8rem; opacity: 0.6;" data-i18n="footer_tagline">A private perfume house in the UAE blending French structure with Arabian depth.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 25px; font-size: 0.9rem;" data-i18n="footer_shop">Shop</h4>
+                <ul style="list-style: none; font-size: 0.8rem; line-height: 2;">
+                    <li><a href="gallery.html" data-i18n="nav_shop">Shop</a></li>
+                    <li><a href="gallery.html?cat=dakhoon" data-i18n="nav_dakhoon">Dakhoon</a></li>
+                    <li><a href="gallery.html?cat=giftsets" data-i18n="nav_gifts">Gift Sets</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 25px; font-size: 0.9rem;" data-i18n="footer_connect">Connect</h4>
+                <ul style="list-style: none; font-size: 0.8rem; line-height: 2;">
+                    <li><a href="https://wa.me/qr/4EGSY3HZUCP3E1" target="_blank">WhatsApp</a></li>
+                    <li><a href="https://vt.tiktok.com/ZSHwNjFkg/" target="_blank">TikTok</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 25px; font-size: 0.9rem;" data-i18n="footer_visit">Visit Us</h4>
+                <p style="font-size: 0.8rem; opacity: 0.6; line-height: 2;">
+                    Velvet Scents Atelier, Dubai, UAE<br>
+                    velvetscents@gmail.com
+                </p>
             </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-logo-brand">
-                    <h2>VS</h2>
-                    <p class="footer-tagline">A private perfume house in the UAE blending French structure with Arabian depth.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Shop</h4>
-                    <ul>
-                        <li><a href="gallery.html">Perfumes</a></li>
-                        <li><a href="gallery.html">Dakhoon</a></li>
-                        <li><a href="gallery.html">Gift Sets</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="#">WhatsApp</a></li>
-                        <li><a href="#">Instagram</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Visit Us</h4>
-                    <p style="font-size: 0.9rem; opacity: 0.8;">Dubai Mall, UAE</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Velvet Scents. All rights reserved.</p>
-                <p>Developed by <a href="#" style="color: var(--accent-gold);">Antigravity</a></p>
-            </div>
+        <div class="container" style="margin-top: 80px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; font-size: 0.7rem; opacity: 0.4;">
+            <p data-i18n="copy">© 2026 Velvet Scents. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Search Overlay -->
-    <div class="search-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-ivory); z-index: 3000; display: none; flex-direction: column; align-items: center; justify-content: center;">
-        <button class="close-search" style="position: absolute; top: 40px; right: 40px; font-size: 2rem; background: none; border: none; cursor: pointer;">×</button>
-        <div class="container" style="max-width: 800px; width: 100%;">
-            <input type="text" placeholder="Search fragrances..." style="width: 100%; background: none; border: none; border-bottom: 2px solid var(--accent-gold); font-size: 3rem; font-family: 'Cormorant Garamond', serif; padding: 20px 0; outline: none;">
+    <!-- SHARED CART & MODALS -->
+    <div class="overlay-all"></div>
+    <div class="cart-sidebar">
+        <div class="cart-header"><h3 class="serif" data-i18n="cart_title">Shopping Bag</h3><button class="close-trigger">×</button></div>
+        <div class="cart-items-container"></div>
+        <div class="cart-footer">
+            <div class="cart-subtotal-row"><span data-i18n="cart_subtotal">Subtotal</span><span class="subtotal-amount">AED 0</span></div>
+            <button class="btn btn-gold" style="width: 100%;" onclick="handleCheckout()">Checkout via WhatsApp</button>
         </div>
     </div>
-    <style>
-        .search-overlay.active { display: flex !important; }
-        @media (max-width: 1200px) {
-            .category-grid { grid-template-columns: repeat(3, 1fr) !important; }
-        }
-        @media (max-width: 768px) {
-            .category-grid { grid-template-columns: repeat(2, 1fr) !important; }
-        }
-    </style>
 
-    <!-- Cart Sidebar -->
-    <div class="cart-overlay"></div>
-    <div class="cart-sidebar">
-        <div class="cart-header">
-            <h3 class="serif">Shopping Bag</h3>
-            <span class="close-cart">×</span>
-        </div>
-        <div class="cart-items"></div>
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span>Subtotal</span>
-                <span class="subtotal-amount">AED 0.00</span>
-            </div>
-            <a href="cart.html" class="btn btn-primary" style="width: 100%; text-align: center;">View Full Cart</a>
-        </div>
+    <div class="order-modal">
+        <h3 class="serif" style="margin-bottom: 25px;">Complete Your Order</h3>
+        <form id="order-form">
+            <div class="form-group"><label>Full Name</label><input type="text" name="name" required></div>
+            <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" required></div>
+            <div class="form-group"><label>Delivery Address</label><textarea name="address" required></textarea></div>
+            <div class="form-group"><label>City</label><select name="city" required><option value="Dubai">Dubai</option><option value="Abu Dhabi">Abu Dhabi</option></select></div>
+            <div style="display: none;"><input type="radio" name="payment" value="Cash on Delivery" checked></div>
+            <button class="btn btn-gold" type="submit" style="width: 100%;">Send Order on WhatsApp</button>
+        </form>
     </div>
 
     <script src="js/main.js"></script>
+    <script>
+        function renderGrid(products) {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = products.map(p => `
+                <div class="product-card reveal visible">
+                    <div class="card-media">
+                        <img src="${p.img}" alt="${p.name}">
+                        <div class="wishlist-btn">♡</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="serif">${p.name}</h3>
+                        <p class="product-notes">${p.notes}</p>
+                        <p class="product-price">AED ${p.price}</p>
+                        <button class="btn btn-outline" style="width: 100%;" onclick="addToCart(${p.id})">Add to Bag</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterGallery(cat) {
+            const filtered = cat === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.cat === cat);
+            renderGrid(filtered);
+            document.querySelectorAll('.filter-pill').forEach(btn => {
+                btn.classList.toggle('active', btn.innerText.toLowerCase() === cat);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const cat = urlParams.get('cat') || 'all';
+            filterGallery(cat);
+        });
+    </script>
 </body>
 </html>

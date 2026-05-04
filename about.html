@@ -3,141 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Story | Velvet Scents - Heritage & Craft</title>
-    <meta name="description" content="Learn about the heritage and craftsmanship behind Velvet Scents - luxury Arabic perfumery.">
+    <title>About Us | Velvet Scents</title>
     <link rel="icon" href="images/logo.jpg" type="image/jpeg">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <!-- Announcement Bar -->
-    <div class="announcement-bar">
-        Free shipping across UAE on orders above AED 200
-    </div>
-
-    <!-- Sticky Navigation -->
-    <header class="nav-wrapper">
-        <div class="container">
-            <nav class="navbar">
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="gallery.html">Shop</a>
-                    <a href="gallery.html#dakhoon">Dakhoon</a>
-                    <a href="gallery.html#gift-sets">Gift Sets</a>
-                    <a href="about.html">About</a>
-                </div>
-                <a href="index.html" class="nav-logo">
-                    <span class="logo-monogram">VS</span>
-                    <span class="logo-text">Velvet Scents</span>
-                </a>
-                <div class="nav-icons">
-                    <button class="icon-btn search-toggle-btn">🔍</button>
-                    <button class="icon-btn theme-toggle-btn">🌙</button>
-                    <button class="icon-btn lang-toggle-btn">عربي</button>
-                    <a href="#" class="icon-btn cart-icon">
-                        🛍️ <span class="cart-count">0</span>
-                    </a>
-                </div>
+    <header class="nav-shell scrolled">
+        <div class="container navbar">
+            <a href="index.html" class="nav-brand">
+                <div class="vs-logo">VS</div>
+                <span class="nav-wordmark">VELVET SCENTS</span>
+            </a>
+            <nav class="nav-center">
+                <a href="index.html" class="nav-link" data-i18n="nav_home">Home</a>
+                <a href="gallery.html" class="nav-link" data-i18n="nav_shop">Shop</a>
+                <a href="gallery.html?cat=dakhoon" class="nav-link" data-i18n="nav_dakhoon">Dakhoon</a>
+                <a href="gallery.html?cat=giftsets" class="nav-link" data-i18n="nav_gifts">Gift Sets</a>
+                <a href="about.html" class="nav-link" data-i18n="nav_about">About</a>
+                <a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a>
             </nav>
+            <div class="nav-right">
+                <button class="nav-icon-btn theme-toggle-btn" onclick="cycleTheme()">🌙</button>
+                <button class="nav-icon-btn lang-toggle-btn" onclick="toggleLanguage()">عربي</button>
+                <button class="nav-icon-btn cart-trigger" onclick="openCart()">
+                    🛍️ <span class="cart-badge">0</span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Story -->
     <section class="hero" style="height: 60vh;">
-        <div class="hero-bg">
-            <img src="images/14.jpeg" alt="Velvet Scents Heritage">
-        </div>
-        <div class="hero-content">
-            <span class="eyebrow">Our Story</span>
-            <h1>A Legacy of Scent</h1>
-            <p>Blending French structure with Arabian depth since 2001</p>
+        <div class="hero-media"><img src="images/14.jpeg" alt="About Hero"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content" style="text-align: left; padding-bottom: 5vh;">
+            <h1 class="serif">Our Story</h1>
+            <p class="hero-sub">A Legacy of Scent & Mastery</p>
         </div>
     </section>
 
-    <!-- Narrative Section -->
     <section class="section">
-        <div class="container" style="max-width: 900px;">
-            <div class="text-center">
-                <span class="eyebrow">Mastery in Every Drop</span>
-                <h2>The Art of Olfactory Excellence</h2>
-                <p style="margin-bottom: 2rem;">Velvet Scents was founded with a single vision: to create perfumes that transcend time and trends. Our journey began in the vibrant markets of Dubai, where we discovered the magic of rare oud and precious resins.</p>
-                <p>Today, our atelier combines these ancient ingredients with the precision of French perfumery. Each composition is aged to perfection, ensuring a scent that is as enduring as it is evocative.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Strip -->
-    <section class="section-dark" style="padding: 60px 0;">
         <div class="container">
-            <div style="display: flex; justify-content: space-around; text-align: center; flex-wrap: wrap; gap: 40px;">
-                <div>
-                    <h3 style="font-size: 3rem; color: var(--accent-gold);">25+</h3>
-                    <p class="eyebrow" style="margin-bottom: 0;">Years of Mastery</p>
-                </div>
-                <div>
-                    <h3 style="font-size: 3rem; color: var(--accent-gold);">28</h3>
-                    <p class="eyebrow" style="margin-bottom: 0;">Signature Scents</p>
-                </div>
-                <div>
-                    <h3 style="font-size: 3rem; color: var(--accent-gold);">50+</h3>
-                    <p class="eyebrow" style="margin-bottom: 0;">Rare Ingredients</p>
-                </div>
-                <div>
-                    <h3 style="font-size: 3rem; color: var(--accent-gold);">100k</h3>
-                    <p class="eyebrow" style="margin-bottom: 0;">Global Clients</p>
-                </div>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2 class="serif" style="font-style: italic; color: var(--gold); margin-bottom: 3rem;">"Fragrance is the most intense form of memory."</h2>
+                <p style="font-size: 1.2rem; line-height: 1.8; opacity: 0.8; margin-bottom: 2rem;">Born in the vibrant heart of Dubai, Velvet Scents was established with a singular vision: to create perfumes that transcend time and culture. For over 25 years, our master perfumers have blended the meticulous structure of French perfumery with the deep, mystical soul of Arabian heritage.</p>
+                <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.7;">Every creation is an artisanal masterpiece, hand-crafted in our Dubai atelier using rare oils and precious resins sourced from the furthest corners of the earth.</p>
             </div>
         </div>
     </section>
 
-    <!-- Craftsmanship Split -->
-    <section class="split-section">
-        <div class="split-image">
-            <img src="images/21.jpeg" alt="Craftsmanship">
-        </div>
-        <div class="split-content">
-            <span class="eyebrow">Hand Crafted</span>
-            <h2>Precision and Passion</h2>
-            <p>From the hand-picked roses of Taif to the meticulously sourced oud from the forests of Cambodia, our ingredients are the soul of our maison. We believe in slow perfumery—where time is the most important ingredient.</p>
-            <a href="gallery.html" class="btn btn-outline" style="align-self: flex-start; margin-top: 2rem;">Explore the Gallery</a>
+    <section class="section" style="background-color: var(--dark); color: white;">
+        <div class="container" style="display: flex; align-items: center; gap: 80px;">
+            <div style="flex: 1;"><img src="images/15.jpeg" alt="Founder" style="width: 100%; border-radius: 5px;"></div>
+            <div style="flex: 1;">
+                <span class="eyebrow" style="color: var(--gold);">25+ YEARS OF MASTERY</span>
+                <h2 class="serif">The Founder's Vision</h2>
+                <p style="opacity: 0.7; margin-bottom: 2rem;">"We don't just sell scents; we offer an experience of indulgence. Velvet Scents is for those who appreciate the finer details — the weight of the glass, the slow release of the notes, and the lingering presence that commands attention."</p>
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-style: italic;">Abdul Rehman Ali</div>
+                <div style="font-size: 0.7rem; letter-spacing: 0.2em; opacity: 0.5; margin-top: 5px;">MASTER PERFUMER & FOUNDER</div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <section class="section">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-logo-brand">
-                    <h2>VS</h2>
-                    <p class="footer-tagline">A private perfume house in the UAE blending French structure with Arabian depth.</p>
+            <h2 class="serif text-center" style="margin-bottom: 5rem;">Milestones of Excellence</h2>
+            <div style="display: flex; justify-content: space-between; position: relative; padding-bottom: 40px;">
+                <div style="position: absolute; top: 50px; left: 0; width: 100%; height: 1px; background: var(--border); z-index: -1;"></div>
+                <div style="text-align: center; flex: 1;">
+                    <div style="width: 20px; height: 20px; background: var(--gold); border-radius: 50%; margin: 40px auto 20px;"></div>
+                    <h3 class="serif">2000</h3>
+                    <p style="font-size: 0.8rem; opacity: 0.6;">Founded in Dubai</p>
                 </div>
-                <div class="footer-col">
-                    <h4>Shop</h4>
-                    <ul>
-                        <li><a href="gallery.html">Perfumes</a></li>
-                        <li><a href="gallery.html">Dakhoon</a></li>
-                    </ul>
+                <div style="text-align: center; flex: 1;">
+                    <div style="width: 20px; height: 20px; background: var(--gold); border-radius: 50%; margin: 40px auto 20px;"></div>
+                    <h3 class="serif">2008</h3>
+                    <p style="font-size: 0.8rem; opacity: 0.6;">First Boutique</p>
                 </div>
-                <div class="footer-col">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="#">Instagram</a></li>
-                    </ul>
+                <div style="text-align: center; flex: 1;">
+                    <div style="width: 20px; height: 20px; background: var(--gold); border-radius: 50%; margin: 40px auto 20px;"></div>
+                    <h3 class="serif">2015</h3>
+                    <p style="font-size: 0.8rem; opacity: 0.6;">GCC Expansion</p>
                 </div>
-                <div class="footer-col">
-                    <h4>Visit Us</h4>
-                    <p style="font-size: 0.9rem; opacity: 0.8;">Dubai, UAE</p>
+                <div style="text-align: center; flex: 1;">
+                    <div style="width: 20px; height: 20px; background: var(--gold); border-radius: 50%; margin: 40px auto 20px;"></div>
+                    <h3 class="serif">2024</h3>
+                    <p style="font-size: 0.8rem; opacity: 0.6;">Velvet Scents Rebrand</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Velvet Scents. All rights reserved.</p>
-                <p>Developed by <a href="#" style="color: var(--accent-gold);">Antigravity</a></p>
+        </div>
+    </section>
+
+    <footer style="background-color: var(--black); color: white; padding: 100px 0 40px;">
+        <div class="container" style="text-align: center;">
+            <h2 class="serif" style="margin-bottom: 2rem;">Ready to Find Your Signature Scent?</h2>
+            <div style="display: flex; gap: 20px; justify-content: center;">
+                <a href="gallery.html" class="btn btn-gold">Shop Now</a>
+                <a href="contact.html" class="btn btn-outline-white">Contact Us</a>
             </div>
         </div>
     </footer>
 
-    <!-- Search Overlay & Cart Sidebar (Same as index) -->
-    <div class="search-overlay">...</div>
+    <!-- SHARED COMPONENTS -->
+    <div class="overlay-all"></div>
     <div class="cart-sidebar">...</div>
 
     <script src="js/main.js"></script>

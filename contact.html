@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Order | Velvet Scents</title>
+    <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="nav-shell scrolled">
+        <div class="container navbar">
+            <a href="index.html" class="nav-brand">
+                <div class="vs-logo">VS</div>
+                <span class="nav-wordmark">VELVET SCENTS</span>
+            </a>
+            <nav class="nav-center">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="gallery.html" class="nav-link">Shop</a>
+                <a href="gallery.html?cat=dakhoon" class="nav-link">Dakhoon</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-right">
+                <button class="nav-icon-btn theme-toggle-btn" onclick="cycleTheme()">🌙</button>
+                <button class="nav-icon-btn lang-toggle-btn" onclick="toggleLanguage()">عربي</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" style="height: 40vh;">
+        <div class="hero-media"><img src="images/28.jpeg" alt="Contact Hero"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content" style="padding-bottom: 5vh;">
+            <h1 class="serif">Get in Touch</h1>
+            <p class="hero-sub">We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 80px;">
+                <div style="background: var(--ivory-dark); padding: 40px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 15px;">📱</div>
+                    <h3 class="serif">WhatsApp</h3>
+                    <p style="font-size: 0.8rem; opacity: 0.6; margin-bottom: 20px;">Chat with us directly</p>
+                    <a href="https://wa.me/qr/4EGSY3HZUCP3E1" target="_blank" class="btn btn-gold" style="padding: 0.8rem 1.5rem; background-color: #25D366; border-color: #25D366;">CHAT ON WHATSAPP</a>
+                </div>
+                <div style="background: var(--ivory-dark); padding: 40px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 15px;">📧</div>
+                    <h3 class="serif">Email</h3>
+                    <p style="font-size: 0.8rem; opacity: 0.6; margin-bottom: 20px;">velvetscents@gmail.com</p>
+                    <a href="mailto:velvetscents@gmail.com" class="btn btn-outline" style="padding: 0.8rem 1.5rem;">SEND EMAIL</a>
+                </div>
+                <div style="background: var(--ivory-dark); padding: 40px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 15px;">📍</div>
+                    <h3 class="serif">Visit Us</h3>
+                    <p style="font-size: 0.8rem; opacity: 0.6; margin-bottom: 20px;">Velvet Scents Atelier, Dubai, UAE<br>Available by appointment only</p>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 60px; border: 1px solid var(--border); max-width: 900px; margin: 0 auto;">
+                <h2 class="serif text-center" style="margin-bottom: 10px;">Place a Custom Order</h2>
+                <p class="text-center" style="opacity: 0.6; margin-bottom: 40px;">Fill in your details and we'll prepare your order and confirm via WhatsApp</p>
+                
+                <form id="custom-order-form">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" name="phone" required placeholder="+971 5X XXX XXXX">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Delivery Address *</label>
+                        <textarea name="address" required rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>City *</label>
+                        <select name="city" required>
+                            <option value="Dubai">Dubai</option>
+                            <option value="Abu Dhabi">Abu Dhabi</option>
+                            <option value="Sharjah">Sharjah</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Products Interested In</label>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+                            <label style="background: var(--ivory-dark); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; cursor: pointer;"><input type="checkbox" name="interest" value="Noir Éclat"> Noir Éclat</label>
+                            <label style="background: var(--ivory-dark); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; cursor: pointer;"><input type="checkbox" name="interest" value="Marj"> Marj</label>
+                            <label style="background: var(--ivory-dark); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; cursor: pointer;"><input type="checkbox" name="interest" value="Oud & Roses"> Oud & Roses</label>
+                            <label style="background: var(--ivory-dark); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; cursor: pointer;"><input type="checkbox" name="interest" value="Dakhoon"> Dakhoon</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Payment Method *</label>
+                        <div style="display: flex; gap: 20px; margin-top: 10px;">
+                            <label style="font-size: 0.8rem;"><input type="radio" name="payment" value="Cash on Delivery" checked> Cash on Delivery</label>
+                            <label style="font-size: 0.8rem;"><input type="radio" name="payment" value="Bank Transfer"> Bank Transfer</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 20px;">SEND ORDER REQUEST ON WHATSAPP</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background-color: var(--black); color: white; padding: 60px 0; text-align: center;">
+        <div class="container">
+            <h3 class="serif" style="margin-bottom: 20px;">Follow Our Journey on TikTok</h3>
+            <a href="https://vt.tiktok.com/ZSHwNjFkg/" target="_blank" class="btn btn-outline-white">@VELVETSCENTS</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('custom-order-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const interests = Array.from(this.querySelectorAll('input[name="interest"]:checked')).map(cb => cb.value).join(', ');
+            const message = `🌿 *Custom Order Request — Velvet Scents*\n\n` +
+                          `👤 Name: ${this.name.value}\n` +
+                          `📱 Phone: ${this.phone.value}\n` +
+                          `📍 Address: ${this.address.value}, ${this.city.value}\n` +
+                          `🛍️ Interested In: ${interests || 'General Inquiry'}\n` +
+                          `💳 Payment: ${this.payment.value}\n\n` +
+                          `_Please contact me to confirm pricing and availability._`;
+            
+            window.open(`https://wa.me/qr/4EGSY3HZUCP3E1?text=${encodeURIComponent(message)}`, '_blank');
+        });
+    </script>
+</body>
+</html>
