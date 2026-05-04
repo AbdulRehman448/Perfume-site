@@ -251,16 +251,8 @@ body[data-theme="light"] .btn-outline {
     gap: 8px;
 }
 
-.cart-count {
-    min-width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    background: var(--gold);
-    color: #171717;
-    font-weight: 800;
-    font-size: 0.74rem;
+.cart-chip {
+    display: none !important;
 }
 /* END: Header */
 
@@ -706,7 +698,7 @@ body.rtl .faq-question {
     z-index: 100;
     transform: translateX(110%);
     transition: transform 0.28s ease;
-    display: grid;
+    display: none;
     grid-template-rows: auto 1fr auto;
 }
 
