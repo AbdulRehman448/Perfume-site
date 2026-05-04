@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Scent | Luxury Perfume in UAE</title>
+    <meta name="description" content="Velvet Scent offers luxury perfumes in UAE with fast delivery and cash on delivery. Shop premium fragrances and order instantly on WhatsApp.">
+    <meta name="keywords" content="Velvet Scent, UAE perfume, luxury fragrance, WhatsApp order, cash on delivery, Dubai perfumes">
+    <meta name="author" content="Velvet Scent">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="images/28.jpeg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="dark">
+    <!-- START: Header -->
+    <header class="site-header" id="top">
+        <div class="container header-row">
+            <a class="brand" href="#top" aria-label="Velvet Scent home">
+                <span class="brand-mark">VS</span>
+                <span class="brand-name">Velvet Scent</span>
+            </a>
+
+            <button class="mobile-nav-btn" id="mobileNavBtn" aria-label="Open menu">☰</button>
+
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <a href="#top" data-i18n="navHome">Home</a>
+                <a href="#shop" data-i18n="navShop">Shop</a>
+                <a href="#reviews" data-i18n="navReviews">Reviews</a>
+                <a href="#faq" data-i18n="navFaq">FAQ</a>
+                <a href="#contact" data-i18n="navContact">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="langToggle" class="chip-btn" type="button" aria-label="Language toggle">EN | العربية</button>
+                <button id="themeToggle" class="chip-btn" type="button" aria-label="Theme toggle">Dark</button>
+                <button id="cartBtn" class="chip-btn cart-chip" type="button" aria-label="Open cart">
+                    <span data-i18n="cart">Cart</span>
+                    <span id="cartCount" class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- END: Header -->
+
+    <main>
+        <!-- START: Hero Slider -->
+        <section class="hero" aria-label="Hero slider">
+            <div class="hero-slider" id="heroSlider">
+                <article class="hero-slide active" data-index="0">
+                    <img src="images/28.jpeg" alt="Luxury perfume bottle" fetchpriority="high">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content container">
+                        <p class="offer-badge" data-i18n="offer">45% OFF - Limited Time</p>
+                        <h1 data-i18n="heroTitle">Unleash Your Signature Scent</h1>
+                        <p data-i18n="heroSub">Luxury Fragrances for Men and Women in UAE</p>
+                        <div class="hero-cta">
+                            <a href="#shop" class="btn btn-gold" data-i18n="shopNow">Shop Now</a>
+                            <button class="btn btn-outline" id="heroWhatsappBtn" type="button" data-i18n="orderWhatsapp">Order on WhatsApp</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="hero-slide" data-index="1">
+                    <img src="images/14.jpeg" alt="Premium scent arrangement" loading="lazy">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content container">
+                        <p class="offer-badge" data-i18n="offer">45% OFF - Limited Time</p>
+                        <h2 data-i18n="heroTitle">Unleash Your Signature Scent</h2>
+                        <p data-i18n="heroSub">Luxury Fragrances for Men and Women in UAE</p>
+                        <div class="hero-cta">
+                            <a href="#shop" class="btn btn-gold" data-i18n="shopNow">Shop Now</a>
+                            <button class="btn btn-outline" id="heroWhatsappBtn2" type="button" data-i18n="orderWhatsapp">Order on WhatsApp</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="hero-slide" data-index="2">
+                    <img src="images/19.jpeg" alt="Luxury fragrance concept" loading="lazy">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content container">
+                        <p class="offer-badge" data-i18n="offer">45% OFF - Limited Time</p>
+                        <h2 data-i18n="heroTitle">Unleash Your Signature Scent</h2>
+                        <p data-i18n="heroSub">Luxury Fragrances for Men and Women in UAE</p>
+                        <div class="hero-cta">
+                            <a href="#shop" class="btn btn-gold" data-i18n="shopNow">Shop Now</a>
+                            <button class="btn btn-outline" id="heroWhatsappBtn3" type="button" data-i18n="orderWhatsapp">Order on WhatsApp</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <button class="slider-arrow prev" id="sliderPrev" type="button" aria-label="Previous slide">❮</button>
+            <button class="slider-arrow next" id="sliderNext" type="button" aria-label="Next slide">❯</button>
+            <div class="slider-dots" id="sliderDots" aria-label="Slider controls"></div>
+        </section>
+        <!-- END: Hero Slider -->
+
+        <!-- START: Products -->
+        <section class="section" id="shop">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-kicker">Velvet Scent</p>
+                    <h2 data-i18n="productsTitle">Best Selling Collection</h2>
+                </div>
+
+                <div class="products-grid" id="productsGrid"></div>
+            </div>
+        </section>
+        <!-- END: Products -->
+
+        <!-- START: Why Choose Us -->
+        <section class="section section-alt" id="why">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-kicker" data-i18n="whyKicker">Why Choose Us</p>
+                    <h2 data-i18n="whyTitle">Luxury Crafted for Everyday Confidence</h2>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card"><h3 data-i18n="f1t">Long-lasting Fragrance</h3><p data-i18n="f1d">Performance that stays fresh for hours in UAE weather.</p></article>
+                    <article class="feature-card"><h3 data-i18n="f2t">Premium Oils</h3><p data-i18n="f2d">High-quality concentrated oils for rich signature scent trails.</p></article>
+                    <article class="feature-card"><h3 data-i18n="f3t">Affordable Luxury</h3><p data-i18n="f3d">Luxury feeling at conversion-focused, practical prices.</p></article>
+                    <article class="feature-card"><h3 data-i18n="f4t">Unisex Perfumes</h3><p data-i18n="f4d">Balanced profiles made for both men and women.</p></article>
+                    <article class="feature-card"><h3 data-i18n="f5t">Fast UAE Delivery</h3><p data-i18n="f5d">Quick dispatch and reliable local shipping support.</p></article>
+                </div>
+            </div>
+        </section>
+        <!-- END: Why Choose Us -->
+
+        <!-- START: How To Order -->
+        <section class="section" id="how">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-kicker" data-i18n="howKicker">How To Order</p>
+                    <h2 data-i18n="howTitle">Simple WhatsApp Checkout Flow</h2>
+                </div>
+                <div class="steps-grid">
+                    <article class="step-card"><span>1</span><h3 data-i18n="s1t">Select Product</h3><p data-i18n="s1d">Choose your favorite perfume set from the collection.</p></article>
+                    <article class="step-card"><span>2</span><h3 data-i18n="s2t">Click WhatsApp</h3><p data-i18n="s2d">Use direct order or cart checkout to open WhatsApp.</p></article>
+                    <article class="step-card"><span>3</span><h3 data-i18n="s3t">Fill Details</h3><p data-i18n="s3d">Enter your name, phone, UAE address, and city.</p></article>
+                    <article class="step-card"><span>4</span><h3 data-i18n="s4t">Confirm Order</h3><p data-i18n="s4d">Send and our team confirms your order quickly.</p></article>
+                </div>
+            </div>
+        </section>
+        <!-- END: How To Order -->
+
+        <!-- START: Reviews -->
+        <section class="section section-alt" id="reviews">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-kicker" data-i18n="reviewsKicker">Customer Reviews</p>
+                    <h2 data-i18n="reviewsTitle">Trusted by Customers Across UAE</h2>
+                </div>
+                <div class="reviews-grid" id="reviewsGrid"></div>
+            </div>
+        </section>
+        <!-- END: Reviews -->
+
+        <!-- START: Trust Badges -->
+        <section class="section" id="trust">
+            <div class="container trust-row">
+                <article class="trust-card"><h3 data-i18n="tb1t">Cash on Delivery Available</h3><p data-i18n="tb1d">Pay only when your order reaches your door.</p></article>
+                <article class="trust-card"><h3 data-i18n="tb2t">Fast Shipping Across UAE</h3><p data-i18n="tb2d">Coverage across Dubai, Abu Dhabi, Sharjah and more.</p></article>
+                <article class="trust-card"><h3 data-i18n="tb3t">100% Satisfaction Guarantee</h3><p data-i18n="tb3d">Support team ready to help if you need assistance.</p></article>
+            </div>
+        </section>
+        <!-- END: Trust Badges -->
+
+        <!-- START: FAQ -->
+        <section class="section section-alt" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <p class="section-kicker">FAQ</p>
+                    <h2 data-i18n="faqTitle">Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-list" id="faqList"></div>
+            </div>
+        </section>
+        <!-- END: FAQ -->
+
+        <!-- START: About -->
+        <section class="section" id="about">
+            <div class="container about-wrap">
+                <div>
+                    <p class="section-kicker" data-i18n="aboutKicker">About Velvet Scent</p>
+                    <h2 data-i18n="aboutTitle">Identity, Confidence, and Elegant Presence</h2>
+                    <p data-i18n="aboutText">At Velvet Scent, we believe fragrance is your unseen signature. Our creations are inspired by confidence, refined identity, and timeless elegance. Each blend is crafted to help you stand out with sophistication from day to night, delivering premium character in every spray.</p>
+                </div>
+                <img src="images/13.jpeg" alt="Velvet Scent luxury concept" loading="lazy">
+            </div>
+        </section>
+        <!-- END: About -->
+    </main>
+
+    <!-- START: Footer -->
+    <footer class="site-footer" id="contact">
+        <div class="container footer-grid">
+            <div>
+                <h3>Velvet Scent</h3>
+                <p data-i18n="footerTag">Luxury fragrances for UAE customers.</p>
+            </div>
+            <div>
+                <h4 data-i18n="whatsLabel">WhatsApp</h4>
+                <a href="https://wa.me/971547220879" target="_blank" rel="noopener">+971 54 722 0879</a>
+            </div>
+            <div>
+                <h4>Email</h4>
+                <a href="mailto:velvetscent0@gmail.com">velvetscent0@gmail.com</a>
+            </div>
+            <div>
+                <h4 data-i18n="socialLabel">Social</h4>
+                <div class="social-links">
+                    <a href="https://wa.me/971547220879" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="TikTok">TT</a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-copy">© <span id="year"></span> Velvet Scent. All rights reserved.</p>
+    </footer>
+    <!-- END: Footer -->
+
+    <!-- START: Floating WhatsApp -->
+    <a class="floating-whatsapp" href="https://wa.me/971547220879" target="_blank" rel="noopener" aria-label="Open WhatsApp chat">
+        <span>WhatsApp</span>
+    </a>
+    <!-- END: Floating WhatsApp -->
+
+    <!-- START: Sticky Order Button -->
+    <button id="stickyOrderBtn" class="sticky-order-btn" type="button" data-i18n="stickyOrder">Order Now</button>
+    <!-- END: Sticky Order Button -->
+
+    <!-- START: Live Order Popup -->
+    <div class="live-order-popup" id="liveOrderPopup" aria-live="polite"></div>
+    <!-- END: Live Order Popup -->
+
+    <!-- START: Cart Drawer -->
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+        <div class="cart-head">
+            <h3 data-i18n="cartTitle">Your Selection</h3>
+            <button id="closeCartBtn" class="icon-btn" type="button" aria-label="Close cart">✕</button>
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="cart-foot">
+            <p><span data-i18n="total">Total</span>: <strong id="cartTotal">AED 0</strong></p>
+            <button id="checkoutWhatsappBtn" class="btn btn-gold" type="button" data-i18n="checkoutWhatsapp">Checkout on WhatsApp</button>
+        </div>
+    </aside>
+    <!-- END: Cart Drawer -->
+
+    <!-- START: Overlay -->
+    <div class="overlay" id="overlay"></div>
+    <!-- END: Overlay -->
+
+    <!-- START: Quick View Modal -->
+    <div class="modal" id="quickViewModal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="icon-btn modal-close" id="closeQuickViewBtn" type="button" aria-label="Close quick view">✕</button>
+            <img id="quickViewImage" src="" alt="Product preview">
+            <h3 id="quickViewName"></h3>
+            <p id="quickViewBenefit"></p>
+            <p id="quickViewPrice" class="price-line"></p>
+            <button id="quickViewOrderBtn" class="btn btn-gold" type="button" data-i18n="orderWhatsapp">Order on WhatsApp</button>
+        </div>
+    </div>
+    <!-- END: Quick View Modal -->
+
+    <!-- START: Checkout Modal -->
+    <div class="modal" id="checkoutModal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="icon-btn modal-close" id="closeCheckoutBtn" type="button" aria-label="Close checkout">✕</button>
+            <h3 data-i18n="checkoutFormTitle">Complete Your WhatsApp Order</h3>
+            <form id="checkoutForm" class="checkout-form">
+                <label data-i18n="fullName">Full Name</label>
+                <input type="text" id="fullName" required>
+
+                <label data-i18n="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber" required>
+
+                <label data-i18n="deliveryAddress">Delivery Address (UAE)</label>
+                <input type="text" id="deliveryAddress" required>
+
+                <label data-i18n="city">City</label>
+                <input type="text" id="city" required>
+
+                <p class="payment-note" data-i18n="paymentCod">Payment Method: Cash on Delivery</p>
+                <button class="btn btn-gold" type="submit" data-i18n="sendOrder">Send Order</button>
+            </form>
+        </div>
+    </div>
+    <!-- END: Checkout Modal -->
+
+    <!-- START: Exit Intent Popup -->
+    <div class="modal" id="exitIntentModal" aria-hidden="true">
+        <div class="modal-content exit-content">
+            <button class="icon-btn modal-close" id="closeExitIntentBtn" type="button" aria-label="Close offer">✕</button>
+            <p class="section-kicker" data-i18n="exitKicker">Wait Before You Go</p>
+            <h3 data-i18n="exitTitle">Get 10% Extra on Your WhatsApp Order</h3>
+            <p data-i18n="exitText">Message us now and mention code VELVET10 to unlock your additional discount.</p>
+            <button id="exitOrderBtn" class="btn btn-gold" type="button" data-i18n="orderWhatsapp">Order on WhatsApp</button>
+        </div>
+    </div>
+    <!-- END: Exit Intent Popup -->
+
+    <script src="js/main.js"></script>
+</body>
+</html>
