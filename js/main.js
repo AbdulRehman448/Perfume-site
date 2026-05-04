@@ -711,7 +711,6 @@ function applyLanguage(lang) {
     renderProducts();
     renderReviews();
     renderFaq();
-    renderCart();
 
     const toggle = document.getElementById("langToggle");
     if (toggle) {
@@ -891,8 +890,6 @@ function init() {
     renderProducts();
     renderReviews();
     renderFaq();
-    renderCart();
-    updateCartCount();
 
     bindEvents();
     bindExitIntent();
