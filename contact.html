@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
@@ -22,8 +22,8 @@
                 <a href="contact.html" class="nav-link">Contact</a>
             </nav>
             <div class="nav-right">
-                <button class="nav-icon-btn theme-toggle-btn" onclick="cycleTheme()">🌙</button>
-                <button class="nav-icon-btn lang-toggle-btn" onclick="toggleLanguage()">عربي</button>
+                <button class="nav-icon-btn theme-toggle-btn" onclick="cycleTheme()">ðŸŒ™</button>
+                <button class="nav-icon-btn lang-toggle-btn" onclick="toggleLanguage()">Ø¹Ø±Ø¨ÙŠ</button>
             </div>
         </div>
     </header>
@@ -41,19 +41,19 @@
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 80px;">
                 <div style="background: var(--ivory-dark); padding: 40px; text-align: center;">
-                    <div style="font-size: 2rem; margin-bottom: 15px;">📱</div>
+                    <div style="font-size: 2rem; margin-bottom: 15px;">ðŸ“±</div>
                     <h3 class="serif">WhatsApp</h3>
                     <p style="font-size: 0.8rem; opacity: 0.6; margin-bottom: 20px;">Chat with us directly</p>
-                    <a href="https://wa.me/qr/4EGSY3HZUCP3E1" target="_blank" class="btn btn-gold" style="padding: 0.8rem 1.5rem; background-color: #25D366; border-color: #25D366;">CHAT ON WHATSAPP</a>
+                    <a href="https://wa.me/971547220879" target="_blank" class="btn btn-gold" style="padding: 0.8rem 1.5rem; background-color: #25D366; border-color: #25D366;">CHAT ON WHATSAPP</a>
                 </div>
                 <div style="background: var(--ivory-dark); padding: 40px; text-align: center;">
-                    <div style="font-size: 2rem; margin-bottom: 15px;">📧</div>
+                    <div style="font-size: 2rem; margin-bottom: 15px;">ðŸ“§</div>
                     <h3 class="serif">Email</h3>
-                    <p style="font-size: 0.8rem; opacity: 0.6; margin-bottom: 20px;">velvetscents@gmail.com</p>
-                    <a href="mailto:velvetscents@gmail.com" class="btn btn-outline" style="padding: 0.8rem 1.5rem;">SEND EMAIL</a>
+                    <p style="font-size: 0.8rem; opacity: 0.6; margin-bottom: 20px;">abdulrehman.tp.786@gmail.com</p>
+                    <a href="mailto:abdulrehman.tp.786@gmail.com" class="btn btn-outline" style="padding: 0.8rem 1.5rem;">SEND EMAIL</a>
                 </div>
                 <div style="background: var(--ivory-dark); padding: 40px; text-align: center;">
-                    <div style="font-size: 2rem; margin-bottom: 15px;">📍</div>
+                    <div style="font-size: 2rem; margin-bottom: 15px;">ðŸ“</div>
                     <h3 class="serif">Visit Us</h3>
                     <p style="font-size: 0.8rem; opacity: 0.6; margin-bottom: 20px;">Velvet Scents Atelier, Dubai, UAE<br>Available by appointment only</p>
                 </div>
@@ -90,7 +90,7 @@
                     <div class="form-group">
                         <label>Products Interested In</label>
                         <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-                            <label style="background: var(--ivory-dark); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; cursor: pointer;"><input type="checkbox" name="interest" value="Noir Éclat"> Noir Éclat</label>
+                            <label style="background: var(--ivory-dark); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; cursor: pointer;"><input type="checkbox" name="interest" value="Noir Ã‰clat"> Noir Ã‰clat</label>
                             <label style="background: var(--ivory-dark); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; cursor: pointer;"><input type="checkbox" name="interest" value="Marj"> Marj</label>
                             <label style="background: var(--ivory-dark); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; cursor: pointer;"><input type="checkbox" name="interest" value="Oud & Roses"> Oud & Roses</label>
                             <label style="background: var(--ivory-dark); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; cursor: pointer;"><input type="checkbox" name="interest" value="Dakhoon"> Dakhoon</label>
@@ -121,16 +121,17 @@
         document.getElementById('custom-order-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const interests = Array.from(this.querySelectorAll('input[name="interest"]:checked')).map(cb => cb.value).join(', ');
-            const message = `🌿 *Custom Order Request — Velvet Scents*\n\n` +
-                          `👤 Name: ${this.name.value}\n` +
-                          `📱 Phone: ${this.phone.value}\n` +
-                          `📍 Address: ${this.address.value}, ${this.city.value}\n` +
-                          `🛍️ Interested In: ${interests || 'General Inquiry'}\n` +
-                          `💳 Payment: ${this.payment.value}\n\n` +
+            const message = `ðŸŒ¿ *Custom Order Request â€” Velvet Scents*\n\n` +
+                          `ðŸ‘¤ Name: ${this.name.value}\n` +
+                          `ðŸ“± Phone: ${this.phone.value}\n` +
+                          `ðŸ“ Address: ${this.address.value}, ${this.city.value}\n` +
+                          `ðŸ›ï¸ Interested In: ${interests || 'General Inquiry'}\n` +
+                          `ðŸ’³ Payment: ${this.payment.value}\n\n` +
                           `_Please contact me to confirm pricing and availability._`;
             
-            window.open(`https://wa.me/qr/4EGSY3HZUCP3E1?text=${encodeURIComponent(message)}`, '_blank');
+            window.open(`https://wa.me/971547220879?text=${encodeURIComponent(message)}`, '_blank');
         });
     </script>
 </body>
 </html>
+

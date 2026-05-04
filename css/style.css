@@ -976,3 +976,346 @@ body.rtl .modal-close {
     }
 }
 /* END: Breakpoint 1440 */
+
+/* START: Velvet Scent Overrides */
+.header-actions .cart-chip { display: inline-flex !important; }
+
+.hero {
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-slider,
+.hero-slide,
+.hero-slide img,
+.hero-content {
+    height: 100vh;
+}
+
+.hero-content {
+    justify-content: center;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.16));
+}
+
+.hero-content h1,
+.hero-content h2,
+.hero-content p {
+    max-width: 760px;
+}
+
+.hero-cta .btn {
+    min-width: 170px;
+}
+
+.products-grid,
+#product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(198, 163, 83, 0.18);
+    box-shadow: 0 18px 40px rgba(17, 14, 7, 0.08);
+}
+
+body[data-theme="dark"] .glass-card {
+    background: rgba(22, 22, 22, 0.72);
+    border-color: rgba(198, 163, 83, 0.18);
+}
+
+.product-card {
+    border-radius: 22px;
+    overflow: hidden;
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 48px rgba(198, 163, 83, 0.12);
+}
+
+.product-media {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.product-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.45s ease;
+}
+
+.product-card:hover .product-media img {
+    transform: scale(1.06);
+}
+
+.product-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--gold), #d6b772);
+    color: #111;
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+.product-copy {
+    padding: 18px;
+    display: grid;
+    gap: 12px;
+}
+
+.product-copy__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.product-copy__head h3 {
+    font-size: 1.3rem;
+}
+
+.product-copy p {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.product-view-btn {
+    width: 100%;
+}
+
+.best-seller {
+    border-color: rgba(198, 163, 83, 0.35);
+}
+
+.product-modal {
+    width: min(1100px, 96vw);
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 20px;
+    align-items: center;
+}
+
+.product-modal img {
+    width: 100%;
+    height: 78vh;
+    max-height: 720px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin: 0;
+}
+
+.product-modal-copy {
+    display: grid;
+    gap: 12px;
+}
+
+.product-modal-note,
+.product-modal-desc,
+.order-summary-line {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.checkout-modal {
+    width: min(720px, 96vw);
+}
+
+.checkout-form select,
+.checkout-form textarea,
+.checkout-form input {
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: color-mix(in srgb, var(--surface) 92%, #ffffff 8%);
+    color: var(--text);
+    padding: 12px 14px;
+}
+
+.checkout-form textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.order-summary-line {
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: rgba(198, 163, 83, 0.08);
+}
+
+.cart-drawer {
+    width: min(460px, 92vw);
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    backdrop-filter: blur(18px);
+}
+
+.cart-row {
+    display: grid;
+    grid-template-columns: 78px 1fr auto;
+    gap: 12px;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    margin-bottom: 12px;
+}
+
+.cart-row img {
+    width: 78px;
+    height: 78px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.cart-row__info {
+    display: grid;
+    gap: 6px;
+}
+
+.cart-qty {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-qty button,
+.remove-line {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: transparent;
+    cursor: pointer;
+}
+
+.cart-row__actions {
+    display: grid;
+    gap: 8px;
+    justify-items: end;
+}
+
+.cart-empty-message {
+    padding: 40px 0;
+    text-align: center;
+    color: var(--muted);
+}
+
+.floating-whatsapp {
+    right: 18px;
+    bottom: 18px;
+    z-index: 120;
+    box-shadow: 0 18px 32px rgba(32, 198, 90, 0.28);
+}
+
+.sticky-order-btn {
+    z-index: 119;
+    box-shadow: 0 12px 26px rgba(198, 163, 83, 0.18);
+}
+
+.site-footer {
+    background: linear-gradient(180deg, #0b0b0b, #151515 65%, #0b0b0b);
+    color: #f7f2e8;
+    border-top: 1px solid rgba(198, 163, 83, 0.18);
+}
+
+.footer-grid a {
+    color: var(--gold);
+}
+
+.footer-map-section iframe {
+    width: 100%;
+}
+
+.review-card,
+.feature-card,
+.trust-card,
+.faq-item {
+    border-radius: 18px;
+}
+
+.faq-item {
+    width: 100%;
+    text-align: left;
+    display: grid;
+    gap: 8px;
+    padding: 18px;
+}
+
+.faq-item small {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.25s ease;
+    color: var(--muted);
+}
+
+.faq-item.open small {
+    max-height: 120px;
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+    .products-grid,
+    #product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .products-grid,
+    #product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .footer-grid {
+        grid-template-columns: 1.4fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-cta {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+    }
+
+    .product-modal {
+        grid-template-columns: 1fr;
+    }
+
+    .product-modal img {
+        height: 42vh;
+    }
+
+    .cart-row {
+        grid-template-columns: 62px 1fr;
+    }
+
+    .cart-row__actions {
+        grid-column: 1 / -1;
+        justify-items: start;
+    }
+}
+/* END: Velvet Scent Overrides */
