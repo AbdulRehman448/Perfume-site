@@ -391,7 +391,7 @@ function openCheckoutModal() {
   }
   populateCityOptions();
   updateOrderSummary();
-  openModal('checkoutModal');
+  if (!cart.length) { alert(currentLang === 'ar' ? 'يرجى إضافة المنتجات إلى الطلب أولاً.' : 'Please add products to your order first.'); return; }`r`n  openModal('checkoutModal');
 }
 
 function updateOrderSummary() {
@@ -442,7 +442,7 @@ function buildWhatsAppMessage(customer) {
     '',
     '━━━━━━━━━━━━',
     '',
-    `💳 Payment: ${t('paymentCod')}`,
+    💳 Payment: Cash on Delivery (UAE),
     '',
     'Please confirm my order.',
     'Thank you.'
@@ -646,4 +646,5 @@ function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
 
