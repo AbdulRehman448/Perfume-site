@@ -577,13 +577,28 @@ body.rtl .faq-question {
 
 .footer-grid {
     display: grid;
-    gap: 16px;
+    gap: 24px;
     grid-template-columns: 1fr;
+}
+
+.footer-map-section {
+    grid-column: 1 / -1;
 }
 
 .footer-grid h4,
 .footer-grid h3 {
-    margin-bottom: 6px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.footer-grid a {
+    display: inline-block;
+    color: var(--gold);
+    transition: opacity 0.2s ease;
+}
+
+.footer-grid a:hover {
+    opacity: 0.8;
 }
 
 .social-links {
@@ -598,13 +613,15 @@ body.rtl .faq-question {
     border-radius: 50%;
     display: grid;
     place-items: center;
+    color: var(--text);
 }
 
 .footer-copy {
     text-align: center;
-    margin-top: 24px;
+    margin-top: 16px;
     color: var(--muted);
     font-size: 0.88rem;
+    line-height: 1.6;
 }
 /* END: About + Footer */
 
