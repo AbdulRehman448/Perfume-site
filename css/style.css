@@ -906,14 +906,26 @@ body.rtl .modal-close {
 /* START: Breakpoint 768 */
 @media (min-width: 768px) {
     .main-nav {
-        position: static;
-        max-height: none;
-        overflow: visible;
-        background: transparent;
-        border: 0;
-        display: flex;
-        gap: 16px;
-        inset: auto;
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        bottom: auto !important;
+        width: auto !important;
+        height: auto !important;
+        background: transparent !important;
+        border: 0 !important;
+        border-right: none !important;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 16px !important;
+        padding: 0 !important;
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        box-shadow: none !important;
+        z-index: auto !important;
+        overflow: visible !important;
     }
 
     .main-nav a {
