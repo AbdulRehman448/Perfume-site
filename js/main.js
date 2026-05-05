@@ -7,10 +7,35 @@ const STORAGE_KEYS = {
 };
 
 const HERO_SLIDES = ['images/28.jpeg', 'images/14.jpeg', 'images/19.jpeg'];
-const PRODUCT_FILES = [
-  '1.jpeg','2.jpeg','3.jpeg','4.jpeg','5.jpeg','6.jpeg','7.jpeg','8.jpeg','9.jpeg',
-  '10.jpeg','11.jpeg','12.jpeg','13.jpeg','14.jpeg','15.jpeg','16.jpeg','17.jpeg','18.jpeg',
-  '19.jpeg','20.jpeg','21.jpeg','22.jpeg','23.jpeg','24.jpeg','25.jpeg','26.jpeg','27.jpeg','28.jpeg'
+const PRODUCT_DATA = [
+  { file: '1.jpeg', name: 'Velvet Scent 01', name_ar: 'فيلفت سينت 01', price: 39, desc: 'A soft everyday fragrance with a clean modern profile.', description_ar: 'عطر يومي ناعم بلمسة عصرية نظيفة.', category: 'perfume', badge: '' },
+  { file: '2.jpeg', name: 'Velvet Scent 02', name_ar: 'فيلفت سينت 02', price: 49, desc: 'A warm and elegant fragrance for daily wear.', description_ar: 'عطر دافئ وأنيق للاستخدام اليومي.', category: 'perfume', badge: '' },
+  { file: '3.jpeg', name: 'Velvet Scent 03', name_ar: 'فيلفت سينت 03', price: 59, desc: 'A smooth fragrance with a balanced luxury feel.', description_ar: 'عطر ناعم بإحساس فاخر ومتوازن.', category: 'perfume', badge: '' },
+  { file: '4.jpeg', name: 'Velvet Scent 04', name_ar: 'فيلفت سينت 04', price: 69, desc: 'A refined scent made for confident everyday style.', description_ar: 'رائحة راقية مصممة للثقة اليومية.', category: 'perfume', badge: '' },
+  { file: '5.jpeg', name: 'Velvet Scent 05', name_ar: 'فيلفت سينت 05', price: 79, desc: 'A premium signature scent with a classy finish.', description_ar: 'عطر مميز فاخر بلمسة نهائية أنيقة.', category: 'perfume', badge: 'Best Seller' },
+  { file: '6.jpeg', name: 'Velvet Scent 06', name_ar: 'فيلفت سينت 06', price: 89, desc: 'A rich fragrance with long-lasting character.', description_ar: 'عطر غني بطابع يدوم طويلاً.', category: 'perfume', badge: '' },
+  { file: '7.jpeg', name: 'Velvet Scent 07', name_ar: 'فيلفت سينت 07', price: 99, desc: 'A smooth blend with a soft luxury aroma.', description_ar: 'مزيج ناعم برائحة فاخرة هادئة.', category: 'perfume', badge: '' },
+  { file: '8.jpeg', name: 'Velvet Scent 08', name_ar: 'فيلفت سينت 08', price: 109, desc: 'An elegant scent for day-to-night confidence.', description_ar: 'عطر أنيق للثقة من النهار إلى الليل.', category: 'perfume', badge: '' },
+  { file: '9.jpeg', name: 'Velvet Scent 09', name_ar: 'فيلفت سينت 09', price: 119, desc: 'A polished fragrance with a modern luxury note.', description_ar: 'عطر مصقول بلمسة فاخرة عصرية.', category: 'perfume', badge: '' },
+  { file: '10.jpeg', name: 'Velvet Scent 10', name_ar: 'فيلفت سينت 10', price: 129, desc: 'A bold scent designed to stand out subtly.', description_ar: 'عطر جريء مصمم ليمنح حضورًا مميزًا.', category: 'perfume', badge: 'Limited' },
+  { file: '11.jpeg', name: 'Velvet Scent 11', name_ar: 'فيلفت سينت 11', price: 139, desc: 'A fresh and premium fragrance with easy wearability.', description_ar: 'عطر منعش وفاخر سهل الاستخدام اليومي.', category: 'perfume', badge: '' },
+  { file: '12.jpeg', name: 'Velvet Scent 12', name_ar: 'فيلفت سينت 12', price: 149, desc: 'A smooth luxury scent with a confident trail.', description_ar: 'رائحة فاخرة ناعمة مع أثر مميز.', category: 'perfume', badge: '' },
+  { file: '13.jpeg', name: 'Velvet Scent 13', name_ar: 'فيلفت سينت 13', price: 159, desc: 'A rich fragrance with a polished premium finish.', description_ar: 'عطر غني بلمسة نهائية فاخرة.', category: 'giftset', badge: '' },
+  { file: '14.jpeg', name: 'Velvet Scent 14', name_ar: 'فيلفت سينت 14', price: 169, desc: 'A luxurious scent crafted for elegant moments.', description_ar: 'عطر فاخر صُمم للحظات الأنيقة.', category: 'giftset', badge: '' },
+  { file: '15.jpeg', name: 'Velvet Scent 15', name_ar: 'فيلفت سينت 15', price: 179, desc: 'A warm fragrance with soft lasting depth.', description_ar: 'عطر دافئ بعمق ناعم يدوم.', category: 'giftset', badge: '' },
+  { file: '16.jpeg', name: 'Velvet Scent 16', name_ar: 'فيلفت سينت 16', price: 189, desc: 'A balanced fragrance with a premium daily profile.', description_ar: 'عطر متوازن بملف يومي فاخر.', category: 'giftset', badge: '' },
+  { file: '17.jpeg', name: 'Velvet Scent 17', name_ar: 'فيلفت سينت 17', price: 199, desc: 'A standout perfume with an elegant aroma trail.', description_ar: 'عطر مميز بأثر عطري أنيق.', category: 'giftset', badge: '' },
+  { file: '18.jpeg', name: 'Velvet Scent 18', name_ar: 'فيلفت سينت 18', price: 209, desc: 'A luxurious blend with refined everyday appeal.', description_ar: 'مزيج فاخر بجاذبية يومية راقية.', category: 'giftset', badge: '' },
+  { file: '19.jpeg', name: 'Velvet Scent 19', name_ar: 'فيلفت سينت 19', price: 219, desc: 'A graceful scent with a premium signature feel.', description_ar: 'رائحة أنيقة بإحساس توقيع فاخر.', category: 'giftset', badge: '' },
+  { file: '20.jpeg', name: 'Velvet Scent 20', name_ar: 'فيلفت سينت 20', price: 229, desc: 'A deep fragrance made for evening presence.', description_ar: 'عطر عميق مناسب للحضور المسائي.', category: 'dakhoon', badge: '' },
+  { file: '21.jpeg', name: 'Velvet Scent 21', name_ar: 'فيلفت سينت 21', price: 239, desc: 'A smooth scent with a rich and lasting finish.', description_ar: 'رائحة ناعمة بلمسة غنية تدوم.', category: 'dakhoon', badge: '' },
+  { file: '22.jpeg', name: 'Velvet Scent 22', name_ar: 'فيلفت سينت 22', price: 249, desc: 'A premium fragrance with a classic luxury mood.', description_ar: 'عطر فاخر بطابع كلاسيكي راقٍ.', category: 'dakhoon', badge: '' },
+  { file: '23.jpeg', name: 'Velvet Scent 23', name_ar: 'فيلفت سينت 23', price: 259, desc: 'A soft yet expressive scent for special wear.', description_ar: 'عطر ناعم لكنه واضح للمناسبات الخاصة.', category: 'dakhoon', badge: '' },
+  { file: '24.jpeg', name: 'Velvet Scent 24', name_ar: 'فيلفت سينت 24', price: 269, desc: 'A rich fragrance with a confident oud-style feel.', description_ar: 'عطر غني بإحساس فاخر قريب من العود.', category: 'dakhoon', badge: '' },
+  { file: '25.jpeg', name: 'Velvet Scent 25', name_ar: 'فيلفت سينت 25', price: 279, desc: 'A premium scent with long-lasting warmth.', description_ar: 'رائحة فاخرة بدفء يدوم طويلًا.', category: 'dakhoon', badge: '' },
+  { file: '26.jpeg', name: 'Velvet Scent 26', name_ar: 'فيلفت سينت 26', price: 289, desc: 'A stylish fragrance with a polished luxury tone.', description_ar: 'عطر أنيق بنغمة فاخرة مصقولة.', category: 'dakhoon', badge: '' },
+  { file: '27.jpeg', name: 'Velvet Scent 27', name_ar: 'فيلفت سينت 27', price: 299, desc: 'A strong signature scent for premium appeal.', description_ar: 'عطر توقيع قوي بجاذبية فاخرة.', category: 'dakhoon', badge: '' },
+  { file: '28.jpeg', name: 'Velvet Scent 28', name_ar: 'فيلفت سينت 28', price: 309, desc: 'A final luxury fragrance with a refined finish.', description_ar: 'عطر فاخر نهائي بلمسة راقية.', category: 'dakhoon', badge: '' }
 ];
 
 const EMIRATE_CITIES = {
@@ -131,8 +156,6 @@ const REVIEWS = [
   { en: 'Saeed Al Dhaheri from Al Ain recommended Velvet Scent for daily wear.', ar: 'سعيد الظاهري من العين أوصى بفيلفت سينت للاستخدام اليومي.' }
 ];
 
-const BASE_PRICES = [39, 49, 59, 69, 79, 89, 99, 109, 119, 129, 139, 149, 159, 169, 179, 189, 199, 209, 219, 229, 239, 249, 259, 269, 279, 289, 299, 309];
-
 function sortFilesNaturally(files) {
   return [...files].sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
 }
@@ -141,56 +164,40 @@ function isProductImageFile(file) {
   return /\.(jpe?g|png|webp|gif)$/i.test(file);
 }
 
-function buildProducts(files) {
-  return sortFilesNaturally(files).filter(isProductImageFile).map((file, index) => {
-    const name = filenameToProductName(file);
-    const price = BASE_PRICES[index] || (39 + (index * 10));
-    const category = index < 12 ? 'perfume' : index < 20 ? 'giftset' : 'dakhoon';
-    return {
-      id: index + 1,
-      name,
-      name_ar: name,
-      img: `images/${file}`,
-      image: `images/${file}`,
-      price,
-      desc: `A luxurious fragrance selected from the Velvet Scent collection, designed for refined UAE tastes and elegant daily wear.`,
-      description_ar: 'عطر فاخر مختار من مجموعة فيلفت سينت، مصمم للأذواق الراقية في الإمارات وللاستخدام اليومي الأنيق.',
-      category,
-      cat: category,
-      notes: 'Luxury long-lasting fragrance for UAE weather.',
-      bestSeller: index === 4 || index === 9 || index === 13,
-      badge: index === 4 ? 'Best Seller' : index === 9 ? 'Limited' : ''
-    };
-  });
+function buildProducts(files = PRODUCT_DATA.map((product) => product.file)) {
+  const fileMap = new Map(sortFilesNaturally(files).filter(isProductImageFile).map((file) => [file, `images/${file}`]));
+  return PRODUCT_DATA.map((product, index) => ({
+    id: index + 1,
+    name: product.name,
+    name_ar: product.name_ar,
+    img: fileMap.get(product.file) || `images/${product.file}`,
+    image: fileMap.get(product.file) || `images/${product.file}`,
+    price: product.price,
+    desc: product.desc,
+    description_ar: product.description_ar,
+    category: product.category,
+    cat: product.category,
+    notes: product.notes || 'Luxury long-lasting fragrance for UAE weather.',
+    bestSeller: product.badge === 'Best Seller',
+    badge: product.badge
+  }));
 }
 
-function filenameToProductName(file) {
-  const base = file.replace(/\.[^/.]+$/, '');
-  if (/^\d+$/.test(base)) {
-    return `Velvet Scent ${base.padStart(2, '0')}`;
-  }
-  return base
-    .replace(/[_-]+/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .replace(/\b\w/g, (char) => char.toUpperCase());
-}
-
-let PRODUCTS = buildProducts(PRODUCT_FILES);
+let PRODUCTS = buildProducts();
 
 async function discoverProductFiles() {
   try {
     const response = await fetch('images/');
-    if (!response.ok) return PRODUCT_FILES;
+    if (!response.ok) return PRODUCT_DATA.map((product) => product.file);
     const html = await response.text();
     const matches = [...html.matchAll(/href=["']([^"']+\.(?:jpe?g|png|webp|gif))["']/gi)];
     const files = matches
       .map((match) => decodeURIComponent(match[1].split('/').pop() || ''))
       .filter(Boolean);
     const uniqueFiles = [...new Set(files)].filter(isProductImageFile);
-    return uniqueFiles.length ? uniqueFiles : PRODUCT_FILES;
+    return uniqueFiles.length ? uniqueFiles : PRODUCT_DATA.map((product) => product.file);
   } catch {
-    return PRODUCT_FILES;
+    return PRODUCT_DATA.map((product) => product.file);
   }
 }
 
@@ -312,7 +319,7 @@ function renderProducts() {
       <div class="product-card glass-card ${product.bestSeller ? 'best-seller' : ''}" data-product-id="${product.id}" dir="${currentLang === 'ar' ? 'rtl' : 'ltr'}">
         <div class="product-image">
           <img src="${product.image || product.img}" alt="${currentLang === 'ar' ? product.name_ar : product.name}" loading="lazy">
-          ${product.bestSeller ? '<span class="product-badge">Best Seller</span>' : ''}
+          ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
         </div>
         <div class="product-info">
           <div class="product-header">
@@ -488,7 +495,7 @@ function openProductModal(productId) {
   if (name) name.textContent = product.name;
   if (price) price.textContent = money(product.price);
   if (benefit) benefit.textContent = product.bestSeller ? (currentLang === 'ar' ? 'الأكثر مبيعًا' : 'Best Seller') : (currentLang === 'ar' ? 'عطر فاخر مختار بعناية.' : 'Premium fragrance selected for elegance and daily wear.');
-  if (desc) desc.textContent = product.desc;
+  if (desc) desc.textContent = product.desc || (currentLang === 'ar' ? product.description_ar : product.desc);
 
   openModal('quickViewModal');
 }
