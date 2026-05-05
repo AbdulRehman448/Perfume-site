@@ -156,6 +156,13 @@ const REVIEWS = [
   { en: 'Saeed Al Dhaheri from Al Ain recommended Velvet Scent for daily wear.', ar: 'سعيد الظاهري من العين أوصى بفيلفت سينت للاستخدام اليومي.' }
 ];
 
+const FAQ_DATA = [
+  { q_en: 'How long is delivery in UAE?', a_en: 'Usually 1 to 3 business days depending on your emirate.', q_ar: 'كم مدة التوصيل داخل الإمارات؟', a_ar: 'عادةً من يوم إلى ثلاثة أيام عمل حسب الإمارة.' },
+  { q_en: 'What payment method do you accept?', a_en: 'Cash on Delivery within the UAE.', q_ar: 'ما هي طريقة الدفع؟', a_ar: 'الدفع عند الاستلام داخل الإمارات فقط.' },
+  { q_en: 'Do I need an account to order?', a_en: 'No. Add items, complete the form, and send the order.', q_ar: 'هل أحتاج حسابًا للطلب؟', a_ar: 'لا، فقط أضف المنتجات وأكمل النموذج ثم أرسل الطلب.' },
+  { q_en: 'Do you offer WhatsApp support?', a_en: 'Yes. WhatsApp is the only contact and ordering channel.', q_ar: 'هل لديكم دعم واتساب؟', a_ar: 'نعم، واتساب هو وسيلة التواصل والطلب الوحيدة.' }
+];
+
 function sortFilesNaturally(files) {
   return [...files].sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
 }
@@ -372,19 +379,16 @@ function renderReviews() {
 function renderFaq() {
   const target = document.getElementById('faqList');
   if (!target) return;
-  const items = [
-    { q: currentLang === 'ar' ? 'كم مدة التوصيل داخل الإمارات؟' : 'How long is delivery in UAE?', a: currentLang === 'ar' ? 'عادةً من يوم إلى ثلاثة أيام عمل حسب الإمارة.' : 'Usually 1 to 3 business days depending on your emirate.' },
-    { q: currentLang === 'ar' ? 'ما هي طريقة الدفع؟' : 'What payment method do you accept?', a: currentLang === 'ar' ? 'الدفع عند الاستلام داخل الإمارات فقط.' : 'Cash on Delivery within the UAE.' },
-    { q: currentLang === 'ar' ? 'هل أحتاج حسابًا للطلب؟' : 'Do I need an account to order?', a: currentLang === 'ar' ? 'لا، فقط أضف المنتجات وأكمل النموذج ثم أرسل الطلب.' : 'No. Add items, complete the form, and send the order.' },
-    { q: currentLang === 'ar' ? 'هل لديكم دعم واتساب؟' : 'Do you offer WhatsApp support?', a: currentLang === 'ar' ? 'نعم، واتساب هو وسيلة التواصل والطلب الوحيدة.' : 'Yes. WhatsApp is the only contact and ordering channel.' }
-  ];
-
-  target.innerHTML = items.map((item, index) => `
-    <button class="faq-item glass-card" type="button" data-faq="${index}">
-      <span>${item.q}</span>
-      <small>${item.a}</small>
-    </button>
-  `).join('');
+  target.innerHTML = FAQ_DATA.map((item, index) => {
+    const q = currentLang === 'ar' ? item.q_ar : item.q_en;
+    const a = currentLang === 'ar' ? item.a_ar : item.a_en;
+    return `
+      <button class="faq-item glass-card" type="button" data-faq="${index}">
+        <span>${q}</span>
+        <small>${a}</small>
+      </button>
+    `;
+  }).join('');
 
   target.querySelectorAll('[data-faq]').forEach((btn) => {
     btn.addEventListener('click', () => btn.classList.toggle('open'));
