@@ -133,6 +133,34 @@ const REVIEWS = [
 
 const BASE_PRICES = [39, 49, 59, 69, 79, 89, 99, 109, 119, 129, 139, 149, 159, 169, 179, 189, 199, 209, 219, 229, 239, 249, 259, 269, 279, 289, 299, 309];
 
+function sortFilesNaturally(files) {
+  return [...files].sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+}
+
+function isProductImageFile(file) {
+  return /\.(jpe?g|png|webp|gif)$/i.test(file) && !/^logo\./i.test(file);
+}
+
+function buildProducts(files) {
+  return sortFilesNaturally(files).filter(isProductImageFile).map((file, index) => {
+    const name = filenameToProductName(file);
+    const price = BASE_PRICES[index] || (39 + (index * 10));
+    const category = index < 12 ? 'perfume' : index < 20 ? 'giftset' : 'dakhoon';
+    return {
+      id: index + 1,
+      name,
+      img: `images/${file}`,
+      price,
+      desc: `A luxurious fragrance selected from the Velvet Scent collection, designed for refined UAE tastes and elegant daily wear.`,
+      category,
+      cat: category,
+      notes: 'Luxury long-lasting fragrance for UAE weather.',
+      bestSeller: index === 4 || index === 9 || index === 13,
+      badge: index === 4 ? 'Best Seller' : index === 9 ? 'Limited' : ''
+    };
+  });
+}
+
 function filenameToProductName(file) {
   const base = file.replace(/\.[^/.]+$/, '');
   if (/^\d+$/.test(base)) {
@@ -145,23 +173,23 @@ function filenameToProductName(file) {
     .replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
-const PRODUCTS = PRODUCT_FILES.map((file, index) => {
-  const name = filenameToProductName(file);
-  const price = BASE_PRICES[index] || (39 + (index * 10));
-  const category = index < 12 ? 'perfume' : index < 20 ? 'giftset' : 'dakhoon';
-  return {
-    id: index + 1,
-    name,
-    img: `images/${file}`,
-    price,
-    desc: `A luxurious fragrance selected from the Velvet Scent collection, designed for refined UAE tastes and elegant daily wear.`,
-    category,
-    cat: category,
-    notes: 'Luxury long-lasting fragrance for UAE weather.',
-    bestSeller: index === 4 || index === 9 || index === 13,
-    badge: index === 4 ? 'Best Seller' : index === 9 ? 'Limited' : ''
-  };
-});
+let PRODUCTS = buildProducts(PRODUCT_FILES);
+
+async function discoverProductFiles() {
+  try {
+    const response = await fetch('images/');
+    if (!response.ok) return PRODUCT_FILES;
+    const html = await response.text();
+    const matches = [...html.matchAll(/href=["']([^"']+\.(?:jpe?g|png|webp|gif))["']/gi)];
+    const files = matches
+      .map((match) => decodeURIComponent(match[1].split('/').pop() || ''))
+      .filter(Boolean);
+    const uniqueFiles = [...new Set(files)].filter(isProductImageFile);
+    return uniqueFiles.length ? uniqueFiles : PRODUCT_FILES;
+  } catch {
+    return PRODUCT_FILES;
+  }
+}
 
 let cart = JSON.parse(localStorage.getItem(STORAGE_KEYS.cart) || '[]');
 let currentTheme = 'light';
@@ -669,7 +697,10 @@ function populateFooterYear() {
   if (year) year.textContent = new Date().getFullYear();
 }
 
-function init() {
+async function init() {
+  const discoveredFiles = await discoverProductFiles();
+  PRODUCTS = buildProducts(discoveredFiles);
+
   populateFooterYear();
   populateEmirates();
   populateCityOptions();
