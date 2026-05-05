@@ -567,7 +567,7 @@ function buildWhatsAppMessage(customer) {
     '💳 *PAYMENT:* Cash on Delivery (UAE)',
     '',
     'Please confirm my order.',
-    'Thank you! 🙏'
+    'Thank you!'
   ].join('\n');
 
   return encodeURIComponent(message);
@@ -798,11 +798,3 @@ async function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
-
-
-
-
-
-
-
-
