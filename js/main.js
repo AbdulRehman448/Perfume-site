@@ -534,36 +534,44 @@ function populateCityOptions() {
 }
 
 function buildWhatsAppMessage(customer) {
-  const items = cart.map((item) => `- ${item.name} x${item.qty} = ${money(item.price * item.qty)}`).join('\n');
+  // 1. Detailed item breakdown: Product | Qty x Price | Subtotal
+  const items = cart.map((item) => {
+    const subtotal = item.price * item.qty;
+    return `🛍️ *${item.name}*\n   ${item.qty} x ${money(item.price)} = *${money(subtotal)}*`;
+  }).join('\n\n');
+
+  // 2. Calculate grand total
   const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+  // 3. Construct the organized message
   const message = [
-    'VELVET SCENT ORDER',
-    '━━━━━━━━━━━━',
+    '✨ *VELVET SCENT ORDER*',
+    '━━━━━━━━━━━━━━━━━━',
     '',
-    'Selected Fragrances:',
+    '📦 *SELECTED FRAGRANCES*',
     items,
     '',
-    `Total: ${money(total)}`,
+    '──────────────────',
+    `💰 *GRAND TOTAL:*  *${money(total)}*`,
+    '──────────────────',
     '',
-    '━━━━━━━━━━━━',
+    '👤 *CUSTOMER DETAILS*',
+    `• *Name:* ${customer.fullName}`,
+    `• *Phone:* ${customer.phoneNumber}`,
+    `• *City:* ${customer.city}`,
+    `• *Emirate:* ${customer.emirate}`,
+    `• *Address:* ${customer.address}`,
     '',
-    'Customer Details:',
-    `Name: ${customer.fullName}`,
-    `Phone: ${customer.phoneNumber}`,
-    `City: ${customer.city}`,
-    `Emirate: ${customer.emirate}`,
-    `Delivery Address: ${customer.address}`,
+    '━━━━━━━━━━━━━━━━━━',
     '',
-    '━━━━━━━━━━━━',
-    '',
-    '💳 Payment: Cash on Delivery (UAE)',
+    '💳 *PAYMENT:* Cash on Delivery (UAE)',
     '',
     'Please confirm my order.',
-    'Thank you.'
+    'Thank you! 🙏'
   ].join('\n');
+
   return encodeURIComponent(message);
 }
-
 function openWhatsAppOrder(customer) {
   const encoded = buildWhatsAppMessage(customer);
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`, '_blank', 'noopener');
