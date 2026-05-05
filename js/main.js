@@ -26,64 +26,100 @@ const EMIRATE_CITIES = {
 
 const TRANSLATIONS = {
   en: {
-    navHome: 'Home', navShop: 'Shop', navReviews: 'Reviews', navContact: 'Contact',
+    navHome: 'Home', navShop: 'Shop', navReviews: 'Reviews', navFaq: 'FAQ', navContact: 'Contact',
+    offer: '45% OFF - Limited Time',
     heroTitle: 'Unleash Your Signature Scent',
     heroSub: 'Luxury Fragrances for Men and Women in UAE',
-    heroCtaShop: 'Shop Now',
-    heroCtaWhatsApp: 'WhatsApp Order',
-    productsTitle: 'Luxury Perfume Collection',
+    shopNow: 'Shop Now',
+    orderWhatsapp: 'Order on WhatsApp',
+    productsTitle: 'Best Selling Collection',
     productsSub: 'Browse every fragrance and open the detail view to add it to your order.',
     viewDetails: 'View Details',
     addToOrder: 'Add to Order',
-    cartTitle: 'Cart',
+    cart: 'Cart',
+    cartTitle: 'Your Selection',
     cartEmpty: 'Your cart is empty.',
-    cartProceed: 'Proceed to WhatsApp Order',
-    orderFormTitle: 'Complete Your WhatsApp Order',
+    total: 'Total',
+    checkoutWhatsapp: 'Checkout on WhatsApp',
+    checkoutFormTitle: 'Complete Your WhatsApp Order',
     fullName: 'Full Name',
+    phoneNumber: 'Phone Number',
     phone: 'Phone Number',
     emirate: 'State / Emirate',
     city: 'City',
     address: 'Delivery Address',
     sendOrder: 'Send Order to WhatsApp',
     stickyOrder: 'Order Now',
-    whyTitle: 'Why Velvet Scent',
-    reviewsTitle: 'Customer Reviews',
-    footerBrand: 'Velvet Scent – Luxury Fragrance Brand',
-    footerContact: 'WhatsApp',
-    developerCredit: 'Developed By: Abdul Rehman Ali',
-    copyright: '© 2026 Velvet Scent. All Rights Reserved. Developed by Abdul Rehman Ali',
-    paymentCod: 'Cash on Delivery (UAE)',
-    orderConfirmed: 'Your order is ready to send via WhatsApp.'
+    whyKicker: 'Why Choose Us',
+    whyTitle: 'Luxury Crafted for Everyday Confidence',
+    f1t: 'Long-lasting Fragrance', f1d: 'Performance that stays fresh for hours in UAE weather.',
+    f2t: 'Premium Oils', f2d: 'High-quality concentrated oils for rich signature scent trails.',
+    f3t: 'Affordable Luxury', f3d: 'Luxury feeling at conversion-focused, practical prices.',
+    f4t: 'Unisex Perfumes', f4d: 'Balanced profiles made for both men and women.',
+    f5t: 'Fast UAE Delivery', f5d: 'Quick dispatch and reliable local shipping support.',
+    reviewsKicker: 'Customer Reviews',
+    reviewsTitle: 'Trusted by Customers Across UAE',
+    tb1t: 'Cash on Delivery Available', tb1d: 'Pay only when your order reaches your door.',
+    tb2t: 'Fast Shipping Across UAE', tb2d: 'Coverage across Dubai, Abu Dhabi, Sharjah and more.',
+    tb3t: '100% Satisfaction Guarantee', tb3d: 'Support team ready to help if you need assistance.',
+    faqTitle: 'Frequently Asked Questions',
+    aboutKicker: 'About Velvet Scent',
+    aboutTitle: 'Identity, Confidence, and Elegant Presence',
+    aboutText: 'At Velvet Scent, we believe fragrance is your unseen signature. Our creations are inspired by confidence, refined identity, and timeless elegance. Each blend is crafted to help you stand out with sophistication from day to night, delivering premium character in every spray.',
+    footerTag: 'Luxury fragrances for UAE customers.',
+    whatsLabel: 'WhatsApp',
+    paymentCod: 'Payment Method: Cash on Delivery (UAE)',
+    exitKicker: 'Wait Before You Go',
+    exitTitle: 'Get 10% Extra on Your WhatsApp Order',
+    exitText: 'Message us now and mention code VELVET10 to unlock your additional discount.'
   },
   ar: {
-    navHome: 'الرئيسية', navShop: 'المتجر', navReviews: 'التقييمات', navContact: 'التواصل',
+    navHome: 'الرئيسية', navShop: 'المتجر', navReviews: 'التقييمات', navFaq: 'الأسئلة الشائعة', navContact: 'التواصل',
+    offer: 'خصم 45% - عرض محدود الوقت',
     heroTitle: 'أطلق عطرك المميز',
     heroSub: 'عطور فاخرة للرجال والنساء في الإمارات',
-    heroCtaShop: 'تسوق الآن',
-    heroCtaWhatsApp: 'طلب واتساب',
-    productsTitle: 'مجموعة العطور الفاخرة',
+    shopNow: 'تسوق الآن',
+    orderWhatsapp: 'طلب واتساب',
+    productsTitle: 'مجموعة الأكثر مبيعاً',
     productsSub: 'تصفح كل عطر وافتح التفاصيل لإضافته إلى طلبك.',
     viewDetails: 'عرض التفاصيل',
     addToOrder: 'أضف إلى الطلب',
-    cartTitle: 'السلة',
+    cart: 'السلة',
+    cartTitle: 'اختياراتك',
     cartEmpty: 'سلتك فارغة.',
-    cartProceed: 'إتمام الطلب عبر واتساب',
-    orderFormTitle: 'أكمل طلبك عبر واتساب',
+    total: 'الإجمالي',
+    checkoutWhatsapp: 'إتمام على واتساب',
+    checkoutFormTitle: 'أكمل طلبك عبر واتساب',
     fullName: 'الاسم الكامل',
+    phoneNumber: 'رقم الهاتف',
     phone: 'رقم الهاتف',
     emirate: 'الولاية / الإمارة',
     city: 'المدينة',
     address: 'عنوان التوصيل',
     sendOrder: 'إرسال الطلب إلى واتساب',
     stickyOrder: 'اطلب الآن',
-    whyTitle: 'لماذا فيلفت سينت',
-    reviewsTitle: 'آراء العملاء',
-    footerBrand: 'فيلفت سينت – علامة عطور فاخرة',
-    footerContact: 'واتساب',
-    developerCredit: 'تم التطوير بواسطة: عبد الرحمن علي',
-    copyright: '© 2026 Velvet Scent. جميع الحقوق محفوظة. تم التطوير بواسطة عبد الرحمن علي',
-    paymentCod: 'الدفع عند الاستلام (الإمارات)',
-    orderConfirmed: 'طلبك جاهز للإرسال عبر واتساب.'
+    whyKicker: 'لماذا اخترنا',
+    whyTitle: 'الفخامة المصممة للثقة اليومية',
+    f1t: 'رائحة طويلة الأمد', f1d: 'أداء تبقى طازجة لساعات في طقس الإمارات.',
+    f2t: 'زيوت فاخرة', f2d: 'زيوت مركزة عالية الجودة لزيوت عطرية غنية.',
+    f3t: 'فخامة ميسورة', f3d: 'شعور فخم بأسعار عملية مركزة على التحويل.',
+    f4t: 'عطور محايدة الجنس', f4d: 'ملفات متوازنة مصنوعة للرجال والنساء.',
+    f5t: 'توصيل سريع بالإمارات', f5d: 'إرسال سريع وشحن محلي موثوق.',
+    reviewsKicker: 'تقييمات العملاء',
+    reviewsTitle: 'موثوق به من قبل العملاء في جميع أنحاء الإمارات',
+    tb1t: 'الدفع عند الاستلام متاح', tb1d: 'ادفع فقط عند وصول طلبك إلى باب منزلك.',
+    tb2t: 'شحن سريع في جميع أنحاء الإمارات', tb2d: 'تغطية دبي وأبوظبي والشارقة وأكثر.',
+    tb3t: '100% ضمان الرضا', tb3d: 'فريق الدعم جاهز للمساعدة إذا كنت بحاجة.',
+    faqTitle: 'الأسئلة الشائعة',
+    aboutKicker: 'حول فيلفت سينت',
+    aboutTitle: 'الهوية والثقة والحضور الأنيق',
+    aboutText: 'في Velvet Scent، نعتقد أن العطر هو توقيعك غير المرئي. استلهاماتنا الإبداعية من الثقة والهوية المكررة والأناقة الخالدة. يتم صنع كل خليط لمساعدتك على التميز بتعقيد من اليوم إلى الليل، مما يوفر شخصية فاخرة في كل رش.',
+    footerTag: 'عطور فاخرة لعملاء الإمارات.',
+    whatsLabel: 'واتساب',
+    paymentCod: 'طريقة الدفع: الدفع عند الاستلام (الإمارات)',
+    exitKicker: 'انتظر قبل أن تغادر',
+    exitTitle: 'احصل على 10% إضافية على طلب WhatsApp الخاص بك',
+    exitText: 'راسلنا الآن وذكر رمز VELVET10 لفتح خصم إضافي.'
   }
 };
 
@@ -97,9 +133,20 @@ const REVIEWS = [
 
 const BASE_PRICES = [39, 49, 59, 69, 79, 89, 99, 109, 119, 129, 139, 149, 159, 169, 179, 189, 199, 209, 219, 229, 239, 249, 259, 269, 279, 289, 299, 309];
 
+function filenameToProductName(file) {
+  const base = file.replace(/\.[^/.]+$/, '');
+  if (/^\d+$/.test(base)) {
+    return `Velvet Scent ${base.padStart(2, '0')}`;
+  }
+  return base
+    .replace(/[_-]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+}
+
 const PRODUCTS = PRODUCT_FILES.map((file, index) => {
-  const code = String(index + 1).padStart(2, '0');
-  const name = `Velvet Scent ${code}`;
+  const name = filenameToProductName(file);
   const price = BASE_PRICES[index] || (39 + (index * 10));
   const category = index < 12 ? 'perfume' : index < 20 ? 'giftset' : 'dakhoon';
   return {
@@ -109,13 +156,15 @@ const PRODUCTS = PRODUCT_FILES.map((file, index) => {
     price,
     desc: `A luxurious fragrance selected from the Velvet Scent collection, designed for refined UAE tastes and elegant daily wear.`,
     category,
+    cat: category,
+    notes: 'Luxury long-lasting fragrance for UAE weather.',
     bestSeller: index === 4 || index === 9 || index === 13,
     badge: index === 4 ? 'Best Seller' : index === 9 ? 'Limited' : ''
   };
 });
 
 let cart = JSON.parse(localStorage.getItem(STORAGE_KEYS.cart) || '[]');
-let currentTheme = localStorage.getItem(STORAGE_KEYS.theme) || 'light';
+let currentTheme = 'light';
 let currentLang = localStorage.getItem(STORAGE_KEYS.lang) || 'en';
 let currentSlide = 0;
 let heroTimer = null;
@@ -389,9 +438,13 @@ function openCheckoutModal() {
     cart.push({ ...activeProduct, qty: 1 });
     saveCart();
   }
+  if (!cart.length) {
+    alert(currentLang === 'ar' ? 'يرجى إضافة المنتجات إلى الطلب أولاً.' : 'Please add products to your order first.');
+    return;
+  }
   populateCityOptions();
   updateOrderSummary();
-  if (!cart.length) { alert(currentLang === 'ar' ? 'يرجى إضافة المنتجات إلى الطلب أولاً.' : 'Please add products to your order first.'); return; }`r`n  openModal('checkoutModal');
+  openModal('checkoutModal');
 }
 
 function updateOrderSummary() {
@@ -420,7 +473,7 @@ function populateCityOptions() {
 }
 
 function buildWhatsAppMessage(customer) {
-  const items = cart.map((item) => `- ${item.name} — ${money(item.price * item.qty)}`).join('\n');
+  const items = cart.map((item) => `- ${item.name} x${item.qty} = ${money(item.price * item.qty)}`).join('\n');
   const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
   const message = [
     'VELVET SCENT ORDER',
@@ -437,12 +490,12 @@ function buildWhatsAppMessage(customer) {
     `Name: ${customer.fullName}`,
     `Phone: ${customer.phoneNumber}`,
     `City: ${customer.city}`,
-    `State: ${customer.state}`,
+    `Emirate: ${customer.emirate}`,
     `Delivery Address: ${customer.address}`,
     '',
     '━━━━━━━━━━━━',
     '',
-    💳 Payment: Cash on Delivery (UAE),
+    '💳 Payment: Cash on Delivery (UAE)',
     '',
     'Please confirm my order.',
     'Thank you.'
@@ -464,7 +517,7 @@ function applyTheme(theme) {
   localStorage.setItem(STORAGE_KEYS.theme, currentTheme);
   document.body.setAttribute('data-theme', theme);
   const themeBtn = document.getElementById('themeToggle');
-  if (themeBtn) themeBtn.textContent = theme === 'light' ? 'Light' : 'Dark';
+  if (themeBtn) themeBtn.textContent = theme === 'light' ? 'Dark' : 'Light';
 }
 
 function cycleTheme() {
@@ -518,6 +571,11 @@ function bindEvents() {
     openCart();
   });
 
+  // Hero WhatsApp buttons
+  document.getElementById('heroWhatsappBtn')?.addEventListener('click', openCart);
+  document.getElementById('heroWhatsappBtn2')?.addEventListener('click', openCart);
+  document.getElementById('heroWhatsappBtn3')?.addEventListener('click', openCart);
+
   document.getElementById('checkoutWhatsappBtn')?.addEventListener('click', openCheckoutModal);
   document.getElementById('stickyOrderBtn')?.addEventListener('click', () => {
     document.getElementById('shop')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -547,16 +605,16 @@ function bindEvents() {
 
     const fullName = document.getElementById('customerName')?.value.trim();
     const phoneNumber = document.getElementById('customerPhone')?.value.trim();
-    const state = document.getElementById('stateSelect')?.value;
+    const emirate = document.getElementById('stateSelect')?.value;
     const city = document.getElementById('citySelect')?.value;
     const address = document.getElementById('customerAddress')?.value.trim();
 
-    if (!fullName || !phoneNumber || !state || !city || !address) {
+    if (!fullName || !phoneNumber || !emirate || !city || !address) {
       alert(currentLang === 'ar' ? 'يرجى تعبئة جميع الحقول المطلوبة.' : 'Please complete all required fields.');
       return;
     }
 
-    openWhatsAppOrder({ fullName, phoneNumber, state, city, address });
+    openWhatsAppOrder({ fullName, phoneNumber, emirate, city, address });
     cart = [];
     saveCart();
     event.target.reset();
@@ -601,7 +659,7 @@ function bindEvents() {
 
 function setupHeroInteractions() {
   HERO_SLIDES.forEach((_, index) => {
-    const slide = document.querySelector(`.hero-slide[data-slide="${index}"]`);
+    const slide = document.querySelector(`.hero-slide[data-index="${index}"]`);
     if (slide) slide.addEventListener('click', () => setHeroSlide(index));
   });
 }
@@ -620,7 +678,7 @@ function init() {
   renderFaq();
   renderCart();
   updateCartCount();
-  applyTheme(currentTheme);
+  applyTheme('light');
   applyLanguage(currentLang);
   startHeroSlider();
   bindEvents();
@@ -646,5 +704,11 @@ function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
+
+
+
+
+
 
 
