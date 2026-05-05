@@ -611,8 +611,13 @@ function toggleLanguage() {
 }
 
 function bindEvents() {
+  const mobileNav = document.getElementById('mainNav');
   document.getElementById('mobileNavBtn')?.addEventListener('click', () => {
-    document.getElementById('mainNav')?.classList.toggle('open');
+    mobileNav?.classList.toggle('open');
+  });
+
+  mobileNav?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => mobileNav.classList.remove('open'));
   });
 
   document.getElementById('langToggle')?.addEventListener('click', toggleLanguage);
