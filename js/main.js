@@ -149,9 +149,12 @@ function buildProducts(files) {
     return {
       id: index + 1,
       name,
+      name_ar: name,
       img: `images/${file}`,
+      image: `images/${file}`,
       price,
       desc: `A luxurious fragrance selected from the Velvet Scent collection, designed for refined UAE tastes and elegant daily wear.`,
+      description_ar: 'عطر فاخر مختار من مجموعة فيلفت سينت، مصمم للأذواق الراقية في الإمارات وللاستخدام اليومي الأنيق.',
       category,
       cat: category,
       notes: 'Luxury long-lasting fragrance for UAE weather.',
@@ -306,31 +309,36 @@ function renderProducts() {
     const grid = document.getElementById(targetId);
     if (!grid) return;
     grid.innerHTML = PRODUCTS.map((product) => `
-      <article class="product-card glass-card ${product.bestSeller ? 'best-seller' : ''}" data-product-id="${product.id}">
-        <div class="product-media">
-          <img src="${product.img}" alt="${product.name}" loading="lazy">
+      <div class="product-card glass-card ${product.bestSeller ? 'best-seller' : ''}" data-product-id="${product.id}" dir="${currentLang === 'ar' ? 'rtl' : 'ltr'}">
+        <div class="product-image">
+          <img src="${product.image || product.img}" alt="${currentLang === 'ar' ? product.name_ar : product.name}" loading="lazy">
           ${product.bestSeller ? '<span class="product-badge">Best Seller</span>' : ''}
         </div>
-        <div class="product-copy">
-          <div class="product-copy__head">
-            <h3>${product.name}</h3>
-            <strong>${money(product.price)}</strong>
+        <div class="product-info">
+          <div class="product-header">
+            <h3 class="product-name">${currentLang === 'ar' ? product.name_ar : product.name}</h3>
+            <strong class="product-price">${money(product.price)}</strong>
           </div>
-          <p>${product.desc}</p>
-          <button class="btn btn-gold product-view-btn" type="button" data-view="${product.id}">${t('viewDetails')}</button>
-          <button class="btn btn-outline" type="button" data-add="${product.id}">${t('addToOrder')}</button>
+          <p class="product-description">${currentLang === 'ar' ? product.description_ar : product.desc}</p>
+          <div class="product-actions">
+            <button class="btn btn-gold product-view-btn" type="button" data-view="${product.id}">${t('viewDetails')}</button>
+            <button class="btn btn-outline product-add-btn" type="button" data-id="${product.id}" data-name="${currentLang === 'ar' ? product.name_ar : product.name}">${t('addToOrder')}</button>
+          </div>
         </div>
-      </article>
+      </div>
     `).join('');
 
     grid.querySelectorAll('[data-view]').forEach((button) => {
       button.addEventListener('click', () => openProductModal(button.getAttribute('data-view')));
     });
 
-    grid.querySelectorAll('[data-add]').forEach((button) => {
+    grid.querySelectorAll('.product-add-btn').forEach((button) => {
       button.addEventListener('click', (event) => {
         event.stopPropagation();
-        addToCart(button.getAttribute('data-add'));
+        const productId = button.dataset.id;
+        const productName = button.dataset.name;
+        addToCart(productId);
+        console.log('Added to order:', productName);
       });
     });
 
@@ -470,7 +478,13 @@ function openProductModal(productId) {
   const benefit = document.getElementById('quickViewBenefit');
   const desc = document.getElementById('quickViewDescription');
 
-  if (image) image.src = product.img;
+  if (image) {
+    image.src = product.img;
+    image.style.objectFit = 'contain';
+    image.style.height = 'min(70vh, 620px)';
+    image.style.maxHeight = 'none';
+    image.style.background = currentTheme === 'dark' ? '#111' : '#fff';
+  }
   if (name) name.textContent = product.name;
   if (price) price.textContent = money(product.price);
   if (benefit) benefit.textContent = product.bestSeller ? (currentLang === 'ar' ? 'الأكثر مبيعًا' : 'Best Seller') : (currentLang === 'ar' ? 'عطر فاخر مختار بعناية.' : 'Premium fragrance selected for elegance and daily wear.');
@@ -565,6 +579,7 @@ function applyTheme(theme) {
   document.body.setAttribute('data-theme', theme);
   const themeBtn = document.getElementById('themeToggle');
   if (themeBtn) themeBtn.textContent = theme === 'light' ? 'Dark' : 'Light';
+  renderCart();
 }
 
 function cycleTheme() {
@@ -619,9 +634,10 @@ function bindEvents() {
   });
 
   // Hero WhatsApp buttons
-  document.getElementById('heroWhatsappBtn')?.addEventListener('click', openCart);
-  document.getElementById('heroWhatsappBtn2')?.addEventListener('click', openCart);
-  document.getElementById('heroWhatsappBtn3')?.addEventListener('click', openCart);
+  const openDirectWhatsApp = () => window.open(`https://wa.me/${WHATSAPP_NUMBER}`, '_blank', 'noopener');
+  document.getElementById('heroWhatsappBtn')?.addEventListener('click', openDirectWhatsApp);
+  document.getElementById('heroWhatsappBtn2')?.addEventListener('click', openDirectWhatsApp);
+  document.getElementById('heroWhatsappBtn3')?.addEventListener('click', openDirectWhatsApp);
 
   document.getElementById('checkoutWhatsappBtn')?.addEventListener('click', openCheckoutModal);
   document.getElementById('stickyOrderBtn')?.addEventListener('click', () => {
@@ -630,8 +646,12 @@ function bindEvents() {
 
   document.getElementById('floatingWhatsAppBtn')?.addEventListener('click', (event) => {
     event.preventDefault();
-    if (cart.length) openCart();
-    else document.getElementById('shop')?.scrollIntoView({ behavior: 'smooth' });
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}`, '_blank', 'noopener');
+  });
+
+  document.querySelector('.brand')?.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   document.getElementById('overlay')?.addEventListener('click', () => {
@@ -678,6 +698,10 @@ function bindEvents() {
       const target = id && id !== '#' ? document.querySelector(id) : null;
       if (!target) return;
       event.preventDefault();
+      if (id === '#top') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
